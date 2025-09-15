@@ -1,0 +1,1 @@
+Slides and example code for a talk on Inline::C, presented to Thousand Oaks Perl Mongers & Los Angeles Perl Mongers Nov/Dec 2011

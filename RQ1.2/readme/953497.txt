@@ -1,0 +1,14 @@
+= Dotfiles =
+
+== Vim ==
+
+:SyntasticCheck requires pyflakes, flake8 and pylint
+
+= Brew (OS X) =
+
+After having installed Brew: `./.brew`.
+
+== Sources ==
+
+* https://github.com/mathiasbynens/dotfiles
+

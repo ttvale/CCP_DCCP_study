@@ -1,0 +1,1 @@
+Caputure screen to video file on mac. Implementation of Apple's OpenGL example code with GUI and ability to caputure mouse movements added. Can choose export format, codec, and quality. (Cocoa - Apple Mac OSX 10.5.8 - XCode 3.2 Project)

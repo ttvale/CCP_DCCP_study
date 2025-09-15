@@ -1,0 +1,52 @@
+= Plugin
+
+* home: http://rubyworks.github.com/plugin
+* source: http://github.com/rubyworks/plugin
+
+
+== DESCRIPTION
+
+Plugin is a straighforward plugin manager for Ruby. It can handle
+RubyGems, Rolls and Ruby's standard site locals. It is both more
+flexible and more robust the using Gem.find_files or searching the
+$LOAD_PATH manually.
+
+The Plugin library does two signifficant things. First it designates
+a location in the ruby $LOAD_PATH for plugins. Second it provides
+an easy to use function for finding plugin scripts stored in the
+designated location.
+
+
+== USAGE
+
+Place all plugins for your project in <tt>lib/plugins/<name>/</tt>.
+Or if you have altered the load path for your project, you can
+place them in the alternate location, <tt><alternate-loadpath>/plugins/<name>/</tt>.[1]
+
+To find plugins, simply provide a glob to the <tt>Plugin.find</tt> function,
+and it will return all matches found within current and/or most recent versions
+of libraries.
+
+For example, a common use case for a pluggable application is to require all
+the plugins found:
+
+  require 'plugin'
+
+  Plugin.find('myapp/*.rb').each do |file|
+    require(file)
+  end
+
+Alternately you might load plugins only as needed. For instance, if a command-line
+option calls for it.
+
+[1] Alterating the conventional load path shoud be avoided whenever possible.
+
+
+== COPYRIGHTS
+
+Copyright (c) 2009 Thomas Sawyer
+
+Plugin is release under the terms of the LGPL.
+
+See COPYING for details.
+

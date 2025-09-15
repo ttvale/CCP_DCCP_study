@@ -1,0 +1,1 @@
+Nether is a rails engine for easily adding endless page functionality to paginated content.

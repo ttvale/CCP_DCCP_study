@@ -1,0 +1,1 @@
+INACTIVE - http://mzl.la/ghe-archive - Style guidelines and configurations for Mozilla projects

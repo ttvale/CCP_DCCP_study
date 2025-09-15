@@ -1,0 +1,74 @@
+/********************************************
+**  Name: Ethernet client with Dhcp and DNS support for Arduino Ethernet shield
+**  Created: 27/09/2011
+*********************************************
+**  REVISIONS
+**
+**  V1.1 - 10/11/2012
+**  * Fixed bug in debug mode (would go out of memory)
+**
+**  V1.0 - 18/10/2011
+**  * READY for production
+**
+**  V0.11 - 18/10/2011
+**  * Fixed bug in hostIP where an uninitialized variable could corrupt data received from serial port.
+**
+**  V0.10 - 17/10/2011
+**  * Added config process
+**  * Tested config OK, still IP weird problem to solve
+**
+**  V0.9 - 3/10/2011
+**  * Fine tunning, production ready. WORKS!
+**
+**  V0.8 - 2/10/2011
+**  * Added command driving trough serial interface
+**  * Fixed bug in which a wrong webiste address would hang the device.
+**  * Implemented error sending information trough serial messages
+**	* Fine tuned comunication protcol
+**
+**  V0.7 - 30/09/2011
+**	* Fixed bug that would create a buffer overflow after some web requests
+**  * Fixed bug in which the server port was not reverted to 80 after printing at port 8000
+**  * Fixed bug permitting more than one request one after another
+**
+**  V0.6 - 29/09/2011
+**  * Added XML pharsing 
+**  * Printing working
+**
+**  V0.5 - 28/09/2011
+**  * Fixed problem understanding IP addresses (TEXT based)
+**
+**  V0.4 - 28/09/2011
+**  * Added serial configuration from seed_counter
+**  * Added password functionality
+**  * Added XML phareser 
+**
+**  V0.3 - 27/09/2011
+**  * Sucessfully connected to website using password
+**
+**  V0.2 - 27/09/2011
+**  * Sucessfully pharsing Host Names request trough DNS server
+**  * Implementing non blocking logic so arduino can refresh its IP when
+**	  expired lease occurs in the local DHCP server
+**
+**  V0.1 - 27/09/2011
+**	* First example working, successfuly receiving data from websites
+**  * Only via IP address
+**
+*********************************************
+*/
+//
+//  This example it's based on work of Georg Kaindl ( http://gkaindl.com )
+//  under the terms of the GNU Lesser General Public License as
+//  published by the Free Software Foundation, either version 3 of
+//  the License, or (at your option) any later version.
+//
+//  EthernetDHCP is distributed in the hope that it will be useful,
+//  but WITHOUT ANY WARRANTY; without even the implied warranty of
+//  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU Lesser General Public License for more details.
+//
+//  You should have received a copy of the GNU Lesser General Public
+//  License along with EthernetDHCP. If not, see
+//  <http://www.gnu.org/licenses/>.
+//

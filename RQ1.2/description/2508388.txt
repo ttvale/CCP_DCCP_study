@@ -1,0 +1,1 @@
+A openstreetmaps integrated application built on CakePHP framework

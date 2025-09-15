@@ -1,0 +1,1 @@
+Plugin that allows Uni to also create Lectures for a Course

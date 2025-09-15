@@ -1,0 +1,1 @@
+TerrariaServer with client code removal and additions from the TShock team.

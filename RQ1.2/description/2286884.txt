@@ -1,0 +1,1 @@
+With this Dokuwiki plugin you can index and search your pages with an external Solr server

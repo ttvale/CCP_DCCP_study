@@ -1,0 +1,1 @@
+Built from scratch to replicate some of the Django admin functionality and add some more, to serve as an introspective interface for Django and Mongo. 

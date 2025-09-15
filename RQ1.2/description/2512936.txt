@@ -1,0 +1,1 @@
+This is a demo I used in my talk at SenchaCon 2011. It's a Sencha Touch application (for iPhone) that uses PhoneGap to cache data using CoreData.

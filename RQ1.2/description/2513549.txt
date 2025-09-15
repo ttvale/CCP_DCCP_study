@@ -1,0 +1,1 @@
+Application built from "Rails 3 In Action" book by Yehuda Katz and Ryan A. Bigg

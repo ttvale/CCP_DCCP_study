@@ -1,0 +1,135 @@
+== ActiveRestrictors
+
+Chainable ActiveRecord restrictions.
+
+{<img src="https://secure.travis-ci.org/chrisroberts/active_restrictors.png" />}[http://travis-ci.org/chrisroberts/active_restrictors]
+
+=== Overview
+
+Restrictions are made via join tables between two models and a User object. Imagine these models:
+
+  +-------+       +---------------+      +------------+    +--------------+       +------+
+  | Asset |<*-----|AssetPermission|<-----| Permission |--->|UserPermission|-----*>| User |
+  +-------+       +---------------+      +------------+    +--------------+       +------+
+
+Our model definitions would look something like:
+
+  class Permission < ActiveRecord::Base
+    has_many :asset_permissions, :dependent => :destroy
+    has_many :assets, :through => :asset_permissions
+    has_many :user_permissions, :dependent => :destroy
+    has_many :users, :through => :user_permissions
+  end
+
+  class AssetPermission < ActiveRecord::Base
+    belongs_to :asset
+    belongs_to :permission
+  end
+
+  class Asset < ActiveRecord::Base
+    has_many :asset_permissions, :dependent => :destroy
+    has_many :permissions, :through => :asset_permissions
+  end
+
+  class UserPermission < ActiveRecord::Base
+    belongs_to :user
+    belongs_to :permission
+  end
+
+  class User < ActiveRecord::Base
+    has_many :user_permissions, :dependent => :destroy
+    has_many :users, :through => :user_permissions
+  end
+
+Now, suppose a User should only be allowed to to see an Asset instance if the Asset instance and the User both have the same permission assigned to them. We modify Asset like so:
+
+  class Asset < ActiveRecord::Base
+    ...
+    include ActiveRestrictor
+
+    add_restrictor(:permissions,
+      :enabled => lambda{ User.current_user.assets_enabled? },
+      :views => {
+        :value => :name,
+        :multiple => true,
+        :default_view_all => true,
+        :user_values_only => lambda{ User.current_user }
+      }
+    )
+  end
+
+A quick overview of what these options are doing. 
+
+* :enabled -> Restrictor is applied/not applied. This can be a static value or it can be a callable block to allow dynamic enabling
+* :value -> This is the attribute on the Permission model that is displayed to the user
+* :multiple -> Allows multiple Permissions to be applied on the restriction
+* :default_view_all -> If Asset has no Permissions applied, it is viewable by all
+* :user_values_only -> Only Permissions assigned to the user will be viewable in edit mode
+
+With the inclusion of the restrictor, we now have two new methods available. The first is on User instances:
+
+  User.first.allowed_assets -> Returns scoping of Assets the given user instance has access to
+
+The second is on Asset instances:
+
+  Asset.first.allowed_users -> Returns scoping of the Users allowed to acces this instance
+
+== View Helpers
+
+=== Details
+
+  %table
+    %tr
+      %td= 'Name'
+      %td= @asset.name
+    - display_full_restictors(@asset).each do |pair|
+      %tr
+        %td= "#{pair.first}:"
+        %td= pair.last
+
+=== Edit
+
+  - form_for(@asset) do |f|
+    %table
+      %tr
+        %td= 'Name:'
+        %td= f.text_field :name
+      - edit_full_restrictors(@asset, f).each do |pair|
+        %tr
+          %td= "#{pair.first}:"
+          %td= pair.last
+
+== Restrictor Types
+
+=== Basic User
+
+- TODO
+
+=== Basic Model
+
+- TODO
+
+=== Implicit
+
+- TODO
+
+=== Full
+
+- TODO
+
+== Custom Restrictors
+
+=== User custom
+
+- TODO
+
+=== Model custom
+
+- TODO
+
+== Bugs/Features
+
+* Please report any bugs via gihub issues
+
+Currently 'User' is static within the code. This will be removed in the future to allow restrictors
+to be applied to any two models.

@@ -1,0 +1,1 @@
+A program that shutdown the phone if nothing is done (screen stays locked) during a time defined by the user

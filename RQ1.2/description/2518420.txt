@@ -1,0 +1,1 @@
+A python library for dictionary-based analysis/synthesis of musical audio 

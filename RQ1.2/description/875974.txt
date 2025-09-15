@@ -1,0 +1,1 @@
+A set of extern classes for Haxe that wrap the Titanium API (http://developer.appcelerator.com/).

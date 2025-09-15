@@ -1,0 +1,1 @@
+Simple classes, scripts and functions that I write for Scala

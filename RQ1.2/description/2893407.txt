@@ -1,0 +1,1 @@
+openmoko u-boot fork with support for iPAQ h1940 and rx1950

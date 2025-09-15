@@ -1,0 +1,1 @@
+A collections module for the Kohana PHP Framework.

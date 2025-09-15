@@ -1,0 +1,1 @@
+Vim plugin that changes the color of the statusbar of the focused window according with the current mode (normal/insert/replace)

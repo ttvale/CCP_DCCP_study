@@ -1,0 +1,1 @@
+An experiment w/ PEG.js: a simple language 2 express a strategy 2 shorten a tweet to 140 chars

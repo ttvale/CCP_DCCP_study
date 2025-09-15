@@ -1,0 +1,1 @@
+CakePHP2: Deprecated parent controller class that adds a helper _respond() method for ajax requests

@@ -1,0 +1,1 @@
+An alternative for the C++ Standard library, expanded and cleaned up where necessary

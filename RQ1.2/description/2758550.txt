@@ -1,0 +1,1 @@
+(Brightcove) Cookies the user's volume preference and uses that when they return to the player.

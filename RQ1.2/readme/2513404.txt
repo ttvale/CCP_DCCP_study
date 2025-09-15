@@ -1,0 +1,31 @@
+To build run:
+
+	make
+
+To install:
+
+	make install
+
+		(as root)
+
+To uninstall:
+
+	make uninstall
+
+		(as root)
+
+Usage:
+
+	g15date
+		Displays time (analogue clock) and date.
+	g15date -d
+		Displays time (digital) and date.
+
+-----
+NOTE:	The g15daemon must be running.
+-----
+
+Version:
+	0.2 - Early development!
+
+Email dean.birch0@gmail.com with bugs, suggestions, or just let me know that someone is actually using this package!

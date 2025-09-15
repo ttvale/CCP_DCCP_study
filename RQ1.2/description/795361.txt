@@ -1,0 +1,1 @@
+A C# client framework for consuming HTTP/REST services

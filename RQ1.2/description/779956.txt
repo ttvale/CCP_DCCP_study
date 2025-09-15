@@ -1,0 +1,1 @@
+Lightweight guaranteed-delivery messaging gem backed by ActiveRecord and resque

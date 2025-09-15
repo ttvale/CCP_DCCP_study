@@ -1,0 +1,6 @@
+Fast loading tvguide
+----------------------
+1. uncomment the channels that you want in grabber/channels.tv
+2. run grabber/grab_today.py. it outputs today.json.
+3. run tv/<generator script> to generate html
+

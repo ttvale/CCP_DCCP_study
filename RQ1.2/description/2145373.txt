@@ -1,0 +1,1 @@
+Element-wise (vectorized) function, method and operator support for iterables in python

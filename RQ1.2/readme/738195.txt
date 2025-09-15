@@ -1,0 +1,61 @@
+h1. MozVisibility
+
+"Page Visibility API":http://www.w3c-test.org/webperf/specs/PageVisibility/ allows site developers to programmatically determine the current visibility of a document and be notified of visibility changes. At this moment Page Visibility API is natively supported in Chrome 13+, Firefox 10+ and IE10. MozVisibility is designed to partially emulate Page Visibility API in older Firefox versions (5—9).
+
+h2. How it works
+
+Functioning principle of this library is based on the "following feature, introduced in Firefox 5.0":https://bugzilla.mozilla.org/show_bug.cgi?id=633421: when the page is in inactive tab Firefox clamps setTimeout/setInterval that lesser than 1 second to 1 second.
+
+Therefore, by setting timeout with 500ms delay and calculating the actual delay between setting and firing timeout, we can determine whether page visible or not.
+
+
+h2. Usage
+
+Add mozvisibility.js to your project. 
+
+h3. document.mozVisibilityState & document.mozHidden
+
+You can use the following properties to determine whether page visible or not:
+<pre>document.mozVisibilityState 	// can be ‘visible’ or ‘hidden’
+document.mozHidden		// can be true or false
+</pre>
+
+
+h3. “mozvisibilitychange” event
+
+<pre>document.addEventListener("mozvisibilitychange", function () {
+	console.log(‘Page became', document.mozHidden ? 'invisible' : 'visible');
+}, false);
+</pre>
+
+
+h3. Visibility.js
+
+You can also use this library in conjunction with "Visibility.js":https://github.com/evilmartians/visibility.js. In this case include mozvisibility.js BEFORE visibility.js.
+
+h2. Limitations & known issues
+
+* Only 'visible' and 'hidden' states are supported.
+* The library determines page as 'hidden' ONLY when it is in the background tab. Other types of invisibility cannot be detected at this time.
+* There is a 1 second delay between the moment when page became invisible and firing "mozvisibilitychange" event.
+* Doesn't work in IFRAME.
+
+h2. Read more
+
+* "Page Visibility Editor's Draft":http://www.w3c-test.org/webperf/specs/PageVisibility/
+* "Bug 633421 — Clamp setTimeout/setInterval to something higher than 10ms in inactive tabs":https://bugzilla.mozilla.org/show_bug.cgi?id=633421
+* "MDC — Using the Page Visibility API":https://developer.mozilla.org/en/DOM/Using_the_Page_Visibility_API
+* "Google code — Using the Page Visibility API":http://code.google.com/chrome/whitepapers/pagevisibility.html
+* "IE9 Test Drive — Page Visibility API":http://ie.microsoft.com/testdrive/Performance/PageVisibility/Default.html
+
+h2. License
+
+h3. MIT License
+
+Copyright (c) 2011 Vladimir Zhuravlev
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. 
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

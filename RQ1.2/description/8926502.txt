@@ -1,0 +1,1 @@
+Read-only mirror of https://svn.typo3.org/TYPO3v4/Extensions/ad_google_maps/. Updated daily with svn2git.

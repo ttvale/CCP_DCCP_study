@@ -1,0 +1,1 @@
+Cassandra's twin brother. yaCf: yet another Cassandra framework.

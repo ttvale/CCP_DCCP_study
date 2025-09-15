@@ -1,0 +1,1 @@
+Allows BrowserCMS to export a sitemap for search engines to help with Search Engine Optimization (SEO).

@@ -1,0 +1,1 @@
+Build wagn as a Cloud Store package

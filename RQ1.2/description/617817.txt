@@ -1,0 +1,1 @@
+Api for using config entries (only partially done)

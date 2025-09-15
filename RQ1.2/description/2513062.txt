@@ -1,0 +1,1 @@
+Tool to assist in the creation of ODF files, template-based for a magazine project at school.

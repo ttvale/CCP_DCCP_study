@@ -1,0 +1,1 @@
+Use twitter/bootstrap in as admin theme in Symfony 1.4

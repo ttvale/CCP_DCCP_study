@@ -1,0 +1,1 @@
+Game/application that simulates the stock market that I'm making in my spare time.

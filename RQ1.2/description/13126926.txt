@@ -1,0 +1,1 @@
+WoW Addon - Allows you to choose a colour shader which best suits your type of colourblindness.

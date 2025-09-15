@@ -1,0 +1,1 @@
+[not actively maintained] A lightweight Python library that uses Webkit to enable easy scraping of dynamic, Javascript-heavy web pages

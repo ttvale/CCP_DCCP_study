@@ -1,0 +1,1 @@
+Transition Theme, is an installable Diazo theme for Plone 4 using the transition template

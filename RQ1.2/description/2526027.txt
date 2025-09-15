@@ -1,0 +1,1 @@
+Making markdown text files pretty. This is pretty much a clone of https://github.com/sanand0/markdress so the credit should go to him. I was surprised at how easy it was to implement in node.

@@ -1,0 +1,1 @@
+nfo files and rename scripts for Chaos Communication Congress recordings so XBMC can add them as a show

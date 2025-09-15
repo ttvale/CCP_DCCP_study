@@ -1,0 +1,1 @@
+A centralized suite of extensions for the TTYtter Twitter client. These extensions add features such as sound notifications, text to speech, and more.

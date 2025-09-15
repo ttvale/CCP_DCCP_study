@@ -1,0 +1,1 @@
+experiementation based on http://java.ociweb.com/mark/clojure/article.html

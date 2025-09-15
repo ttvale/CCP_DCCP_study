@@ -1,0 +1,1 @@
+GAE + Eclipse + Maven Archetype

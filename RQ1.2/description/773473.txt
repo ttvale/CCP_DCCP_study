@@ -1,0 +1,1 @@
+Fork of Pyglet to provide OpenGL Core functionality on Mac OS-X. Please use the official repository unless you require these changes.

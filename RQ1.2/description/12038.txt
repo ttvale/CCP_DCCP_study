@@ -1,0 +1,1 @@
+An open source substitute for Apple's genstrings which can be integrated in Apps.

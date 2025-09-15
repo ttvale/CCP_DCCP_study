@@ -1,0 +1,1 @@
+A category on UIView to create an instance with a block for its drawRect.

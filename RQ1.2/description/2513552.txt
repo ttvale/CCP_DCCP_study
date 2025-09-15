@@ -1,0 +1,1 @@
+A slider plugin for jquery

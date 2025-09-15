@@ -1,0 +1,38 @@
+This application is NOT usable yet, still in early stage of development .
+
+Experimental remote monitoring and control system for Arduinos/Hydroponics/Repraps/Repstraps/3d scanners.
+Also, it will be the "parent" of both the Hydroduino and Doboz-web projects
+It includes a Web client (using Javascript + Jquery ) and server (pure Python, Twisted based ):
+
+//////////////////////////////
+UPDATE: 01/06/2012
+WAY too many updates to list here, project is still not in a really usable state, but sub elements here and there work, lots still remaining to be
+done. If you are curious about the workings and the project, best look around the code/ the various commits
+
+UPDATE: 04/17/2011
+-The project now comes with buidout scripts for easier deployment : no need to have the dependencies installed: here is how you can setup and run 
+Pollapli using buildout:
+-check out the code from github
+in command line :
+- navigate to the directory you just checked out the code into 
+- type python bootstrap.py (Optionally you can do pythonVERSIONNUM bootstrap.py : ie i use python2.6 bootstrap.py) 
+- type buildout/buildout : here you will see buildout getting all the project dependencies and setting up an isolated python environment
+DONE!
+To run the project , just type , at the same place: buildout/Pollapli
+
+In general:
+
+Depencies:
+* Works with Python 2.6/2.7 (not Python 3.0 compatible)
+* You will need Twisted 11.0.0
+* You will need to have pySerial installed
+* for webcam support , pygst is required too
+* to generate docs, sphinx and all its dependencies are required
+
+For more info 
+please see the wiki pages at https://github.com/kaosat-dev/Pollapli/wiki
+
+
+//////////////////////////////
+Pollapli : Licensed under the GPL license
+© 2011 by Mark "Ckaos" Moissette 

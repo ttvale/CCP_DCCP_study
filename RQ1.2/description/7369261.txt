@@ -1,0 +1,1 @@
+jQuery Mobile for Rails 3/4 Asset Pipeline

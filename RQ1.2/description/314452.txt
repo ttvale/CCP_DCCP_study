@@ -1,0 +1,1 @@
+Small, quick chat server in Erlang

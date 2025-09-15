@@ -1,0 +1,1 @@
+This is just a simple example that how to implement horizantle Picker view 

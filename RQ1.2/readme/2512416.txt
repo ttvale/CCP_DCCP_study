@@ -1,0 +1,13 @@
+HTMLUnitGenerator
+- Generate JUnit test cases from a simple test case language.
+
+Check out the wiki!
+http://github.com/tomasbjerre/HTMLUnitGenerator/wiki
+
+TODO
+- Add web pages and set up test cases.
+-- Simple web page
+-- Web page with JavaScript-states
+-- Web page with forms
+-- ...
+- Get TestToPersonalDetailsViaSearchWithDSL24PhoneNumber.flow in Eclipse project to run.

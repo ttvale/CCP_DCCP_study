@@ -1,0 +1,42 @@
+ICS 491 - Special Topics: Artificial Intelligence for Games<br>
+University of Hawaii at Manoa, Fall 2011<br>
+----
+
+=== Assignment 6 ===
+Assigns different roles to the tanks.
+
+One tank guards the team flag.  If it doesn't have the flag,
+it finds a path to the flag and moves there.  If it has the flag 
+and it is not at its team base, it returns to base.  If it has
+the flag and is at its team base, it turns to face the nearest enemy.
+
+One tank tries to capture the nearest enemy flag.  If it doesn't have
+an enemy flag, it will find a path to the nearest enemy flag and move there.
+If the nearest enemy flag changes, its path will also change.  If it
+has an enemy flag, it will return to base.
+
+The remaining tanks chase after (and hopefully shoot) enemy tanks.
+Each tank's target is determined by the default targeting code.  
+Each tank can have a different target, so each tank will have its own path.
+
+Tanks that are not guarding the team flag will drop the team flag so the
+guard tank can retrieve it.
+
+Tanks that are not trying to capture enemy flags will hold on to enemy flags,
+to prevent them from being picked up by other teams, but they will make no
+effort to capture the flag.
+
+Uses the [http://code.google.com/p/yagsbpl/ YAGSBPL] library to implement A-star search.
+
+=== Installing ===
+# Download the BZFlag 2.4.0 source (not the installer/binary)
+# Extract the source files into a directory (<code>$BZFLAG_HOME</code>)
+# Place the provided files in the corresponding directories within <code>$BZFLAG_HOME</code>, replacing some of the existing files
+# Build BZFlag as normal
+
+=== Running ===
+* <code>$BZFS_BIN</code> - the path to the BZFlag server executable
+* <code>$BZFLAG_BIN</code> - the path to the BZFlag client executable
+* <code>$BZFS_BIN/bzfs -cr</code>
+* <code>$BZFLAG_BIN/bzflag -solo 9</code>
+

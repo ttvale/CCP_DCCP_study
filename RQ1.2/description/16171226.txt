@@ -1,0 +1,1 @@
+A .NET localization library for Windows Forms applications.

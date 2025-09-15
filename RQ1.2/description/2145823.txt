@@ -1,0 +1,1 @@
+Simple sinatra site with a script to check if the Bing API is functioning properly

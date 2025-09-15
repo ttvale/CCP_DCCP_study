@@ -1,0 +1,51 @@
+=encoding utf8
+
+=head1 Introduction
+
+A poker game server and a cli client for Gan Deng Yan(gdy).
+
+=head2 Running the server
+
+=over
+
+C<$ node index.js>
+
+C<$ cd test>
+
+C<$ node t_hello.js>
+
+=back
+
+=head1 Dependcies
+
+=over
+
+=item * node.js(>=0.6.0)
+
+=item * mysql
+
+=item * Redis
+
+=back
+
+=head1 Development Tools
+
+=over
+
+=item * Emacs
+
+=item * Git
+
+=item * EditPlus
+
+=back
+
+=head1 Licence
+
+MIT license 
+
+=head1 Authors
+
+=headq use ssh
+
+canw(nodejs@live.cn)

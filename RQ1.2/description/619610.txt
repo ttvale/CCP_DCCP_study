@@ -1,0 +1,1 @@
+A userscript for Fluid to add dock menus and other features to the new Pandora interface

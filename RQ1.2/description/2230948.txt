@@ -1,0 +1,1 @@
+a boilerplate + backbone mashup with docs for times you're offline

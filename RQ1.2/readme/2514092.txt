@@ -1,0 +1,11 @@
+# SL4Cl
+
+StreamLink For Clojure is a Clojure implementation of the Caplin StreamLink API (see http://caplin.com/StreamLink.php)
+
+## Usage
+
+Under Development
+
+## License
+
+Copyright (C) Caplin Systems Ltd 2012

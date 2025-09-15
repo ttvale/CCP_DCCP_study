@@ -1,0 +1,1 @@
+Used to create wrappers and proxy libraries for Windows binaries.

@@ -1,0 +1,22 @@
+Aqualung README
+===============
+
+
+Aqualung is an advanced music player primarily targeted at the
+GNU/Linux operating system, but also usable on FreeBSD, OpenBSD,
+Cygwin and also runs natively on Microsoft Windows.
+
+Homepage: http://aqualung.jeremyevans.net
+
+Please see the homepage for a general introduction to the program,
+including compilation instructions.
+
+Please refer to the documentation provided on the homepage for a
+detailed description of features, usage tips and miscellaneous info.
+
+The only supported way of interacting with this project is via GitHub
+issues and pull requests.
+
+There exists a mailing list that is now closed and mainly of
+historical interest:
+https://sourceforge.net/p/aqualung/mailman/aqualung-friends

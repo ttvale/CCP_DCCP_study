@@ -1,0 +1,1 @@
+WifiCamera is a Python module for controlling the network camera CS-W07G-CY.

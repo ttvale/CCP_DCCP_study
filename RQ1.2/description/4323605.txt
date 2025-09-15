@@ -1,0 +1,1 @@
+A simple filesystem based python index as an extensible application

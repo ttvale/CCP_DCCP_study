@@ -1,0 +1,1 @@
+Adds the ability to pick group members to the standard Elgg userpicker

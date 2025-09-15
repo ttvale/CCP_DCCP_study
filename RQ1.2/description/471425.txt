@@ -1,0 +1,1 @@
+Loosely coupled machine learning, data-mining and bioinformatics applications in a broad range of functional languages.

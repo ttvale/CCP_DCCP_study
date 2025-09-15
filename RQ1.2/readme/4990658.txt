@@ -1,0 +1,4 @@
+A simple, moduler, lightweight, object oriented php framework.
+
+TODO:
+	- Source code cleanup + comments

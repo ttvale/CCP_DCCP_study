@@ -1,0 +1,49 @@
+          ActiveHabits
+
+Thanks for taking a look. The vision for ActiveHabits is
+to help people help themselves through reflection on their
+own actions. A mobile phone app allows personal information
+to be recorded in real time.
+
+This is implemented through ActiveHabits by pressing a
+button to record the action name, date, time and location.
+Charts can be drawn to see one's actions. Associating
+playlists to buttons is optional.
+
+Functionally ActiveHabits is an Android application that
+saves button clicks, then charts the clicks to provide
+visual feedback. The same engine can be repurposed for
+many different purposes, not all of which can be
+anticipated. The application is flexible enough to track
+any activity you care about. I look forward to hearing
+how people use ActiveHabits.
+
+The website is http://www.activehabits.com
+
+Original this idea evolved from tracking of my personal
+sleep habits, launching playlists via scripts on my
+Linux machine as I awake and went to sleep.
+
+While this implementation could be used in many ways but
+I will first be supporting making this code even better
+for the original intended use.
+
+I welcome other people exploring other uses.  If you are
+interested in seeing features implemented and can provide
+some resources please contact me.
+
+
+Copyright 2011 Grant Bowman <grantbow@activehabits.com>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+

@@ -1,0 +1,1 @@
+The AmazonS3 Drupal module allows the local file system to be replaced with S3. Uploads are saved into the drupal file table using D7's new file/stream wrapper system.

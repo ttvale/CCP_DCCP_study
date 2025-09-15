@@ -1,0 +1,1 @@
+A system to better manage UITableView data source classes, because they can be reusable too! 

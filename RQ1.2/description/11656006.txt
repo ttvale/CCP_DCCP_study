@@ -1,0 +1,1 @@
+[deprecated] can be replaced with v2 of i18next

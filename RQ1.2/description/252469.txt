@@ -1,0 +1,1 @@
+django app that allows capture application metrics by each user individually

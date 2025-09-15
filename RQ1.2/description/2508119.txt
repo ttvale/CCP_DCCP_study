@@ -1,0 +1,1 @@
+Impulse is a small, dynamic object-oriented language that aims to have simple syntax and semantics. It also aims to be lightweight, reflective and open, and easily embeddable.

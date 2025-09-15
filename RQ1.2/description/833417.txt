@@ -1,0 +1,1 @@
+A rails app for managing flights (focused on gliding and on the situation in germany)

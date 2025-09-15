@@ -1,0 +1,1 @@
+A skeleton rails app with basic user authentication and pages

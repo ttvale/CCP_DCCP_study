@@ -1,0 +1,540 @@
+server documentation for grml
+=============================
+grml team <info@grml.org>
+v0.0, July 2011
+
+make apt sane
+-------------
+
+--------------------------------------
+echo 'APT::Install-Recommends "0";' > /etc/apt/apt.conf.d/99norecommends
+--------------------------------------
+
+
+lvm
+---
+
+* create a partition with partition type 8E (linux lvm)
+* +apt-get install lvm2+
+* Add new volumegroup +vgcreate vg0 /dev/sda6+
+
+libvirt + kvm
+-------------
+
+* +apt-get install libvirt-bin virt-top qemu-kvm debootstrap dbus virtinst
+netcat-openbsd bridge-utils vde2+
+
+* remove all additional ips from /e/n/i
+
+* We use vde2 to create a virtual switch for an internal network and bridge the tap
+  device intern to the bridge intbr
+
+./etc/network/interface
+-------------------------------------
+auto eth0
+iface eth0 inet manual
+
+auto extbr
+iface extbr inet static
+  address 83.246.69.170
+  netmask 255.255.255.248
+  broadcast 83.246.69.175
+  gateway 83.246.69.169
+  bridge_ports eth0
+  bridge_fd 9
+  bridge_hello 2
+  bridge_maxage 12
+  bridge_stp off
+
+auto intbr
+iface intbr inet static
+  address 10.0.3.1
+  netmask 255.255.255.0
+  bridge_fd 9
+  bridge_hello 2
+  bridge_maxage 12
+  bridge_stp off
+  bridge_ports intern
+
+auto intern
+iface intern inet manual
+    vde2-switch -t intern
+
+-------------------------------------
+
+Enable ksm
+~~~~~~~~~~
+For details about KSM see
+http://www.kernel.org/doc/Documentation/vm/ksm.txt[ksm.txt]
+
+------------------------------
+apt-get install sysfsutils
+echo "kernel/mm/ksm/run = 1" >> /etc/sysfs.conf
+/etc/init.d/sysfsutils start
+------------------------------
+
+
+LDAP
+----
+
+* +apt-get install slapd ldapvi+
+* Remove old ldap db: +rm /var/lib/ldap/*(db*|bdb|log*|alock)+
+* Remove slapd.d madness: +rm -rf /etc/ldap/slapd.d+
+
+./etc/ldap/slapd.conf
+------------------------------------
+# This is the main slapd configuration file. See slapd.conf(5) for more
+# info on the configuration options.
+
+#######################################################################
+# Global Directives:
+
+# Features to permit
+#allow bind_v2
+
+# Schema and objectClass definitions
+include         /etc/ldap/schema/core.schema
+include         /etc/ldap/schema/cosine.schema
+include         /etc/ldap/schema/nis.schema
+include         /etc/ldap/schema/inetorgperson.schema
+
+#ssl support
+TLSCACertificateFile /etc/ldap/ssl/ca.crt
+TLSCertificateFile /etc/ldap/ssl/server.crt
+TLSCertificateKeyFile /etc/ldap/ssl/server.key
+
+
+# Where the pid file is put. The init.d script
+# will not stop the server if you change this.
+pidfile         /var/run/slapd/slapd.pid
+
+# List of arguments that were passed to the server
+argsfile        /var/run/slapd/slapd.args
+
+# Read slapd.conf(5) for possible values
+loglevel        0
+
+# Where the dynamically loaded modules are stored
+modulepath	/usr/lib/ldap
+moduleload	back_bdb
+
+# The maximum number of entries that is returned for a search operation
+sizelimit 500
+
+# The tool-threads parameter sets the actual amount of cpu's that is used
+# for indexing.
+tool-threads 1
+
+#######################################################################
+# Specific Backend Directives for bdb:
+# Backend specific directives apply to this backend until another
+# 'backend' directive occurs
+backend		bdb
+
+#######################################################################
+# Specific Directives for database #1, of type bdb:
+# Database specific directives apply to this databasse until another
+# 'database' directive occurs
+database        bdb
+
+# The base of your directory in database #1
+suffix          "dc=grml,dc=org"
+checkpoint 512 30
+
+# rootdn directive for specifying a superuser on the database. This is needed
+# for syncrepl.
+# rootdn          "cn=admin,dc=snow-crash,dc=org"
+
+# Where the database file are physically stored for database #1
+directory       "/var/lib/ldap"
+
+# For the Debian package we use 2MB as default but be sure to update this
+# value if you have plenty of RAM
+dbconfig set_cachesize 0 2097152 0
+
+# Sven Hartge reported that he had to set this value incredibly high
+# to get slapd running at all. See http://bugs.debian.org/303057
+# for more information.
+
+# Number of objects that can be locked at the same time.
+dbconfig set_lk_max_objects 1500
+# Number of locks (both requested and granted)
+dbconfig set_lk_max_locks 1500
+# Number of lockers
+dbconfig set_lk_max_lockers 1500
+
+# Indexing options for database #1
+index           objectClass eq
+
+# Save the time that the entry gets modified, for database #1
+lastmod         on
+
+# The userPassword by default can be changed
+# by the owner
+access to attrs=userPassword,shadowLastChange
+        by dn="cn=admin,dc=grml,dc=org" write
+        by anonymous auth
+        by self write
+        by * none
+
+# Read access for the base (needed by sasl..)
+access to dn.base="" by * read
+
+# The admin dn has full write access, everyone else
+# can read everything.
+access to *
+        by dn="cn=admin,dc=grml,dc=org" write
+        by * read
+
+# For Netscape Roaming support, each user gets a roaming
+# profile for which they have write access to
+#access to dn=".*,ou=Roaming,o=morsnet"
+#        by dn="cn=admin,dc=snow-crash,dc=org" write
+#        by dnattr=owner write
+
+#######################################################################
+# Specific Directives for database #2, of type 'other' (can be bdb too):
+# Database specific directives apply to this databasse until another
+# 'database' directive occurs
+#database        <other>
+
+# The base of your directory for database #2
+#suffix		"dc=debian,dc=org"
+
+------------------------------------
+
+.initalize ldap db
+-----------------------------------
+slapadd -c < EOF
+
+dn: dc=grml,dc=org
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: grml.org
+dc: grml
+
+dn: cn=admin,dc=grml,dc=org
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+description: LDAP administrator
+userPassword: {SSHA}ctYLwzAfESce+Yok3S9f2iW9HGpdakMB
+
+dn: ou=People,dc=grml,dc=org
+ou: People
+objectClass: top
+objectClass: organizationalUnit
+structuralObjectClass: organizationalUnit
+
+dn: ou=Group,dc=grml,dc=org
+ou: Group
+objectClass: top
+objectClass: organizationalUnit
+structuralObjectClass: organizationalUnit
+
+----------------------------------
+
+* +chown -R openldap:openldap /var/lib/ldap/* /etc/ldap/slapd.conf+
+* start slapd
+
+host firewall
+-------------
+
+* +apt-get install ferm+
+
+.ferm.conf
+----------------------------------
+table filter {
+    chain INPUT {
+        policy DROP;
+
+        # connection tracking
+        mod state state INVALID DROP;
+        mod state state (ESTABLISHED RELATED) ACCEPT;
+
+        # allow local packet
+        interface lo ACCEPT;
+
+        # respond to ping
+        proto icmp ACCEPT; 
+
+        # allow SSH connections
+        proto tcp dport ssh ACCEPT;
+    }
+    chain OUTPUT {
+        policy ACCEPT;
+
+        # connection tracking
+        #mod state state INVALID DROP;
+        mod state state (ESTABLISHED RELATED) ACCEPT;
+    }
+    chain FORWARD {
+        policy DROP;
+
+        # connection tracking
+        mod state state INVALID DROP;
+        mod state state (ESTABLISHED RELATED) ACCEPT;
+    }
+}
+
+domain ip6 {
+	table filter {
+		chain INPUT {
+			policy DROP;
+
+			# connection tracking
+			mod state state INVALID DROP;
+			mod state state (ESTABLISHED RELATED) ACCEPT;
+
+			policy ACCEPT;
+
+			# respond to ping
+			proto icmpv6 ACCEPT;
+
+			# allow SSH connections
+			proto tcp dport ssh ACCEPT;
+
+
+		}
+
+		chain OUTPUT {
+			policy ACCEPT;
+
+			# connection tracking
+			#mod state state INVALID DROP;
+			mod state state (ESTABLISHED RELATED) ACCEPT;
+		}
+		chain FORWARD {
+			policy DROP;
+
+			# connection tracking	
+			mod state state INVALID DROP;
+			mod state state (ESTABLISHED RELATED) ACCEPT;
+		}
+	}
+}
+
+----------------------------------------------------------------------------------------------
+
+
+3ware tools
+-----------
+
+----------------------------------
+# echo 'deb http://jonas.genannt.name/debian squeeze restricted' >
+    /etc/apt/sources.list.d/3dm2.list
+# wget -O - http://jonas.genannt.name/debian/jonas_genannt.pub | apt-key add -
+# apt-get update ; apt-get install 3ware-cli-binary 3ware-3dm2-binary
+---------------------------------
+
+serial console
+--------------
+
+To activate sol for the BMC/IMPI enable gettys for ttyS0. Adjust /etc/inittab
+and make sure it contains
+
+---------------------------------
+T0:23:respawn:/sbin/getty -L ttyS0 9600 vt100
+---------------------------------
+
+grub
+~~~~
+To send the grub output to the serial console as well as the vga console edit
+/etc/default/grub and add the following lines:
+
+---------------------------------
+GRUB_TERMINAL="serial console"
+GRUB_SERIAL_COMMAND="serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1"
+---------------------------------
+
+
+Configure ipmi
+--------------
+
+* Show lan configuration: +ipmitool lan print+
+* Set ip address: +ipmitool lan set 1 ipaddr $IPADDR+
+* Set netmask: +ipmitool lan set 1 netmask 255.255.255.248+
+* Set default gw: +ipmitool lan set 1 defgw ipaddr $GW+
+
+Show user list: +ipmitool user list 1+
+Create a new user:
+
+---------------------------------
+ipmitool user set name 6 mru
+ipmitool user set password 6 PASSWORD
+---------------------------------
+
+Test the connection: +ipmitool -I lanplus -H $IP -U mru -a sol activate+
+
+user management
+---------------
+
+Usermanagement is done with LDAP and cpu.
+
+.cpu configuration
+------------------------------
+[GLOBAL]
+DEFAULT_METHOD	= ldap
+#CRACKLIB_DICTIONARY = /var/cache/cracklib/cracklib_dict
+
+[LDAP]
+LDAP_URI                = ldap://localhost
+BIND_DN                 = cn=admin,dc=grml,dc=org 
+BIND_PASS               = XXXXXXXXX
+USER_BASE               = ou=People,dc=grml,dc=org
+GROUP_BASE              = ou=Group,dc=grml,dc=org
+USER_OBJECT_CLASS	= account,posixAccount,shadowAccount,top
+GROUP_OBJECT_CLASS	= posixGroup,top
+USER_FILTER	= (objectClass=posixAccount)
+GROUP_FILTER	= (objectClass=posixGroup)
+USER_CN_STRING	= uid
+GROUP_CN_STRING = cn
+SKEL_DIR	= /etc/skel
+DEFAULT_SHELL 	= /usr/bin/zsh
+HOME_DIRECTORY	= /home
+MAX_UIDNUMBER = 10000
+MIN_UIDNUMBER = 1000
+MAX_GIDNUMBER = 10000
+MIN_GIDNUMBER = 1000
+ID_MAX_PASSES = 1000
+# Whether each user should have its own group created or not
+USERGROUPS = yes
+# If you change usergroup set this to the default group a user should have
+#USERS_GID = 100
+RANDOM = "false"
+PASSWORD_FILE = "/etc/passfile"
+SHADOW_FILE = "/etc/shadowfile"
+HASH = "md5"
+SHADOWLASTCHANGE	= 11192
+SHADOWMAX		= 99999
+SHADOWWARING		= 7
+SHADOWEXPIRE		= -1
+SHADOWFLAG		= 134538308
+SHADOWMIN		= -1
+SHADOWINACTIVE		= -1
+------------------------------
+
+Adding users is simple: +cpu useradd -p formorer+
+Add user to whell group: +cpu usermod -G wheel formorer+
+
+puppet
+------
+
+the puppet configuration is on father.
+
+
+client configuration
+~~~~~~~~~~~~~~~~~~~~
+
+Take care that father.grml.org is resovable (/etc/hosts.conf)
+.puppet.conf
+----------------------------------------------
+[main]
+pluginsync=true
+server = father.grml.org
+logdir=/var/log/puppet
+vardir=/var/lib/puppet
+ssldir=/var/lib/puppet/ssl
+rundir=/var/run/puppet
+factpath=$vardir/lib/facter
+templatedir=$confdir/templates
+----------------------------------------------
+
+run + puppetd -w 5 --debug -t+ afterwards and sign the request on father:
+w
++puppetca --sign hostname+.
+
+Run it again and check for errors. (It may take up to three runs until
+everything is ok).
+
+collectd
+--------
+
+TODO
+
+reprepro
+--------
+
+On deb.grml.org:
+
+----------------------------------
+# apt-get install dpkg-dev
+----------------------------------
+
+
+
+repos.grml.org
+--------------
+
+----------------------------------
+# apt-get install gitolite gitweb openbsd-inetd
+# echo git stream tcp nowait gitdaemon /usr/bin/git git \
+daemon --verbose --inetd --base-path=/srv/git/repositories \
+/srv/git/repositories >> /etc/inetd
+----------------------------------
+
+
+bittorrent
+----------
+
+we use bttrack and transmission-daemon for bittorrent distribution. Both is
+currently located on web.grml.org. bttrack is supervised by supervisor
+(http://supervisord.org/) see `/etc/supervisor/conf.d/btracker.conf` for the
+current configuration. transmission-daemon is started from it's init script.
+
+If you remove some isos check `/home/tracker/torrents` for broken symlinks. If 
+you removed something that was in `/home/tracker/torrents` clear the symlink and
+launch
+
+---------------------------------
+# supervisorctl restart bttrack 
+--------------------------------
+
+afterwards.
+
+Both use `/home/tracker/torrents/` as sourcedir for torrent seeding and allowed
+torrents in the tracker. This directory is filled with symlinks to the real
+files because of shortcomings in current BitTorrent software which limits
+the usefulness of subdirectories.
+
+create a new torrentfile
+------------------------
+
+to create a new torrent file call btmakemetafile:
+
+-----------------------------------------------
+ btmakemetafile http://ftp-master.grml.org:6969/announce \
+ /var/www/ftp-master.grml.org/grml32-full_2012.05.iso \
+ --target /var/www/ftp-master.grml.org/grml32-full_2012.05.iso.torrent \
+ --announce_list \
+ http://tracker.publicbt.com/announce,http://ftp-master.grml.org:6969/announce,udp://tracker.openbittorrent.com:80/announce,udp://tracker.publicbt.com:80/announce \
+ --httpseeds http://download.grml.org/grml32-full_2012.05.iso
+
+----------------------------------------------------------------------------------------------------------
+
+and replace grml32-full_2012.05.iso with your iso name. After you created the file link it to `/home/tracker/torrents/` and restart bttrack afterwards. 
+
+If you are to lazy to do it by hand try:
+
+-----------------------------------------------
+# /usr/local/bin/make_torrent /var/www/ftp-master.grml.org/grml96-full_2013.02.iso
+-----------------------------------------------
+
+mirrors
+-------
+
+mirrors are configured in Mirrors.masterlist which is located in the
+grml-mirrors repository. The format of the file should be more or less self
+explanary. You can use any other entry as template. Please don't broke that
+file as several other files are generated from that list.
+
+We generate the following other files from the masterlist:
+
+- mirmon config (`/etc/mirmon/mirror.list`). mirmon runs
+  (`/usr/local/bin/run_mirmon`) every 15 minutes and
+  calls `/usr/local/src/grml-mirrors/masterlist2mirmon`) after a git pull.
+- after mirmon runs, `/usr/local/bin/generate_mirror_map` generates the apache
+  `/etc/apache2/grml.map` that drives the geoip mirror redirector.
+
+The state of our mirrors can be checked via http://mirror.grml.org/.

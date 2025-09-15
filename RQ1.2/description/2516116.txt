@@ -1,0 +1,1 @@
+Automated Parameter Estimation and Model Selection Toolkit -- A fast MCMC implementation for Bayesian inference

@@ -1,0 +1,1 @@
+A script to keep track of files, check integrity and find duplicates

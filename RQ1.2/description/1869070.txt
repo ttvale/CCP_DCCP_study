@@ -1,0 +1,1 @@
+Stud.IP plugin that displays a "please update your browser" message to users using outdated browser versions.

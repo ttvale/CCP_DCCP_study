@@ -1,0 +1,26 @@
+
+*General Build Instructions & Dependencies:*
+* "compile / install floor and dependencies":https://github.com/a2flo/floor
+** NOTE: must be built with XML and OpenAL support (everything else should be optional)
+* install SDL2_image (with at least libpng), libxml2, freetype2
+
+*Build Instructions (Linux):*
+* run "./build.sh"
+* install a2elight (alternatively, copy these files/folders there):
+** sudo ln -sf /path/to/a2elight/src /usr/local/include/a2elight
+** sudo ln -sf /path/to/a2elight/lib/liba2elight.so /usr/local/lib/liba2elight.so
+** sudo ln -sf /path/to/a2elight/lib/liba2elightd.so /usr/local/lib/liba2elightd.so
+
+*Build Instructions (OS X / iOS):*
+* open src/a2elight.xcodeproj and build it
+* OS X: in Terminal do (but change /path/to/a2elight!):
+** sudo ln -sf /path/to/a2elight/src /usr/local/include/a2elight
+** sudo ln -sf /path/to/a2elight/lib/liba2elight.dylib /usr/local/lib/liba2elight.dylib
+** sudo ln -sf /path/to/a2elight/lib/liba2elightd.dylib /usr/local/lib/liba2elightd.dylib
+* iOS: install/symlink a2elight .a and lib folder:
+** sudo ln -sf /path/to/a2elight/bin/liba2elight{,d}.a {iPhoneOS/iPhoneSimulator folders}/usr/lib/
+** sudo ln -sf /path/to/a2elight {iPhoneOS/iPhoneSimulator folders}/usr/include/a2elight
+** linker flags for a depending project: -lSDL2 -lSDL2_image -lfloor -la2elight -lcrypto -lssl
+
+*Build Instructions (Windows):*
+* broken right now - will be fixed soon(tm)

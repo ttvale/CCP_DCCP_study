@@ -1,0 +1,1 @@
+Replaces google search results forwarder links with original links

@@ -1,0 +1,1 @@
+Attempt to create simple android application for taking picture of 3d object

@@ -1,0 +1,1 @@
+When I browse a subreddit, I like to open all the new links in new Chrome tabs to cruise through them faster. This opens all of them at once!

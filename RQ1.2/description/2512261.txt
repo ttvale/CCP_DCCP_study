@@ -1,0 +1,1 @@
+MediaWiki extension for including articles.

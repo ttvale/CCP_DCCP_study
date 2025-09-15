@@ -1,0 +1,1 @@
+Bundle for the Doctrine OXM project (deprecated) - use https://github.com/doctrine/DoctrineOXMBundle

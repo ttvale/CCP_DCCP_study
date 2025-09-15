@@ -1,0 +1,1 @@
+A Puppet DNS records management module for DNSimple, DNSMadeEasy and AWS Route53

@@ -1,0 +1,1 @@
+Ridiculously simple Gravatar integration for Asp.Net MVC: @Html.GravatarImage("user.name@email.com")

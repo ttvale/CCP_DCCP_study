@@ -1,0 +1,1 @@
+This example codes show you how to add 'do not backup' attribute to your files and directory.

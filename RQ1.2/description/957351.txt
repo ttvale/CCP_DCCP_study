@@ -1,0 +1,1 @@
+A styleguide generator based on kss (https://github.com/kneath/kss), but built in node.js

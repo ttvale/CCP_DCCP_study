@@ -1,0 +1,1 @@
+A tile-based "slippy map" library written in/for C++/Qt. It's meant to enable C++/Qt developers to easily add nice, interactive maps to their applications. Supports zooming, rotating, interactive custom map objects, transparency, etc. It is a Qt map widget that can use tiles from MapQuest, Openstreetmap, or a custom source you define.

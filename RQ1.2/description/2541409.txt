@@ -1,0 +1,1 @@
+A functional dispatcher in R to replace S3 and S4

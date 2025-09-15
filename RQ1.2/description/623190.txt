@@ -1,0 +1,1 @@
+English To DateTime is a plugin that takes (from an input field) both relative dates or dates formatted like M/D/Y and returns a JS Date object corresponding to that date.

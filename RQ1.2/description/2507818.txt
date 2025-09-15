@@ -1,0 +1,1 @@
+A copy of my bash profile for anyone who cares to take a look

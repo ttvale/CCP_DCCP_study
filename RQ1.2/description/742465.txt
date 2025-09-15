@@ -1,0 +1,1 @@
+Go package which allows to bind channel with any IO reader or writer interface.

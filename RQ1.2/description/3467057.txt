@@ -1,0 +1,1 @@
+Bin-Build is a small shell script to simplify compiling source file in C, C++ and Objective-C.

@@ -1,0 +1,1 @@
+Golang Cryptographic Signing package (based on Django 1.4)

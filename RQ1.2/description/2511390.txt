@@ -1,0 +1,1 @@
+An experimental alternative take on a graph library for Haskell (inspired by fgl and the Boost Graph Library)

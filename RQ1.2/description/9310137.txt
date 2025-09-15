@@ -1,0 +1,1 @@
+An extensible IRC bot written in Python. Mostly functions as a testing ground for playing with Python.

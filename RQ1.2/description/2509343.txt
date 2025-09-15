@@ -1,0 +1,1 @@
+Simple plugin handler for Ruby (not Rails)

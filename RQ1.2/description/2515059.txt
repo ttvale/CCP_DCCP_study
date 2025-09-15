@@ -1,0 +1,1 @@
+Blocks of Maven dependencies, for quickly adding dependencies to projects

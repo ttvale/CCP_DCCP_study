@@ -1,0 +1,1 @@
+A cross-platform python library to retrieve the current user's special folders (like Images, Documents, Videos etc.).

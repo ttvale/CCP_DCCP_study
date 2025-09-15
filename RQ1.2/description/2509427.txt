@@ -1,0 +1,1 @@
+Lucene utility for cross-language search via Japanese WordNet

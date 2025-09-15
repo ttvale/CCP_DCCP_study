@@ -1,0 +1,1 @@
+Contao module ce_jquery_slider

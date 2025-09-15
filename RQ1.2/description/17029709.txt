@@ -1,0 +1,1 @@
+A content slider module for Contao CMS using StoutLabs JS Slider

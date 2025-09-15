@@ -1,0 +1,1 @@
+A password generator inspired by the xkcd password spec: http://xkcd.com/936/

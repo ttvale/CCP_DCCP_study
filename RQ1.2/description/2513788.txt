@@ -1,0 +1,1 @@
+Your task is to write a Logo-like program that is capable of producing ASCII art. You will be provided with an input file containing a list of commands which when parsed and executed should produce an ASCII drawing.

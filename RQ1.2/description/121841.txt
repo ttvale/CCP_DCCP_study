@@ -1,0 +1,1 @@
+BuildGen is a cross-platform build script generator. It reads simple configuration files and creates an output such and an IDE project or a Makefile. 

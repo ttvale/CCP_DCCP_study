@@ -1,0 +1,79 @@
+Mozilla.com
+===========
+
+This is the codebase for mozilla.com, a site which Mozilla uses as a
+central spot for promoting and providing free software, particularly
+the Firefox web browser.
+
+More information can be found on the wiki page:
+
+https://wiki.mozilla.org/Mozilla.com
+
+Downloading
+-----------
+
+Get the code from:
+
+    * git: https://github.com/jlongster/mozilla.com
+    * svn: https://svn.mozilla.org/projects/mozilla.com/trunk
+
+Git support is still experimental; it is recommend for you to clone
+the SVN repo directly if you intend to contribute. For reference, this
+git repo was created using:
+
+    git svn clone -r80321 https://svn.mozilla.org/projects/mozilla.com/trunk
+
+Installing
+----------
+
+Make sure name-based virtual hosting is enabled.  In apache, check for
+this line in httpd.conf:
+
+    NameVirtualHost *:80
+
+Copy /includes/config.inc.php-dist to /includes/config.inc.php and
+fill out the variables (server_name and file_root are required).
+
+Install the Virtual Host in apache. Example config:
+
+    <Directory /path/to/mozilla.com>
+            Options Includes FollowSymLinks MultiViews Indexes
+            AllowOverride All
+            Order Deny,Allow
+            Allow from all
+    </Directory>
+
+    <VirtualHost *:80>
+        ServerName mozilla.local
+        VirtualDocumentRoot "/path/to/mozilla.com"
+    </VirtualHost>
+
+The should be it. mozilla.com doesn't use any complicated frameworks,
+so as long as you get PHP running it should work.
+
+Depending on your Apache installation you might need the following
+line within the VirtualHost block to allow PHP inside of html files:
+
+    AddType application/x-httpd-php .php .html
+
+Git or SVN?
+-----------
+
+The site is primarily worked on through SVN, and git is only supported
+as far as `git-svn`. Right now, this means you can use git all you
+want in your development environment, but you can't map your git
+branches to SVN or anything like that. When it comes time to commit,
+use `git-svn` and always only commit one branch to SVN.
+
+Contributing
+------------
+
+Please contact us (jlong@mozilla.com) if you are interesting in
+contributing to this project. Localizing requires a lot of work, and
+we couldn't support this many locales without the generous help of our
+current localizers. Thanks!
+
+Questions?
+----------
+
+Email: James Long <jlong@mozilla.com>

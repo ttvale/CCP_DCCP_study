@@ -1,0 +1,1 @@
+A library supporting an Smalltalk translation of ML-style sum and product types, with Scala-style extractors..

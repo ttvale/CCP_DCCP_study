@@ -1,0 +1,1 @@
+shared assets used on rpmware.com and related sites.

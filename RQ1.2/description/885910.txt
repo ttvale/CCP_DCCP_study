@@ -1,0 +1,1 @@
+A simple (really simple) bank account manager

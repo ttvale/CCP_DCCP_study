@@ -1,0 +1,1 @@
+This is a seed of a perl shell for Postgresql, It adds the ability to Import CSVs preprocessed by Text::CSV

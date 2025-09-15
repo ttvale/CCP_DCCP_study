@@ -1,0 +1,1 @@
+Send notifications from irssi events to your Android phone

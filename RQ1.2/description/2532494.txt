@@ -1,0 +1,1 @@
+Grails plugin created with the purpose of realizing simple excel imports (2003 and 2007 workbooks)

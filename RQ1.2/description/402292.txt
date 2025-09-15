@@ -1,0 +1,1 @@
+Exceptiontrap – Error Monitoring for Ruby on Rails

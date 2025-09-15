@@ -1,0 +1,1 @@
+A simple notary for everyday cryptographic problems (like deciding who does the dishes).

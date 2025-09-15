@@ -1,0 +1,47 @@
+This is the README for Cwallet, a no-nonsense Bitcoin paper wallet creator.
+
+This program will output each address and private key in Bitcoin’s base-58 format. It will also check to make sure that the private key correctly corresponds to the address by performing a multiplication in Elliptic Curve space. When converting between different bases, a reverse conversion is made to verify that the conversion went well. When inputting a private key, its hash portion is checked to make sure that it correctly corresponds to its content portion. Each conversion from a public key to an address is computed twice and both versions are compared for consistency; as is each conversion from a base-256 private key to Bitcoin’s base-58 private key. Pdflatex is used create the PDF file as it is a clean and well tested method of creating PDF documents. We use qrencode with the highest error correction level. A passphrase may be given to encrypt the private key with a one-time-pad derived from the passphrase. The program is written in C, the dependencies are minimal, with the core functions contained within less than 1000 lines of code. This makes it very easy to audit Cwallet for correctness and security.
+
+Dependencies:
+
+- libgtk2.0-dev (For gui version)
+- libdb4.8-dev (Only for the wallet.dat reading feature. You may need to manually change this if your wallet is created with a different version)
+- libssl-dev
+- qrencode
+- pdflatex (texlive)
+
+To compile Cwallet:
+
+./configure
+make
+
+To run the command line version of Cwallet:
+
+cd src
+./cwallet
+
+To run the graphical version of Cwallet:
+
+cd src
+./cwallet-gui
+
+Options for command line version:
+
+-w <wallet file> (defaults to ~/.bitcoin/wallet.dat)
+-d <output directory> (defaults to directory the program is called from)
+-a <address> (if not specified, all addresses are listed)
+-q (produce pdf file of private key QR coded)
+-o <output file> (file to save the pdf with QR encoding, defaults to <output directory>/<address>.pdf)
+-t <address type> (Integer specifying type of address prefix code. For example, Bitcoin uses 0, Namecoin uses 52)
+-r (generate a random private key)
+-p <passphrase>
+-k <private key>
+-e (encrypt the private key with the passphrase)
+-u (use uncompressed public keys)
+-s (create a small/minimal wallet)
+
+Example:
+
+./cwallet -rq
+
+Cwallet is released into the public domain (CC0), so feel to do what you want with it. For more details, see the LICENSE file.

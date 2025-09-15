@@ -1,0 +1,25 @@
+== About Easy Poll Server ==
+
+Easy Poll Server is a web application to create polls and answer polls.
+Besides filling in poll questions online the application also supports
+answering a poll in XML format by smart phone clients.
+
+An Android application is realized to process the XML format
+and display the questions on a smart phone. The smart phone user can enter
+her/his answers and post them.
+
+Easy Poll Server collects all answers. The poll initiator can close a poll
+and view the results.
+
+The project is subject of an assignment. Further the authors get familiar
+with Ruby on Rails and experiment with TDD.
+
+== Setup/Update ==
+
+* install Ruby on Rails (version 3.1.1)
+* git clone git@github.com:rknuus/EasyPollServer.git
+* cd into EasyPollServer directory
+* run <code>bundle</code> to install all required gems
+* run <code>rake db:migrate</code> to setup the DB
+* run <code>rails server</code> to start the development server
+* navigate to http://localhost:3000 in your browser to access the application

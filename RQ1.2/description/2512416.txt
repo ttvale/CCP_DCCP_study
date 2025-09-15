@@ -1,0 +1,1 @@
+Enables user friendly and powerful front end testing of web applications with minimum required effort to implement.

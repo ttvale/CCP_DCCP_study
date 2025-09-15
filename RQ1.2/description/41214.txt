@@ -1,0 +1,1 @@
+A lightweight browser extension that scrobbles the music you listen to on the web.

@@ -1,0 +1,1 @@
+Supports all three PS3 controllers via Bluetooth using the USB Host Shield from http://www.circuitsathome.com/ - This is the old version of the library. The newest one can be found at the following link: https://github.com/felis/USB_Host_Shield_2.0

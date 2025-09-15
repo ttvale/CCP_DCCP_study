@@ -1,0 +1,1 @@
+Takes a POM, a binary JAR, a sources JAR, an optional javadoc JAR, and generates from them a bundle which can be uploaded to Maven Central.

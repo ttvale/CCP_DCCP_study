@@ -1,0 +1,1 @@
+Simple battle algorithm based on names

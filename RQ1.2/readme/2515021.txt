@@ -1,0 +1,10 @@
+REQUIREMENTS
+============
+Install puppetlabs' firewall module: http://forge.puppetlabs.com/puppetlabs/firewall
+
+
+EXAMPLE
+=======
+iptables::hole { 'ssh':
+	port => 22,
+}

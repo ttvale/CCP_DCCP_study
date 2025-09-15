@@ -1,0 +1,1 @@
+A simple, lightweight, flexible and multi-purpose (X)HTML/XML Web scraper to be used in Python solutions.

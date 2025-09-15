@@ -1,0 +1,1 @@
+Scaffold Generator for Rails 3.1 and Sencha Extjs 4

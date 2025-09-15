@@ -1,0 +1,1 @@
+PHP wrapper class for simple interaction with SQL-based relation databases (MySQL,SQLite3,PostgreSQL)

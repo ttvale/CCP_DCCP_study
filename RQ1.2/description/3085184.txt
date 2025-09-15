@@ -1,0 +1,1 @@
+Mybatis migrations plugin to use with Gradle

@@ -1,0 +1,1 @@
+An autoscroll plugin designed with the will_paginate plugin in mind.

@@ -1,0 +1,1 @@
+Collection of useful ruby code snippets

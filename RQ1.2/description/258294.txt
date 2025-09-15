@@ -1,0 +1,1 @@
+fork of master branch from git://git.slackbuilds.org/slackbuilds.git (read more on wiki). If you want to fork/pull request do it only over master (the other branches are temporary and are always rebased on master). alternative interface https://cgit.ponce.cc/slackbuilds/

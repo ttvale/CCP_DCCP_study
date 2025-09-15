@@ -1,0 +1,1 @@
+Sample application showing sketching & collaboration using HTML5 canvas and short-interval data poll.

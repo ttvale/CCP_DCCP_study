@@ -1,0 +1,1 @@
+Dump and parse embedded certificates from Windows binaries

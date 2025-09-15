@@ -1,0 +1,1 @@
+Easier interface to create dashboard widgets in WordPress

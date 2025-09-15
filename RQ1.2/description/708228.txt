@@ -1,0 +1,1 @@
+Automation script that monitors an email account to perform various tasks. Mostly database lookups and email notifications, etc.

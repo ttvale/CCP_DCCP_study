@@ -1,0 +1,1 @@
+The Crysis of roguelikes - procedurally generated with rich 256-color Unicode graphics running in a terminal emulator

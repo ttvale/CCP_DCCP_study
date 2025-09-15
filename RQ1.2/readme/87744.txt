@@ -1,0 +1,72 @@
+tNETacle
+========
+
+Introduction
+------------
+
+tNETacle is an easy to use  Virtual Private Network (VPN) daemon built
+with efficiency and security in mind.
+
+Directories
+-----------
+
+    1. 'dat', contains a variety of data files.
+    2. 'doc', contains a few documentation.
+    3. 'include', contains all *.h files.
+    4. 'src', contains *.c files used by all versions.
+    5. 'util', contains files for utility programs, such as scripts.
+    6. 'sub', contains subdirectories for our libraries.
+    7. 'sys', contains subdirectories for OSs specific files.
+    8. 'sys/share', contains files shared by some OSs.
+    9. 'sys/unix', contains UNIX family (*BSD, Linux and Mac OS X)
+       specific files.
+   10. 'sys/wnt', contains Windows NT specific files.
+   11. 'client', contains subdirectories for our clients.
+   12. 'client/share', contains files shared by some clients.
+   13. 'client/qt', contains files for our Qt client.
+   14. 'client/tty', contains files for our curses client.
+   15. 'client/cli', contains files for our basic command line interface.
+
+Requirements
+------------
+
+Add the tNETacle default user (_tnetacle) with '/var/empty' as home,
+owned by root with permission 700, or the tNETacle will refuse to start.
+
+Install OpenSSL, Libevent-2.0.x (both _core and _openssl) and Yajl 2.x.
+If you are under Linux you might install libbsd too, but it's not mandatory.
+
+Depending of your system you should now install either tapcfg or libtuntap.
+libtuntap is prefered but not available on FreeBSD, Windows and Mac OS X.
+
+Install CMake, then run something like
+    mkdir build && cd build && cmake .. && make
+If something is wrong at this stage, drop us an email.
+
+Now you can edit dat/tNETacle.conf for your need and copy it to
+/etc/tNETacle.conf. If this directory is not the one you want, change it in
+/include/pathnames.h.
+
+Supported Systems
+-----------------
+
+   * Linux (tested on Debian, Ubuntu and Gentoo)
+   * OpenBSD
+   * NetBSD
+   * Mac OS X
+   * Windows NT (tested on Windows 7)
+
+Licence
+-------
+
+   * The tNETacle source code is distributed under the ISC license;
+   * The OpenSSL library is distributed under its own license,
+     check here for more details: <http://www.openssl.org/source/license.html>;
+   * The libevent library is distributed under the 3-clause BSD license;
+   * The libyajl is distributed under the ISC license;
+   * The libbsd library is distrbitued under BSD and MIT license,
+     check here for more details: <http://libbsd.freedesktop.org/wiki/#License>;
+   * The tapcfg library is distributed under the LGPL license,
+     check here for more details: <http://code.google.com/p/tapcfg/>;
+   * The libtuntap library is distributed under the ISC license;
+

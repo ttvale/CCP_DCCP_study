@@ -1,0 +1,1 @@
+Kohana administration module with built-in CRUD

@@ -1,0 +1,1 @@
+Some websites disallow pasting into password fields. This Safari extension fixes that misfeature.

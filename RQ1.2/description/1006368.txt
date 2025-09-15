@@ -1,0 +1,1 @@
+App to store encrypted login/password information about websites

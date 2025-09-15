@@ -1,0 +1,1 @@
+A sample webapp and acceptance test project that demonstrates some features of REST-driver.

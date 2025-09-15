@@ -1,0 +1,1 @@
+MonoTouch / Mono for Android compatible build for the Facebook C# SDK

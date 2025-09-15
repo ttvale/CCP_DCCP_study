@@ -1,0 +1,1 @@
+Kodak image sensor component with sensor driver, sensor control and basic image processing

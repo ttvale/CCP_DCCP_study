@@ -1,0 +1,1 @@
+Blur content on the page to quickly gauge proximity and alignment

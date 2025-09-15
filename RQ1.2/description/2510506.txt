@@ -1,0 +1,1 @@
+Repository for my progress on Learn Ruby Hard Way book excersises

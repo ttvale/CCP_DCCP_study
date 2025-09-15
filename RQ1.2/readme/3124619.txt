@@ -1,0 +1,45 @@
+About
+=====
+
+I'm making a stock market game. It's open source and licensed under a Creative Commons Attribution 3.0 Unported License.
+
+Main.java is the only file at the moment because I haven't seen the need for more (yet). Over the next month the stock market simulator will have most of its features done and hopefully the gui (but don't count on the gui part).
+
+
+Recent News
+===========
+
+I added a very early version of the GUI so people can see how I'm going to do it (to some degree). If you would like to run it with the one-quarter-finished gui and you don't want to look at the code, run it at the command line like this: "java -jar stock-market-v0.5.jar showgui"
+
+
+Version Changes
+===============
+
+For more detailed changes, see changelog.txt
+
+Changes this version (v0.4):
+ + Added more companies
+ + Added two more rumors
+ + Better fluctuations
+ + Company traits (i.e. steady or unsteady)
+ + Added chance of buy backs
+ * Made it so players can't by stock worth $0.00 for obvious reasons
+ * Made it easier to add more companies to the exchange
+ * Tweaked how share prices are managed (now done with an array)
+ * Split code into three classes
+ * Fixed buyStock so that it actually changes how much money the player has
+ * Fixed buyStock and sellStock so you can go back to the main menu
+ * Fixed bug that doesn't show rumors when viewing the main menu more than once per day
+ * Modified myShares to only show companies that the player has shares in
+ * Modified how stock prices are listed
+
+Features in next version (v0.5):
+ * Some form of GUI
+
+Features in future versions:
+ * Possibility for companies to go completely bankrupt and not listed in the exchange
+ * (Maybe) Dividends paid to the user every X days/months/years
+ * User can save their progress and high score
+ * More loan sharks with different intreats rates
+ * More ways to lose
+ * (More features as I think of them)

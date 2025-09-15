@@ -1,0 +1,1 @@
+libomegle is a little C++ (or python with provided bindings) library for interfacing with the 'Omegle' random-pairing instant messaging service.

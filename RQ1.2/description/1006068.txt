@@ -1,0 +1,1 @@
+A simple vim bundle for working with gyp files.

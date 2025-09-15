@@ -1,0 +1,1 @@
+Scrubr contains a set of utilities to parse a payload against a definition. It can be used on it's own or it can be used as middleware for Connect.

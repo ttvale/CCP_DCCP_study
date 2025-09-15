@@ -1,0 +1,1 @@
+simulates media queries to run javascript code

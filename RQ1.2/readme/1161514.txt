@@ -1,0 +1,97 @@
+<code>
+  ABANDONED PROJECT!  I DON'T RECOMMEND YOU USE THIS, AT LEAST MY BRANCH, AS I DON'T MAINTAIN IT.
+</code>
+
+
+h1. Flexible Admin
+
+h3. Reason for being
+
+Flexible Admin is a Rails 3.1 Admin tool to generate an attractive data admin to handle login, data CRUD, search and sort while leaving an easy way to customize the particular needs of an app's custom admin functions.
+
+I have found myself loving other admins for Rails, but many projects need enough admin customization that the value of a engines/magic was offset by the difficulty of customizing.
+
+h4. Depends On
+
+# Rails 3.1+
+
+h4. Basically needs
+
+# SQL database / ActiveRecord.  Most of the cool stuff involves intuiting your admin needs from your sql column names/typues
+
+h4. Customized for
+
+# Paperclip file attachments
+
+h4. Distinctions from other Rails admin gems
+
+Flexible admin generates controller and view files for every model that you are managing, then invites you to get your hands dirty for the customizations of the admin.
+
+It keeps the amount of generated code down by leveraging these gems/libraries to do the heavy lifting
+
+# Devise for login
+# Bootstrap for style
+# inherited_resources for rest controllers
+# Database Tables (js) for table searching and sorting
+
+h4. Shortcomings from other Rails admins gems
+
+# Does not natively handle huge amounts of records for viewing.  You would need to implement handling a large number of records for searching/sorting yourself.  (Because Flexible Admin renders every record of a certain model, and then Datatables js presents just 50 at a time that is paginated/filterable/sortable with javascript)
+# Because this is a generator, not an engine, the resource generator might become less effective (=breaks more) as you admin gets more and more customized.  This is because its replacing/inserting code that may have modified.
+
+h2. Getting Started
+
+In your Gemfile
+
+<code>gem 'flexible_admin'</code>
+
+run <code>bundle install</code>
+
+run <code>rails generate flexible_admin:install</code>
+
+run <code>rake db:migrate</code> to create admin_users tables
+
+h2. Adding models
+
+run <code>rails generate flexible_admin Post</code> to generate a admin/posts controller, /admin/posts route, and add Posts to the admin navigation
+
+h2. Adding devise (authentication)
+
+run <code>rails generate flexible_admin:devise</code> to generate devise, an admin_user, and require login for the admin.
+
+h2. Adding WYSIWYG editor
+
+run <code>rails generate flexible_admin:ckeditor</code> to install and generate ckeditor.  That will turn all fields named Body and Description into a text editor.  It also supports pictures and file attachments in the body and configures ckeditor to use amazon_s3 to store the pic/uploads.
+
+The pics/attachment uploads for ckeditor depend on paperclip for file uploads.  If you use another file attachment handler, install ckeditor yourself from the gem: https://github.com/galetahub/ckeditor
+
+h2. Editing views and controllers
+
+Edit views directly in the app/views/admin, app/views/layouts/admin and app/views/controllers/admin
+
+h3. Dashboard
+
+You can (and should) edit the /admin view at app/views/admin/index.html.  It starts out blank.
+
+h3. Sidebar
+
+Every view file does or can have a <code>content_for :sidebar</code> block where you can content for the sidebar
+
+
+h2. Testing
+
+h3. Gem tests
+
+Flexible Admin as a gem is tested with rspec.  The specs cover that the generator generates the right files.  It does not test that you can actually admin in anything after the generator runs.
+
+h3. Tests needed
+
+If possible, my dream tests would run the admin generator on a dummy_app, then step into the dummy app and run a new test suite on how that app behaves after the generator has been run.  If anyone knows how to do that get in touch through github, email or the Issues section.
+
+h4. Working with the tests gotchas
+
+The generator specs really on a dummy Rails app in the spec/dummy folder.  That dummy app has some models, a schema, and a db/test.sqlite3 that matter for the tests.  You might have to dig into those if you are having problems modding the specs.  One of the generators reads the models and the database columns to generate the admin forms, and so the dummy app has those files to test off it.
+
+h2. License
+
+This project rocks and uses MIT-LICENSE.

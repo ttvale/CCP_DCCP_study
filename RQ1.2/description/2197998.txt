@@ -1,0 +1,1 @@
+HBase-Writer is an extension to the Heritrix open source crawler written by the Internet Archive (http://crawler.archive.org/) that enables it to store crawled content directly into HBase tables.

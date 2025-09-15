@@ -1,0 +1,1 @@
+A library of objects and routines which will allow you to interface with i2c serial eeprom devices.

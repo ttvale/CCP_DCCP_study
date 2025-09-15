@@ -1,0 +1,4 @@
+The theme template of my blog. I named it simy for my love sunnist.
+
+
+![preview](http://raw.github.com/mygoare/simy/master/preview.jpg)

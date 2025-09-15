@@ -1,0 +1,1 @@
+stupid football manager in ruby

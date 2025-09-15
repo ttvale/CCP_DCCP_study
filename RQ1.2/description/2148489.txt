@@ -1,0 +1,1 @@
+Contains Verify - fast and extensible class for simple method arguments asserts. Example: Verify.Args(new { param1, param2 }).NotNull()

@@ -1,0 +1,1 @@
+Make Wolves attack when you use Projectiles! Works in Mob Arena too!

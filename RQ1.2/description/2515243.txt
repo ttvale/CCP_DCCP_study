@@ -1,0 +1,1 @@
+Kde Plasma plasmoid that plays a slideshow of your Facebook pics.

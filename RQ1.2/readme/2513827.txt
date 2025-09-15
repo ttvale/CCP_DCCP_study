@@ -1,0 +1,1 @@
+Example of using PIT mutation testing in maven and gradle builds

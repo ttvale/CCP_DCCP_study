@@ -1,0 +1,1 @@
+Compute community variograms, carry out null modeling, and and graph results

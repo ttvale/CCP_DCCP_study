@@ -1,0 +1,1 @@
+This plugin packages stock github-api library

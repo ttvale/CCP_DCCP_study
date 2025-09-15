@@ -1,0 +1,1 @@
+Library to convert SVG paths to THREE.Paths

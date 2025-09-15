@@ -1,0 +1,1 @@
+A basic Flask app template using MongoEngine

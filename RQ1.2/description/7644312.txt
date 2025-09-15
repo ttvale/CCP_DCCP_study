@@ -1,0 +1,1 @@
+Working through some stuff in Haskell. Dangerously close to writing my own monad tutorial. They're like a burrito, man.

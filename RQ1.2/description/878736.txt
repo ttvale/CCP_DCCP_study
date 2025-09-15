@@ -1,0 +1,1 @@
+An image gallery application for Django framework

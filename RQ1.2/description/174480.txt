@@ -1,0 +1,1 @@
+Easily manage the ad codes that need to appear in your templates

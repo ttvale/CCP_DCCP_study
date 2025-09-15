@@ -1,0 +1,1 @@
+A metagenomic and isolate assembly and analysis pipeline built with AMOS

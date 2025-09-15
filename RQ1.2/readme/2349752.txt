@@ -1,0 +1,78 @@
+Bart ten Brinke - Nedap healthcare - 2008
+
+-----------
+Description
+-----------
+As I found other Rails background project to unstable, complex or too memory hogging, I decided to make this.
+WorkerQueue can execute any task, handle large amounts of data, perform tasks on a separate machine and execute
+tasks either in parallel or in sequence. Got Work?
+
+
+-----------
+Installation
+-----------
+
+Clone the WorkerQueue repostitory
+  git clone git://github.com/barttenbrinke/worker_queue.git vendor/plugins/worker_queue
+
+Switch to the 1_0_stable branch if you don't like living on the edge.
+  cd vendor/plugins/worker_queue
+  git branch 1_0_stable
+  
+Use the following migration to get the show on the road:
+  ruby script/generate worker_queue_migration
+
+
+-----------
+Usage
+-----------
+Whenever you want to background a task, just do the following:
+  work = WorkerQueue::WorkerQueueItem.new
+  work.class_name     = 'Someclass'
+  work.method_name    = 'some_method'
+  work.argument_hash  = {:monkey => :tail}
+  work.data    = '1234567890'
+  work.save!
+
+This will be picked up by the worker when the following command is called:
+  WorkerQueue.work
+  
+  Which in turn will call:
+  Someclass.some_method({:monkey => :tail, :data => '1234567890')
+    
+It is advised too set up a cronjob that runs the supplied rake task:
+  rake worker_queue:work
+  
+Let this run as frequently as possible. WorkerQueue will have no problem if it is instantiated
+multiple times.
+
+Note that WorkerQueue will run only one task of a single class at the same time.
+So if you want to queue and execute the items one after the other, make sure all items are set
+to the same class.
+This is also very usefull for things like xml files that need to be handled in the order in
+which they were uploaded.
+
+If you just want to execute items in the background, supply a unique classname for each item and
+WorkerQueue will try its best to complete them as fast as possible.
+
+After the WorkerQueue has executed a task successfully, it will clear the binary (if any) and move on
+to the next item. WorkerQueue has no problem with multiple instances of it being run a the same time.
+
+To ease defining and adding worker_queue items, we introduce the worker_queue item loaders, which 
+can be created using:
+  ruby script/generate worker_queue_item_loader do_something
+
+Such loaders can be automatically loaded and executed (by cronjobs) using:
+  rake worker_queue:load_and_work
+
+For more examples, see the USAGE file
+
+
+-----------
+Notes
+-----------
+* If you want to store big files in the binary_data field, make sure you MYSQL config accepts
+inserts that are big enough.
+
+* The tasks that get executed expect a Class.method(args_hash) that returns true
+  or false.

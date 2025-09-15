@@ -1,0 +1,1 @@
+Simple-to-use C/C++ library to play PC-98 PMD chiptunes

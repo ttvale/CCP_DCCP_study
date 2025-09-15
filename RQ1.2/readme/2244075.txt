@@ -1,0 +1,38 @@
+A simple Ruby DNS server for EventMachine. Supports the following record
+types: SOA, NS, MX, A, AAAA, CNAME, TXT and SRV.
+
+required gems:
+
+  daemons
+  eventmachine
+  dnsruby
+
+optional gems:
+
+  directory_watcher
+
+  Automaticly reload zone files and add new zone files without having to 
+  restart em-dns-server
+
+  geoip
+
+  Simple location based support can be enabled by downloading the latest
+  geoip data by running "em-dns-server -u".  With geoip support enabled
+  em-dns-server will return the closest IP result to the user when
+  multiple matches are available.
+
+usage:
+
+  em-dns-server start|stop|run|status
+
+  supply the ZONE_FILES environment variable to specify your zones
+  directory...
+
+  ZONE_FILES=/path/to/zones/ em-dns-server start
+
+test:
+
+  dig @nameserver.com example.com
+
+  If geoip support is enabled the ip address should change based
+  on clients location

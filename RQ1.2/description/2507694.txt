@@ -1,0 +1,1 @@
+(perl) - Make your module be a dummy - optionally

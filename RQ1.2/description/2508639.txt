@@ -1,0 +1,1 @@
+Refactor of IBM's (tm) hadoop filesystem to work with fuse4j

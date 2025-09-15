@@ -1,0 +1,1 @@
+Erlang xslt processor with pool and xml serializer (from lists and proplists).

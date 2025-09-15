@@ -1,0 +1,1 @@
+A new widget to be used with plone.app.relationfield

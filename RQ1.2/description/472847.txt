@@ -1,0 +1,1 @@
+Pomodoro technique timer with a lean and usable interface.

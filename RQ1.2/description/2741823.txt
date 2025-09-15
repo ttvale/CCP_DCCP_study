@@ -1,0 +1,1 @@
+Simplistic memory-only sync adapter for Backbone. It's a drop-in replacement for Backbone.Sync() to handle saving to memory.  Use for testing or volatile data that need no persistence.

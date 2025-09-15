@@ -1,0 +1,1 @@
+A module to install Gosa, an LDAP management tool

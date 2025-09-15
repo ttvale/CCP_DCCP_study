@@ -1,0 +1,1 @@
+Authentication library used in the auth-client-demo

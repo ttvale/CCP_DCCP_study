@@ -1,0 +1,13 @@
+Use Github's post-receive hooks to comment on or resolve JIRA issues.
+
+To use:
+- copy config/jira-TEMPLATE.yml to config/jira.yml and put your JIRA credentials in this file.
+- deploy to a server that accepts incoming POSTs from github
+- on your github repository, go to Admin > Service Hooks > Post-Receive URLs, and put your url in.
+- commit to your repository
+
+Triggers:
+
+In your comment include "(resolve[sd]?|fixe?[sd]?) PROJECT-241" to resolve PROJECT-241.
+For any issue key (i.e. PROJECT-241) in your commit message, the message will be attached to the bug as a comment.
+

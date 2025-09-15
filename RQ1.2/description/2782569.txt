@@ -1,0 +1,1 @@
+CustomEvent is a library for progamming JavaScript in an event-driven manner.

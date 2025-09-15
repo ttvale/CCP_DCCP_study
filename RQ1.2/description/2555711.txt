@@ -1,0 +1,1 @@
+The new version of wikigeolinks, a web application that lets you explore interactively how the georeferenced articles of the Wikipedia are connected. This new version is built with Leaflet.

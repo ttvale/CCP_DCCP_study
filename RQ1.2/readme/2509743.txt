@@ -1,0 +1,1 @@
+Old repo compares different libraries to compress assets.

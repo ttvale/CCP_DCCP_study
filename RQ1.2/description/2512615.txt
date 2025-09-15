@@ -1,0 +1,1 @@
+Vim command to open a file anywhere on the system with just a few hints

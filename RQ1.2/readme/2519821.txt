@@ -1,0 +1,1 @@
+This project is to create a grammar that will be used with Ian Holmes's xrate software. It will annotate genome sequences in a phylogenetic tree. See "How To Run" and "howtorunfigure" for an overview of what is in this repository.

@@ -1,0 +1,1 @@
+Qgis plugins useful in archaeology, optimized for ArcheOS GNU/Linux distribution.

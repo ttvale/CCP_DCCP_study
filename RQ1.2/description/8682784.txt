@@ -1,0 +1,1 @@
+:exclamation: This is a read-only mirror of the CRAN R package repository.  StressStrength — Computation and Estimation of Reliability of Stress-Strength Models  

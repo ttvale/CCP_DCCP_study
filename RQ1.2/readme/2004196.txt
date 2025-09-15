@@ -1,0 +1,138 @@
+= rails-translate-models
+
+Minimal implementation of model translations for Rails 3.x having a translations table for each model, based on translated_attributes.
+
+== Installation
+
+Add it to your Gemfile:
+
+  gem 'rails-translate-models'
+
+== Setting up
+
+All examples provided will be based on an article model with title and body as translated attributes.
+
+<b>Migration</b>
+
+For each model you have to create a table for the translations, you can do it on model migration, for example:
+
+  class CreateArticles < ActiveRecord::Migration
+    def change
+      create_table :articles do |t|
+        t.timestamps
+      end
+
+      create_table :article_translations do |t|
+        t.references :article
+        t.string     :language_code
+        t.string     :title
+        t.text       :body
+        t.timestamps
+      end
+
+      add_index :article_translations, [:article_id, :language_code], :unique => true
+    end
+  end
+
+<b>Specify translated attributes in model</b>
+
+  class Article < ActiveRecord::Base
+    has_translations :title, :body
+  end
+
+== Basic usage
+
+Self-explained usage given an article with two translations (en / es)
+
+Retrieve data, english as current language:
+
+  a = Article.first
+  a.title
+  => "example title"
+
+Change language and you'll get in spanish
+
+  I18n.locale = :es
+  a.title
+  => "título ejemplo"
+
+Or you can also get any other language using in_language_code for each attribute
+
+  a.title_in_en
+  => "example title"
+
+Note that if the current language doesn't have a translation it always tries to fallback to default locale (I18n.default_locale) then returns nil if it's also not available.
+
+To create a new object.
+
+  a = Article.new
+  a.title = "example title"
+  a.title_in_es = "título ejemplo"
+  a.save
+
+When translation associated record is destroyed all translations are destroyed as well
+
+== Model options
+
+All models with 'has_translations' have 'has_many :model_translations' and 'default_scope :include => :model_translations' so you can take advantage of it and make use of some scopes, for example:
+
+  class Article < ActiveRecord::Base
+    has_translations :title, :body
+
+    scope :ordered_by_title, :order => 'article_translations.title'
+    scope :with_title, lambda { |title| where("article_translations.title = ?", title) }
+  end
+
+You can also make use of validations, for example:
+
+  class Article < ActiveRecord::Base
+    has_translations :title, :body
+    validates_presence_of :title
+  end
+
+Note all models with 'has_translations' already have the validations for object_id and language_code and also validate the uniqueness of language code for each object_id.
+
+== Form example
+
+Here's a simple example to make a form to edit the example article model in all languages.
+
+form.html.erb
+
+  <%= form_for @article do |f| %>
+    <% I18n.available_locales.each do |locale| %>
+      <%= render "form_translations", {:f => f, :locale => locale } %>
+    <% end %>
+  <% end %>
+
+_form_translations.html.erb partial
+
+  <label for='article_title_in_<%= locale %>'>Title</label><br />
+  <%= f.text_field "title_in_#{locale}".to_sym %>
+
+  <label for='article_body_in_<%= locale %>'>Content</label><br />
+  <%= f.text_area "body_in_#{locale}".to_sym %>
+
+== TODO
+
+It's an initial implementation for a work in progress project, it's just an initial release but does the basic stuff I need. Help is welcome ;)
+
+* translations models generators
+* fallback as an option
+* complete tests? (now there's some basic testing with minitest)
+
+== Similar projects
+
+Not convinced or need a different approach? Try out:
+
+* has_translations (https://github.com/dmitry/has_translations)
+* translated_attributes (https://github.com/grosser/translated_attributes)
+* rails-translate (https://github.com/fesplugas/rails-translate)
+* globalize2 (https://github.com/joshmh/globalize2)
+
+== Other i18n related projects
+
+If you also need to translate routes check out: https://github.com/francesc/rails-translate-routes
+
+
+
+

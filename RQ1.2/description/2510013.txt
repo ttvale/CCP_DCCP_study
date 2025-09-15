@@ -1,0 +1,1 @@
+An attempt to make the JIRA REST API accessible in PowerShell. Targeting mainly Jira 7.x

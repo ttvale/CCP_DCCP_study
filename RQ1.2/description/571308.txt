@@ -1,0 +1,1 @@
+A cross-platform clone of the popular Lazy Newb Pack for Dwarf Fortress.

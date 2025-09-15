@@ -1,0 +1,11 @@
+h1. BetterSession module for Play!
+
+BetterSession improves the current Play! session mechanism by making the session unique in the *Server-side*.
+
+h2. Features
+
+* Makes the session unique.
+* Checks the session integrity with encryption of the data.
+* Stores the date of creation of the session.
+
+See "full documentation":https://github.com/kmkase/bettersession/blob/master/documentation/manual/home.textile

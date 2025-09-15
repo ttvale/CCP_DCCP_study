@@ -1,0 +1,1 @@
+Some snippets of statistics and R

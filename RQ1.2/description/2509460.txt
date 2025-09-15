@@ -1,0 +1,1 @@
+A simple java app that gets the most recent exchange rates for TRY from TCMB 

@@ -1,0 +1,132 @@
+= Simple Attachments
+
+Simple Attachments is a plugin for Ruby on Rails 3 which implements complex solution for working with file attachments.
+
+== Requirements
+
+Plugin contains some CSS and JavaScript code, so Asset Pipeline should be switched on (by default).
+Also you need {jQuery library}[http://jquery.com/] to make JavaScript work.
+
+== Installation
+
+Add this to your Gemfile and run the +bundle+ command.
+
+  gem 'simple_attachments'
+
+== Getting Started
+
+Let's say you have a +User+ which has one +Avatar+ and many +Document+.
+The avatar can be change from user edit form. And the avatar data updates only after submiting the form.
+The documents are shown on the same page. They can be managed separately with auto saving all changes in background.
+You can find this app in +test+.
+
+=== Migrations
+
+  class CreateAvatars < ActiveRecord::Migration
+    def change
+      create_table :avatars do |t|
+        t.references :avatar, :null => true
+        t.attachment
+      end
+    end
+  end
+
+  class CreateDocuments < ActiveRecord::Migration
+    def change
+      create_table :documents do |t|
+        t.references :avatar, :null => true
+        t.attachment
+      end
+    end
+  end
+
+*WARNING*: it's important to permit null value for container.
+
+=== Routes
+
+  resources :avatars, :only => [:create, :show, :destroy]
+  resources :documents, :only => [:create, :show, :destroy]
+
+=== Models
+
+  class User < ActiveRecord::Base
+    has_one_attachment :avatar, :dependent => :destroy
+    has_many_attachments :books, :dependent => :destroy
+  end
+
+  class Avatar < ActiveRecord::Base
+    attached_to :user
+    validates_mimetype %w(image/png image/gif image/jpeg)
+    validates_filesize :less_than_or_equal_to => 5e4
+  end
+
+  class Document < ActiveRecord::Base
+    attached_to :user
+    validates_mimetype %w(application/pdf)
+    validates_filesize :less_than_or_equal_to => 20e6
+  end
+
+You can use a lot of options here. Just like with +has_one+, +has_many+ and +belongs_to+.
+
+=== Controllers
+
+  class AvatarsController < ApplicationController
+    attachment_controller
+  end
+
+  class DocumentsController < ApplicationController
+    attachment_controller
+  end
+
+=== View
+
+  <%= form_for @user do |f| %>
+    <%= f.file :avatar, :auto_associate => false %>
+  <% end %>
+
+  <%= files @user, :documents %>
+
+*WARNING*: you also need +csrf_meta_tags+ in your layout to work with +protect_from_forgery+ filter.
+
+=== JavaScript
+
+Plugin doesn't provide any implementation of the file appearance.
+Instead it triggers events, which are easy to handle.
+
+  //= require_self
+  //= require simple_attachments
+
+  $(function() {
+    // Div is loaded and engine is ready.
+    $(".simple_attachments_div").bind("init", function() {
+      // You can add your own init features here.
+    });
+    // New field was created.
+    // Field is a div displaying attachment information.
+    $(".simple_attachments_div").bind("new_field", function(event, field) {
+      // You have to set field in the right place and add binds.
+      field.appendTo(this);
+      // Attachment was loaded
+      // data contains attachment properties and some little support variables
+      field.bind("loaded", function(event, data) {
+        // You have to create and/or set field content here
+        data.destroy_link.appendTo(this);
+        data.attachment_link.html(data.filename).appendTo(this);
+      });
+      // Attachment upload was failed
+      // errors is an array of strings
+      field.bind("failed", function(event, errors) {
+        // You can do something here before field would be deleted
+      });
+    });
+  });
+
+*WARNING*: +simple_attachments.js+ should be required after binds.
+
+=== CSS
+
++simple_attachments.css+ contains some code to decorate default file input. So better require it, but it's not so necessary.
+
+---
+
+(c) 2012 Tsokurov Alex <{me@ximik.net}[mailto:me@ximik.net]>, released under the MIT license

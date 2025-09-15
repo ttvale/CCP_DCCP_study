@@ -1,0 +1,13 @@
+= redmine_project_access
+
+Redmine plugin that allows some users/groups see non-public project.
+This users can see all non private issues.
+
+= install
+
+put to vendor/plugins/
+and run: rake db:migrate_plugins
+
+= configure
+
+Go to project modules and enable.

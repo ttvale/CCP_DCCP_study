@@ -1,0 +1,1 @@
+The itunes store search api states that large applications should use cache architecture.  This is my simple implementation of one such server using mongodb and node.js

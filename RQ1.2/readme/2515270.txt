@@ -1,0 +1,12 @@
+
+
+
+*********** README *********************************
+
+   Validation suite for MD codes running established force fields
+
+
+****************************************************
+Added users: mfctest
+
+

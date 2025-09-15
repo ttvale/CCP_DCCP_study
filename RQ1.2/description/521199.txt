@@ -1,0 +1,1 @@
+Functions that assist in working with strings. Node.js

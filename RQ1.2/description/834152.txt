@@ -1,0 +1,1 @@
+(Not maintained) Short and Sweet UI interactions in JS and Coffee

@@ -1,0 +1,1 @@
+Node.js Version of MMSG for Chinese Word Segmentation

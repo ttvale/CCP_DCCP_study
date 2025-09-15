@@ -1,0 +1,1 @@
+Looks up warranty Information based on dell service tags

@@ -1,0 +1,1 @@
+A shared space for working on an open standard around food and food business related data which started as a Foodtree project.

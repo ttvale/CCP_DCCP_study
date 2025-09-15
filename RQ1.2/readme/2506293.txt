@@ -1,0 +1,64 @@
+== NoAgenda Attack Vector Dashboard {<img src="https://secure.travis-ci.org/tardate/noagenda_dashboard.png" />}[http://travis-ci.org/tardate/noagenda_dashboard]
+
+
+This is the complete source for the
+link:http://noagendadashboard.com
+web application.
+
+Some technologies it demonstrates in combination:
+* {Rails 3.0.10}[http://www.rubyonrails.org/] (probably updating to 3.1 soon - just need to make sure I can host it without issues first)
+* {InheritedResources}[https://github.com/josevalim/inherited_resources] and {haml}[http://haml-lang.com/] for super thin controllers and views
+* {elycharts}[http://elycharts.com/] (with {jQuery}[http://jquery.com/] and {Raphaël}[http://raphaeljs.com/])
+* iPad-friendly fixed-layout using {iScroll}[http://cubiq.org/iscroll-4]
+* web scraping with {Nokogiri}[http://nokogiri.org/]
+* Test-first with {RSpec}[http://relishapp.com/rspec]
+* iPhone/Android support using {Web 2.0 Touch}[https://github.com/web20boom/Web-2.0-Touch]
+* posting updates to twitter using the {grackle gem}[https://github.com/hayesdavis/grackle]
+
+
+== The NoAgenda Show?
+
+No Agenda is a podcast hosted by Adam Curry and John C. Dvorak twice a week
+on Thursday and Sunday in the morning. The show deconstructs the news and media memes.
+It accepts no advertisers, instead being directly supported and promoted by the listeners.
+
+== Translation/Internationalisation
+
+Currently the site is all in English, but we can support other languages if someone can help with the translations.
+
+All the translatable text is in the file:
+link:noagenda_dashboard/blob/master/config/locales/en.yml
+
+To provide a tranlsation for a given language, just grab a copy of this file, rename is <language-code>.yml,
+translate all the definitions and send it/push it back. Please keep it in UTF-8 character set though.
+
+== Enabling Twitter Notifications
+
+The site will tweet when new shows are loaded. It requires twitter oauth settings to be set
+with these environment variables:
+* navd_consumer_key
+* navd_consumer_secret
+* navd_token
+* navd_token_secret
+
+Set these locally as normal environment variables e.g.:
+
+  $ export navd_consumer_key="the_consumer_key_from_twitter"
+
+To set these on heroku:
+
+  $ heroku config:add navd_consumer_key=".." navd_consumer_secret=".." navd_token=".." navd_token_secret=".."
+
+
+== Contributing
+
+Yes please! If you have any ideas, or can help with design, development or translation, you are most welcome.
+
+If you are familiar with the github process, we're good to go:
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Do your stuff (adding tests where appropriate)
+* Commit and push until you are happy with your contribution
+* Send me a pull request on github.

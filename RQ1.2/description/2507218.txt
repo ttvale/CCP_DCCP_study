@@ -1,0 +1,1 @@
+Simple Web-App to determine the best games to play at a LAN Party.

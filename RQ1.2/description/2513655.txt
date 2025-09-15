@@ -1,0 +1,1 @@
+Parse and extract data from Tracker files in the browser

@@ -1,0 +1,1 @@
+A small javascript bookmarklet to replace video.xin.msn.com's Flash Player with the HTML5 <video /> tag

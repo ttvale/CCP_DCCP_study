@@ -1,0 +1,24 @@
+
+jsArmyCalc
+
+javascript army calculator based on TWR files
+part of the ArmyCalc project
+Copyright 2011 Franciszek Szczepan Wawrzak. All rights reserved.
+released under terms of Simplified BSD License
+
+developer: Franciszek Szczepan Wawrzak <frank@wawrzak.com>
+project website: http://armycalc.net/
+
+
+FILES IN THIS PACKAGE
+
+src/ - JavaScript sources
+css/ - styles and images source files
+web/ - output directory containing merged and packed scripts and stylesheets
+examples/ - few twrs to work with
+tests/ - test suits (you can navigate your browser to this folder to view example rulesets in calculator)
+Makefile - run make to merge and compress js's and css's
+README - this file
+LICENSE - simplified BSD licence
+.project - eclipse customisation
+

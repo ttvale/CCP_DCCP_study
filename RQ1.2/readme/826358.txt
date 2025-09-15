@@ -1,0 +1,73 @@
+Author: Dan Bradley <dan@hep.wisc.edu>
+
+This repository is for integration work required to support access to
+CVMFS in parrot.  All modifications and additions in this repository
+made to code in cvmfs are subject to the license in cvmfs/COPYING
+(BSD).  All modifications and additions in this repository made to
+code in cctools are subject to the license in cctools/COPYING (GPLv2).
+
+The CVMFS and parrot code was checked out from the project
+subversion repositories and was copied into the 'upstream' branch.
+The following versions are currently used:
+
+cvmfs trunk r3371
+cctools trunk r2354
+
+To see the development that has been done, compare the master
+branch to the upstream branch:
+
+git diff upstream..master -- cctools
+git diff upstream..master -- cvmfs
+
+The code in cvmfs/cvmfs/src/cvmfs_common.cc is intended to
+be shared between the FUSE module and libcvmfs.  However,
+to avoid making large changes to the current CVMFS trunk,
+making cvmfs.cc depend on cvmfs_common.cc has been postponed
+for the future.  To see the small changes that were made
+to code copied from cvmfs.cc into cvmfs_common.cc:
+
+diff -up cvmfs/cvmfs/src/cvmfs.cc cvmfs/cvmfs/src/cvmfs_common.cc
+
+
+To build:
+
+cd cvmfs
+
+cd jemalloc
+tar xvjf jemalloc-2.2.1.tar.bz2
+mkdir -p src
+mv jemalloc-2.2.1/* src/
+patch -p0 -i jemalloc-2.2.1-64bit_literals.patch
+cd ..
+
+cd libcurl
+tar xvzf curl-7.21.3.tar.gz
+mv curl-7.21.3/* src/
+cd ..
+
+cd libfuse
+tar xvzf fuse-2.8.4.tar.gz
+mv fuse-2.8.4/* src/
+patch -p0 -i fuse-drainout.patch
+cd ..
+
+cd c-ares
+tar xvzf c-ares-1.7.5.tar.gz
+mv c-ares-1.7.5/* src/
+cd ..
+
+aclocal && autoheader && autoconf && automake
+./configure --disable-server --enable-sqlite3-builtin --enable-libcurl-builtin
+make
+
+cd ../cctools
+./configure --without-system-sand --without-system-allpairs --without-system-wavefront --without-system-makeflow --with-cvmfs-path `pwd`/../cvmfs
+make
+
+
+To test:
+
+. test/setup.sh
+cd cctools/parrot/src
+./parrot_run ls -l /cvmfs/cms.hep.wisc.edu
+./parrot_run ls -l /cvmfs/cms.cern.ch

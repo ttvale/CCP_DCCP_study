@@ -1,0 +1,1 @@
+Yet another cangjie input method for osx

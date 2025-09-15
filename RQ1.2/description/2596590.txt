@@ -1,0 +1,1 @@
+Providing consistent APIs for interacting with your DirecTV Set-Top-Box (STB), because someone had to do it.

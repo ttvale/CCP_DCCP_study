@@ -1,0 +1,1 @@
+Proof of concept - define Minecraft-like block geometry through mathematical functions in XNA using IronPython

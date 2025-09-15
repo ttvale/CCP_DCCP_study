@@ -1,0 +1,11 @@
+Couple of irssi scripts
+- choice.pl
+	- Random chooser script
+	- Usage: !choose option1, option2, optionN
+	- Add channels in the script
+
+
+For suggestions and queries, email hiromi[at]neesan[dot]org
+or contact Hiromi in #isoani on irc.rizon.net
+
+Feel free to improve on the code.

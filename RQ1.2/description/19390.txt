@@ -1,0 +1,1 @@
+Bypassing Mac App Sandbox using DYLD_INSERT_LIBRARIES (LD_PRELOAD)

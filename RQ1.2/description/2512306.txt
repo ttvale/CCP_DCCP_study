@@ -1,0 +1,1 @@
+A game which is a combination of a Fruit/Slot Machine and a Puzzle game where matching patterns is required.

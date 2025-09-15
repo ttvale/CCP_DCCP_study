@@ -1,0 +1,1 @@
+The git-scm.com website. Note that this repository is only for the website; issues with git itself should go to https://git-scm.com/community.

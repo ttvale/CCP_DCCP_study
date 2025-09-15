@@ -1,0 +1,1 @@
+the well-known eight queens problem coded in JAVA.

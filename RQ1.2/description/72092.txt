@@ -1,0 +1,1 @@
+Common utilities between ligGDX, animation4j and Artemis

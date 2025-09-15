@@ -1,0 +1,1 @@
+This module caches the common Zend\* classes used by your application into a single cache file, reducing reliance on the autoloader. This greatly improves the performance of ZF2.

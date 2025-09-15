@@ -1,0 +1,1 @@
+Allow to drop tables before syncdb

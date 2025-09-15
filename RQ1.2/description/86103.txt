@@ -1,0 +1,1 @@
+The idea behind this project is to allow Cocos2D and Box2D to be easily compiled and packaged into a compact and easily embeddable form.

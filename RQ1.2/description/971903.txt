@@ -1,0 +1,1 @@
+Little ruby gem for parsing release text files from Diamond Comics

@@ -1,0 +1,1 @@
+Little tool to scan files on disk and manage collections

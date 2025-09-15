@@ -1,0 +1,1 @@
+Checks a wikipedia article's Munroe Score in accordance with Munroe's Law

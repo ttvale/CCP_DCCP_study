@@ -1,0 +1,1 @@
+a small JS-library with shorthands for DOM manipulation and animation

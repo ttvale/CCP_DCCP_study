@@ -1,0 +1,7 @@
+* Redo of Weekly Eats using updated schema
+* Punchfork integration complete
+
+NOTES
+
+* Run 'rake -T' to see rake task descriptions. See 'punch' namespace
+* rake db:seed is setup to reload punch data automatically

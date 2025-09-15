@@ -1,0 +1,1 @@
+A Sentry extension which integrates with Phabricator

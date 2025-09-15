@@ -1,0 +1,1 @@
+an app to track trending objects where "trending" is defined as views per day

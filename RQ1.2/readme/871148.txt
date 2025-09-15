@@ -1,0 +1,22 @@
+Simple helper for reading zip files with python.
+
+Includes two functions:
+ - fileiterator(): Iterates through all files in the zip file returning filename and content for each. 
+ - process(): Iterates through all files inside the zip file calling the callback function for each file.
+
+Note: Folders are returned the same as files but they have no content and have trailing slash.
+
+Sample usage:
+
+from zipreader import fileiterator
+for filename,content in fileiterator('test.zip'):
+  print filename + ": " + content
+
+------------------------
+
+from zipreader import process
+def callback(filename, content):
+  print filename + ": " + content
+
+process('test.zip', callback)
+

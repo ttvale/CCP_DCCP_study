@@ -1,0 +1,1 @@
+A WordPress plugin that allows for creation of custom post types through the admin interface.

@@ -1,0 +1,1 @@
+A complete Drupal 7.10 installation with the jVectorMap module for easier development. The module only code will be available on drupal.org.

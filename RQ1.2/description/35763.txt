@@ -1,0 +1,1 @@
+This repository has been deprecated, please use one of the separate ANDS application-specific software repositories listed at: http://github.com/au-research/

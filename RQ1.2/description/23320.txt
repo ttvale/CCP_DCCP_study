@@ -1,0 +1,1 @@
+GS Collections has been migrated to the Eclipse Foundation, re-branded as Eclipse Collections.  https://www.eclipse.org/collections/

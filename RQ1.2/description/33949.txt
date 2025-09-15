@@ -1,0 +1,1 @@
+DynaMechs rebuilt with CMake. Original project website: http://sourceforge.net/projects/dynamechs/  (This link has been down for a while, then some unknown guy resurrected it). DynaMechs is orginally developed by Scott McMillan. Current version has been tested on Ubuntu 10.04 and Mac OS Lion 10.7.

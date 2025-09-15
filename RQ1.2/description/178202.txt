@@ -1,0 +1,1 @@
+Create and navigate location on a google map by defining a list

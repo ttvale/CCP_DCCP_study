@@ -1,0 +1,1 @@
+Retrieve BBC news stories from a specific day.

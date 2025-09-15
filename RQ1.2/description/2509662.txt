@@ -1,0 +1,1 @@
+radically simple JS for hide ads from vkontakte.ru

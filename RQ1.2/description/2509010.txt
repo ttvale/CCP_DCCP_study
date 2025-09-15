@@ -1,0 +1,1 @@
+This is a simple picture thumbnailer that creates an easy to use website in seconds.

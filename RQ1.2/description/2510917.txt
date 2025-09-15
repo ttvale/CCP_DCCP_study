@@ -1,0 +1,1 @@
+Restore Bionic via fastboot flash

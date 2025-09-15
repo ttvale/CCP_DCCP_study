@@ -1,0 +1,1 @@
+A super simple web app that removes non-ASCII chars from pasted text. Written in Clojure/Noir.

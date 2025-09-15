@@ -1,0 +1,1 @@
+A Ruby on Rails based personal site and blog.

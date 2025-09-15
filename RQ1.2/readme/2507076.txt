@@ -1,0 +1,29 @@
+Saferun is a library for safely exection of programs with limiting of execution time and memory usage.
+
+SRun is a sample app that uses this library.
+
+Dependences:
+ * cmake >= 2.6 - for building
+ * recent kernel with cgroup cpuacct, devices and memory subsystems support
+ * mounted cgroup filesystem
+ * libcap-dev
+ * cython and python-dev packages
+
+More info can be found in docs/Dependences.md
+
+How to build:
+$ mkdir -p build/release
+$ cd build/release
+$ cmake -DCMAKE_BUILD_TYPE=Release ../../
+$ make
+
+How to build .deb:
+$ cd build/release
+$ cpack -G DEB
+
+Author:
+  Alexander Ankudinov <xelez0@gmail.com>
+
+License:
+  All files are avaliable under the terms of the Apache License, version 2.0.
+

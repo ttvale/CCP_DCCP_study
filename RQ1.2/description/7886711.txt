@@ -1,0 +1,1 @@
+A utility that reminds your android app's users to review the app.  Port of iOS appirater with additional features for Android. 

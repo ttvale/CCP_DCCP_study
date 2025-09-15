@@ -1,0 +1,73 @@
+# OmniAuth Dwolla
+[![Gem Version](https://badge.fury.io/rb/omniauth-dwolla.svg)](http://badge.fury.io/rb/omniauth-dwolla) [![Build Status](https://travis-ci.org/masukomi/omniauth-dwolla.png?branch=master)](https://travis-ci.org/masukomi/omniauth-dwolla) [![Coverage Status](https://coveralls.io/repos/masukomi/omniauth-dwolla/badge.png)](https://coveralls.io/r/masukomi/omniauth-dwolla) [![Code Climate](https://codeclimate.com/github/masukomi/omniauth-dwolla/badges/gpa.svg)](https://codeclimate.com/github/masukomi/omniauth-dwolla) [![security](https://hakiri.io/github/masukomi/omniauth-dwolla/master.svg)](https://hakiri.io/github/masukomi/omniauth-dwolla/master)
+
+
+Dwolla OAuth2 Strategy for OmniAuth 1.0.
+
+## Installing
+
+Add to your `Gemfile`:
+
+```ruby
+gem 'omniauth-dwolla'
+```
+
+Then `bundle install`.
+
+## Usage
+
+`OmniAuth::Strategies::Dwolla` is simply a Rack middleware.
+Read the OmniAuth 1.0 docs for detailed instructions: 
+<https://github.com/intridea/omniauth>.
+
+Here's a quick example, adding the middleware to a Rails app
+in `config/initializers/omniauth.rb` and getting a token with
+scope permissions for full user info, send and request transactions:
+
+```ruby
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :dwolla, ENV['DWOLLA_KEY'], ENV['DWOLLA_SECRET'], 
+  :scope                  => 'accountinfofull|send|request',
+  :provider_ignores_state => true
+end
+```
+
+The `:scope` param is optional.
+
+The default :scope is 'accountinfofull'. 
+It is necessary in order to grab the uid and detailed info for user.
+
+The extra hash will include:
+```json
+    "raw_info": {
+        "City": "Des Moines",
+        "Id": "812-111-1111",
+        "Latitude": 41.584546,
+        "Longitude": -93.634167,
+        "Name": "Test User",
+        "State": "IA",
+        "Type": "Personal"
+    }
+```
+
+## Exception Handling
+
+If the Dwolla library raises a `Dwolla::RequestException`, 
+that will be wrapped and re-raised as a 
+`OmniAuth::Strategies::OAuth2::CallbackError`.  The OmniAuth OAuth2 
+library will, in turn, treat that as a failure due to invalid 
+credentials, passing the `CallbackError` through Rack's middleware chain.
+
+Note that the `Devise::OmniauthCallbacksController` provides a 
+good example of handling this scenario.
+
+## Maintainer's Note
+
+The [omniauth-dwolla gem](https://github.com/masukomi/omniauth-dwolla)
+is currently maintained by masukomi ([GitHub](https://github.com/masukomi/), [web](http://masukomi.org/)). PRs will be happily accepted but 
+the tests must still pass (and be updated if necessary). We're dealing 
+with money here folks. We can't be careless. 
+
+I'm [@masukomi on Twitter](https://twitter.com/masukomi) and that's the best 
+way to contact me if you have any questions or ideas about this gem. My GitHub
+notifications page is typically overflowing with stuff from work. ;)

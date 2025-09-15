@@ -1,0 +1,1 @@
+gem for rails provides wysiwyg editor and elfinder file manager

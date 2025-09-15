@@ -1,0 +1,1 @@
+A simple zsh configuration and prompt. See the PeepCode blog below for a graphical example.

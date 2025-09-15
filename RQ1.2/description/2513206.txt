@@ -1,0 +1,1 @@
+GitHub clone for Digaboard to apply some small fixes

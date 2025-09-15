@@ -1,0 +1,1 @@
+Perl module to control how many instances of an application run in parallel, using DBI as the IPC method.

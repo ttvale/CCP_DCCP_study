@@ -1,0 +1,1 @@
+It is the module for Joomla! that add social media/networks buttons on your site.

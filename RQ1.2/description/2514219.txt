@@ -1,0 +1,1 @@
+A project for configuring different surroundings with the help of a smartphone and bluetooth.

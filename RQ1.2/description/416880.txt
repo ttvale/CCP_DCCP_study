@@ -1,0 +1,1 @@
+WebID authentication strategy for Passport.

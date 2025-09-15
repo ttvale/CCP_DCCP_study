@@ -1,0 +1,1 @@
+Motivated to not be a too damned time consuming activites, I create this framework implementing Microsoft IUI style application. Focused heavily on database desktop application.

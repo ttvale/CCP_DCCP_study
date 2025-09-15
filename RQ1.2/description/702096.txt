@@ -1,0 +1,1 @@
+Alternative calendar export plugin for Moodle 2

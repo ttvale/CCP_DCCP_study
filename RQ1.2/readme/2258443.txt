@@ -1,0 +1,55 @@
+== Milton's Machine
+
+Milton's Machine's goal is to provide a "practical" theoretic and spectral toolset for musical composition, with some
+support for analysis.  This base toolset can be leveraged in your own algorithmic composition code to provide
+enhanced functionality over Ruby's supplyed classes. For example, the Ruby Array class provides very rich functionality
+for manipulating entries; however, it doesn't provide for mod 12 operations.
+
+Milton's machine provides:
+* Generator - a class for producing new materials, such as permutations.
+* ForteDictionary - a class that provides a dictionary of pitch class sets as cataloged by Forte.
+* ForteSet - an extention to the Ruby Array class that adds additional operations for modulo 12 operations.
+* MatrixAnalyser - a class for analysing rows, including the ability to rotate them in groups
+* Spectrum - a class for manipulating and mapping sonic materials
+* Tuning - a class for manipulating and loading tunings related to different temperaments and microtonality.
+
+== Information
+
+=== The Milton's Machine wiki
+
+TBD - the Milton's Machine Wiki will have additional information including answers to your most frequently asked
+questions.
+
+=== Bug reports
+
+If you discover a problem with Milton's Machine, we would like to know about it.   Simply sign into github and report
+the issue.
+
+=== RDocs
+
+You can view the Milton's Machine documentation in RDoc format here:
+
+http://rubydoc.info/github/composer22/miltons_machine/master/frames
+
+=== Contributing
+
+This is a personal project for the time being.  As I find general functionality with my own composing, I will share it.
+Please contact me if you have any cool ideas.
+
+=== Installation
+
+Not publically release yet, as I continue to add things, but eventually you'll just download it via...
+
+    gem install miltons_machine
+
+=== Getting started
+
+Simply add this to your code
+
+    require 'miltons_machine'
+
+@see miltons_machine/examples/ for examples on usage.
+
+== License
+
+MIT License. Copyright 2011

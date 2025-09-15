@@ -1,0 +1,1 @@
+GitHub version of the Google Code Smarty

@@ -1,0 +1,1 @@
+A Wordpress plugin to add location info to posts and aggregate them on a Google Map

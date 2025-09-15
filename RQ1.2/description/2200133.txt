@@ -1,0 +1,1 @@
+A wrapper around Microsoft Chart Control for Windows Forms, with an easy to use API

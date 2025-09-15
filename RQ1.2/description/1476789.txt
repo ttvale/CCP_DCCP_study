@@ -1,0 +1,1 @@
+msgpack implementation by pure Lua (5.1) works without LuajJIT and FFI.

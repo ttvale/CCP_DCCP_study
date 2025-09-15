@@ -1,0 +1,1 @@
+turn openssh into a library [OBSOLETE, almost everything has been merged into upstream]

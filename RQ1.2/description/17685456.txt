@@ -1,0 +1,1 @@
+Password module used in the auth-client-demo

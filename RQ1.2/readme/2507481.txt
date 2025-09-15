@@ -1,0 +1,21 @@
+C++ implementation of the shithead card game
+
+Usage: cpphead <num_games>
+    Omit num_games for interactive mode.
+
+To build:
+
+    make
+
+To install (currently to ~/bin):
+
+    make install
+
+To run tests:
+
+    make test
+
+To clean:
+
+    make clean
+

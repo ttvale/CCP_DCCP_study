@@ -1,0 +1,1 @@
+Quickly evaluates distance when travelling between 2 or more addresses stored in contacts.

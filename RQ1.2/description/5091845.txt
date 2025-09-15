@@ -1,0 +1,1 @@
+slight modification to the $.extend function, that will now merge (aka append arrays) instead of substituting them as index-keyd object

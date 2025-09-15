@@ -1,0 +1,1 @@
+A REST-API for managing and streaming music, along with a JS front end.

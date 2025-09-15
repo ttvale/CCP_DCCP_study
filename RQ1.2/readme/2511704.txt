@@ -1,0 +1,15 @@
+[1/13/2012 - 8:36pm] READ NEW TODO
+
+Documentation for this project can be found at : http://bengreenier.com/pages/magnet/
+
+
+
+
+find and replace in all files "std::cout<<" and replace with "pipe<<" after including pipeline in magnet.h
+
+
+
+
+
+
+

@@ -1,0 +1,115 @@
+---------
+
+The [[https://karl-voit.at/tagstore/][tagstore research project]] was the PhD project of [[https://karl-voit.at/][Karl Voit]] and his
+students. It was active in 2009-2013. the research platform tagstore
+will not be developed any further by us. However, if you find it
+interesting, you're free to test and use [[https://karl-voit.at/tagstore/][the Python-based tagstore
+research prototype]] since it is free software.
+
+If you are interested in the research result, please do [[https://karl-voit.at/tagstore/downloads/Voit2012b.pdf][read and cite
+the final PhD]] which can be found on [[https://karl-voit.at/tagstore/en/papers.shtml][the page with all the research
+papers]]. The PhD thesis document summarizes most of the other papers
+and puts them into context.
+
+On Github, you can find multiple repositories such as the [[https://github.com/novoid/tagstore][tagstore
+source code]], and [[https://github.com/novoid/2011-01-tagstore-formal-experiment][the data for the formal experiment one]] and [[https://github.com/novoid/2011-04-tagstore-formal-experiment][for
+another formal experiment]].
+
+Karl Voit took the experience with this project and developed
+[[https://karl-voit.at/managing-digital-photographs][workflows and a series of open source tools]] for [[https://karl-voit.at/tags/pim/][Personal Information
+Management]] for managing local files via tags. You may want to [[https://karl-voit.at/how-to-use-public-voit][follow
+his blog posts]] about [[https://karl-voit.at/tags/pim/][PIM]].
+
+----------
+
+* Formal Experiment
+
+In January 2011, a formal experiment was conducted which aimed to
+clear some questions in the field of personal information management
+(PIM), information re-finding, and information architecture. You can
+find [[https://github.com/novoid/2011-01-tagstore-formal-experiment][the January experiment on github]] too. In April 2011 we conducted
+another experiment with slightly different focus. This repository
+holds relevant data of this second experiment in April 2011.
+
+For the purpose of the experiments, the testing framework [[https://karl-voit.at/tagstore/][tagstore]] was
+used to *compare* storing files (images, graphics and documents)
+within the *folder hierarchy* using Microsoft Windows Explorer *and
+tagstore*.
+
+The tagstore framework supports file management by applying
+tags. Those tags are being used to (automatically) generate *navigation
+hierarchies*, called TagTrees.
+
+This repository contains anonymous data from the experiment in order
+to *check, extend, or re-evaluate the experiment*.
+
+This is Open Data.
+
+This is [[http://en.wikipedia.org/wiki/Open_research][Open Science]].
+
+* Other Experiment Repositories
+
+The January-experiment:
+https://github.com/novoid/2011-01-tagstore-formal-experiment 
+
+The April experiment has less technical logs, a two week pause between
+filing and re-finding, more test persons, more test items, more
+detailed questionnaires.
+
+* Language
+
+The experiment was conducted by a group of Karl Voit ([[http://www.TUGraz.az][Graz University
+of Technology]]) and took place in [[http://maps.google.com/maps?f%3Dq&source%3Ds_q&hl%3Den&geocode%3D&q%3DInffeldgasse%2B16b,%2Bgraz,%2Baustria&aq%3D&sll%3D47.070714,15.439504&sspn%3D0.143575,0.308647&vpsrc%3D0&ie%3DUTF8&hq%3D&hnear%3DInffeldgasse%2B16b,%2BJakomini%2B8010%2BGraz,%2BSteiermark,%2BAustria&t%3Dh&z%3D16&iwloc%3DA][Graz, Austria]]. Therefore, the
+language of the test persons was *German*. All data which test persons
+were confronted with is in German. Derived data and supplementary
+things such as evaluation scripts are in *English* though.
+
+* White Papers
+
+Several related white papers are linked [[https://karl-voit.at/tagstore/en/papers.shtml][on the tagstore homepage]].
+
+* License
+
+https://github.com/novoid/2011-04-tagstore-formal-experiment is
+licensed under a [[http://creativecommons.org/licenses/by-nc-sa/3.0/][Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License]].
+
+* What is missing
+
+In near future, all relevant experiment data should be online. If
+something is not online (like for example the TP videos), a README.org
+explains further things or links to an alternative hosting place.
+
+Currently, the detailed results are being extracted. The raw results
+are somewhat irritating due to several things like bugs in
+software. 
+
+Here is the list of things which will be published here in future:
+
+** Transcripts
+
+We developed a detailed transcript language and are writing down each
+event very carefully: counting mouse clicks, writing down each spoken
+word, taking notes on each relevant GUI element interaction. 
+
+This took us very long.
+
+The definition of the transcript language will be published here
+too.
+
+The raw transcript files will be published here soon.
+
+** Transcript processing scripts
+
+Python-parser are reading the transcript files and generate a ASCII
+and CSV summary per transcript file. Those parsers will be published
+too.
+
+** Raw and Summarized Results
+
+The summarized CSV files (all TPs) as well as Spreadsheets containing
+the derived diagrams will be published.
+
+** Formal Experiment Report
+
+A report containing the most important results will be published here.
+

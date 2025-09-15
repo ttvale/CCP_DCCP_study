@@ -1,0 +1,36 @@
+Video Gallery
+-------------
+This application lists all videos uploaded by admin to the user.
+The users can filter the videos based on categories and languages. 
+The members of the site can post comments on videos. From the admin 
+panel users can upload videos, add categories and languages.
+======================================================================
+
+Installation
+------------
+Create a database
+Import gallery.sql to the newly created database
+Give the database user name, password and database name in app/Config/database.php 
+Download the files from 
+https://github.com/binoyav/video-gallery/downloads
+
+Extract the given zip file to the virtual directory
+Give the project folder name to HTTP_ROOT variable defined in app/Config/bootstrap.php
+Give write permission to app/tmp folder
+Give write permission to app/webroot/files folder
+======================================================================
+Usage
+------
+Url : http://localhost/%project folder%/
+
+For admin : http://localhost/%project folder%/admin
+
+======================================================================
+Todo
+-----
+Video display
+Authentication check for admin
+Pagination for comments
+
+
+

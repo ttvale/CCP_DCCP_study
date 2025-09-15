@@ -1,0 +1,1 @@
+Simple library for parsing VLBI Data Interchange Format (VDIF) packets.

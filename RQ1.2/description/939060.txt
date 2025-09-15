@@ -1,0 +1,1 @@
+[INACTIVE] Safari Extension extracting information from a Mantis issue and adds it to a GitHub issue

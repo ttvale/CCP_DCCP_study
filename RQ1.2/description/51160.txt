@@ -1,0 +1,1 @@
+A touchpad indicator extension for gnome-shell

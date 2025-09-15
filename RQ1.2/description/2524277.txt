@@ -1,0 +1,1 @@
+A simple NER component that uses prefix-tree to build the recognition dictionary.

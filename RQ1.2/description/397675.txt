@@ -1,0 +1,1 @@
+A simple SDK to get your hands dirty with Nabaztag

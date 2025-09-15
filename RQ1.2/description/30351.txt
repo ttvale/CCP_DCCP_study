@@ -1,0 +1,1 @@
+A PURE JS W3C Standard based(XML DOM Level2 CORE) DOMParser and XMLSerializer. 

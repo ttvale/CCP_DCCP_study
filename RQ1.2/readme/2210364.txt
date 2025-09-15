@@ -1,0 +1,15 @@
+Overview
+========
+
+Just another set of GeoDjango applications.
+
+Want to push out correctly-formatted GeoJSON features? Thank CRSchmidt.
+
+http://stackoverflow.com/questions/3034482/rendering-spatial-data-of-geoqueryset-in-a-custom-view-on-geodjango
+
+# My dumb repo contains code written by pretty smart folks.
+
+* [DjangoGraphviz](https://code.djangoproject.com/wiki/DjangoGraphviz)
+* [FeatureServer](http://pypi.python.org/pypi/FeatureServer/1.12)/[VectorFeatures](http://pypi.python.org/pypi/vectorformats/0.1)
+* [jQuery](jquery.com)
+* [Leaflet](http://leaflet.cloudmade.com/)

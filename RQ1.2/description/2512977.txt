@@ -1,0 +1,1 @@
+Site covering HTML/Javascript banner to blackout any website.

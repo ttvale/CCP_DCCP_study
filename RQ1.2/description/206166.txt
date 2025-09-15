@@ -1,0 +1,1 @@
+An example of implementation of a Module Pattern of Javascript. Leave some comments or questions.

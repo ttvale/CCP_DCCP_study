@@ -1,0 +1,1 @@
+A viewlet for Plone that show up a Google Maps using the document location field. Also can handle KML files using related contents.

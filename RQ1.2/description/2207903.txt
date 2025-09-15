@@ -1,0 +1,1 @@
+Add role to mongoid model with ease.

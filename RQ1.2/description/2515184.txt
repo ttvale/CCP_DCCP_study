@@ -1,0 +1,1 @@
+An Implementation for a simple educational system using java, intended to contain all major concepts and techniques in the language. This is originally a homework for third year students in Damascus University.

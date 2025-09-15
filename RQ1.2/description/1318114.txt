@@ -1,0 +1,1 @@
+Small helper script for exporting MySQL databases.

@@ -1,0 +1,1 @@
+Sample app for https://github.com/justinfrench/formtastic/issues/714

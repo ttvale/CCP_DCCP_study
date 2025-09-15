@@ -1,0 +1,25 @@
+Camera Calibration
+December 2011
+
+Holy RAZAFINJOELINA
+Alexandre MAHE
+
+IMAC Engineering School (promo 2013)
+--------
+
+HOW TO COMPILE
+'make fresh' in CameraCalibration directory for cleaning all the temporary files.
+'make' for building the application.
+
+HOW TO USE
+'./calibration' for displaying help
+'./cameraCalibration -i path/img1.jpg path/img2.jpg' for selecting points manually
+'./cameraCalibration -i path/img1.jpg path/img2.jpg -p path/img1.list path/img2.list' for selecting points from a .list file
+
+
+We hope this will work for you.
+If you see a bug, please report it at github.com/oxydia/CameraCalibration.
+
+Have fun !
+
+Holy & Alex

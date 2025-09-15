@@ -1,0 +1,1 @@
+crazy, but works: it packs irclog, reindxr and ircbot all together

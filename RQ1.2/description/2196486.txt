@@ -1,0 +1,1 @@
+damn simple config file parser for python

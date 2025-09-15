@@ -1,0 +1,1 @@
+The project consists in an Android application that can be used by employees in a restaurant to handle the clients, their orders and can help them easily find free tables or place orders. This is only a demo application, created mainly for proof of proper user-mobile interaction.

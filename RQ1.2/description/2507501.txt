@@ -1,0 +1,1 @@
+Check for leaky attributes in Moose

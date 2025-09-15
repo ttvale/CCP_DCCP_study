@@ -1,0 +1,1 @@
+[OBSOLETE] [ABANDONED] Redmine to github converter script

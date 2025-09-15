@@ -1,0 +1,1 @@
+Framework for Gibbs sampling of probabilistic models

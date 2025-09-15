@@ -1,0 +1,1 @@
+Bukkit Plugin which provides highly configurable loot for all

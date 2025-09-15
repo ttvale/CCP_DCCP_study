@@ -1,0 +1,1 @@
+I've stopped maintaining this project after reaching Rails 4.1.6. For new versions of Rails, and for my latest Rails configuration suggestions, please use mattbrictson/rails-template.

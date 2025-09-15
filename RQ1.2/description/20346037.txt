@@ -1,0 +1,1 @@
+Another useless Java based IRC bot

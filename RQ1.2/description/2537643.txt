@@ -1,0 +1,1 @@
+BetAssistant is service for helping in finding better bets.

@@ -1,0 +1,1 @@
+Repository of Richard Bird's problems with quickcheck properties.

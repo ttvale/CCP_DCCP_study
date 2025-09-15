@@ -1,0 +1,6 @@
+== Battleship (alpha) ==
+
+=== Known issues ===
+For hardcore known issues, visit https://github.com/strugee/HelloWorld3/issues.
+A general list follows, but this may not be up-to-date or current (it will probably be missing items instead of having fixed ones)
+# The game is incomplete and as such will not work.

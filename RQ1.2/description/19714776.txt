@@ -1,0 +1,1 @@
+Chef knife plug-in for Eucalyptus

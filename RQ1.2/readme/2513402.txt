@@ -1,0 +1,50 @@
+==activemerchant.yml
+
+development:
+  login: xxx
+  password: xxx
+  signature: xxx
+
+==application.yml
+
+development:
+  smtp_settings:
+    address: smtp.gmail.com
+    port: 587
+    domain: localhost
+    user_name: user@domain.tld
+    password: xxx
+    authentication: plain
+    enable_starttls_auto: Yes
+  mailer_default:
+    to: to@domain.tld
+    from: from@domain.tld
+  email_host: localhost:3000
+  no_image_id: 0
+  payday_invoice:
+    invoice_logo: /path/to/logo.png
+    company_name: my awesome company
+    company_details: some details go here
+  bank_details:
+    name: name
+    sort_code: xx-xx-xx
+    account_number: xxxxxxxxxxxxxxx
+    iban: ABC DEF 12345678
+
+==database.yml
+
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000    
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: sasisco
+  pool: 5
+  username: sasisco
+  password: sasisco
+  socket: /var/run/mysqld/mysqld.sock
+  

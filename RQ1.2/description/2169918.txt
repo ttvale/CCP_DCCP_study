@@ -1,0 +1,1 @@
+Quick hack to enable file uploads on Play 2.0 (until the official support is in)

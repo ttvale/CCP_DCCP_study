@@ -1,0 +1,1 @@
+Tiny Ruby library to work with Maven's pom.xml files.

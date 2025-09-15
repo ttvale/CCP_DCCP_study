@@ -1,0 +1,1 @@
+Restore del.icio.us bookmarks from database in firefox extension

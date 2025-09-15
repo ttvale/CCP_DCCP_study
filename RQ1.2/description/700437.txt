@@ -1,0 +1,1 @@
+JavaScript that allows a simple transformation of formtastic's inline hints into qTip2 tooltips

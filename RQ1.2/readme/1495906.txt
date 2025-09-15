@@ -1,0 +1,15 @@
+Caja-Image-Converter
+========================
+
+The Caja-Image-Converter extension allows you to resize/rotate images from Caja.
+
+Caja-Image-Converter is a fork of Nautilus-Image-Converter.
+
+Hacking:
+========
+
+c-i-c can be check out with the following command:
+
+git clone git://github.com/mate-desktop/mate-file-manager-image-converter.git
+
+Patches welcomed!

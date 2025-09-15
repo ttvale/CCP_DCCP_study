@@ -1,0 +1,1 @@
+a simple spread-spectrum based informed watermarking implementation in MATLAB

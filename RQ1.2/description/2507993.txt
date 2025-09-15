@@ -1,0 +1,1 @@
+A Sample application using the new Android Beam feature in Android 4.0+ that relays a message to another device

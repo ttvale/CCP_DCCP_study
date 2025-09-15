@@ -1,0 +1,1 @@
+blindparser is an all purpose RSS/ATOM feed parser that parses feeds into a common format so that you do not have to care if they are RSS or ATOM feeds

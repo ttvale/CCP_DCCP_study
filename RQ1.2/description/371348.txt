@@ -1,0 +1,1 @@
+Writer for the upcomming mapsforge map file format

@@ -1,0 +1,1 @@
+A Teamcity plugin for building Unity3d projects. NOTE: this has an MIT license so feel free to copy / adapt as you need to.

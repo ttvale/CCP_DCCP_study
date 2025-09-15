@@ -1,0 +1,1 @@
+qshutdown for timebased shutdown/reboot/suspend/hibernate; qprogram-starter for starting commands and programs on a certain time, logging all output 

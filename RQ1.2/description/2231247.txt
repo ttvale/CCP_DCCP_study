@@ -1,0 +1,1 @@
+Fathr is a open PHP Framework with a CMS built on top - But you can of course just use the Framework itself. It is inspired by Codeigniter and CakePHP.

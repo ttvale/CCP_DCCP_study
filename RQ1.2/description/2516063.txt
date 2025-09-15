@@ -1,0 +1,1 @@
+Galleryable behavior and ajax-gallery based on Uploadify

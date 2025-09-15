@@ -1,0 +1,1 @@
+A gem allowing an active_record model to have previous, next based on single column

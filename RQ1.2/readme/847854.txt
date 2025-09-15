@@ -1,0 +1,50 @@
+# hib-connect
+
+Hib-connect provides an interface between the clojure-world and a hibernate database. Hibernate is an ORM (Object Relational Model) that basically provides two functionalities:
+1. A uniform interface to many different database systems (abstracting away the difference in SQL-dialects).
+2. Persistant storage of (java-)objects and the relations between these objects.
+
+The first item is my primary motivation to develop this system. The system consist of two parts:
+1. A code generator that based on a name and a field definition generates:
+    a. A .java files containing a class definitions of the stored objects.
+    b. A .map.include file that describes the hiberanate mapping.
+    c. A .clj file describes the clojure interface for the objects.
+2. An connector (bridge) to the hibernate work containing the sessionFactory and the code to translate objects/instances from/to clojure.
+ 
+
+
+## Usage
+Using the system basically is a n-step procedure
+1. Use the vinzi.hib-connect.code-generator to generate the files describing your datastructure
+2. Include the generated files in your code-base
+     a. The .java files can be compiled to the classes folder.
+	 (if you connect to an existing applications you can use those java-files. Just take care that the fully qualified names match)
+     b. The .map.include needs to be included in your hibernate mapping
+     c. The .clj needs to be include in the 'use' or 'require' of your code.
+3. The vinzi.hib-connect.bridge needs to be include in your code.
+
+Calls to the hiberate system require a session. The session is provided by wrapping calls with 'call-in-hib-session'.
+When closing the program you need to call 'close-hib' to release the database-connection.
+
+In the file vinzi.hib-connector.demo.clj you find some examples of using the system.
+
+## dependencies
+There is no maven-repository for mysql, so you have to download the jar and install it in your local maven-repository via the command (example, so include your own paths and version-numbers):
+   mvn install:install-file -DgroupId=mysql-connector-java -DartifactId=mysql-connector-java -Dversion=5.1.17 -Dpackaging=jar -Dfile=/opt/jdbc/mysql-connector-java-5.1.17-bin.jar
+This artifact can be used in project.clj as:
+  :dependencies [ [mysql-connector-java "5.1.17"]]
+
+## todo's
+- Add type-meta data to returned clj-objects (such that assoc is allowed again)
+- Add type-checking code to the create-object function and the translator.
+- split interface in generate-package and generate object (or prepare a data structure that contains this information)
+- generate the hibernateMapping.xml files
+- generate the hibernate.cfg.xml files based on data-structure (including config parameters)
+- generate directories/folder that do not exist (yet)
+
+
+## License
+
+Copyright (C) 2012 Vinzi
+
+Distributed under the Eclipse Public License, the same as Clojure.

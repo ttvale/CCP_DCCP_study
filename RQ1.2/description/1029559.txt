@@ -1,0 +1,1 @@
+YAOHA is an Android Application that lets you view and edit opening hours in OpenStreetMap

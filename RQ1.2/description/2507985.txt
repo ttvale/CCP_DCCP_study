@@ -1,0 +1,1 @@
+jQuery image gallery-like plugin to cycle through a set of images.

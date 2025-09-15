@@ -1,0 +1,1 @@
+Converts SBV subtitle files to a comma-delimited format. SBV files are used by Youtube.com's automatic subtitle generating system, and can be downloaded. This program will convert them to a comma-delimited format that can be imported into MS Excel or OpenOffice. (Cocoa - Apple Mac OSX 10.5.8 - XCode 3.2 Project)

@@ -1,0 +1,1 @@
+a home automation scripting framework for Ruby

@@ -1,0 +1,1 @@
+Basic structure for building HTML sites using Middleman, HAML/SASS, and HTML5 Boilerplate

@@ -1,0 +1,91 @@
+# -*- mode: org; coding: utf-8; indent-tabs-mode: nil -*-
+
+* My dotfiles
+
+** Requirements
+
+   - macOS latest version
+   - Xcode
+   - Zsh
+     - [[https://github.com/zplug/zplug][zplug]]
+   - [[https://brew.sh][Homebrew]]
+
+** Installation
+
+#+begin_src sh
+git clone https://github.com/junkw/dotfiles.git /path/to/local/repo
+cd /path/to/local/repo
+rake
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew doctor
+
+brew tap Homebrew/bundle
+brew bundle -v
+
+brew link --force texinfo
+brew link php@7.4
+sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+ln -sf /opt/homebrew/etc/openssl@1.1 /opt/homebrew/etc/openssl
+fc-cache -vf
+
+GMAIL=xxxx@gmail.com rake after
+mu init --muhome=$XDG_CACHE_HOME/mu/ --maildir=$XDG_DATA_HOME/mail/ --my-address=$GMAIL
+
+export SHELL=/opt/homebrew/bin/zsh
+echo $SHELL | sudo tee -a /etc/shells
+chsh -s $SHELL
+exec $SHELL -l
+#+end_src
+
+*** BasicTeX
+
+#+begin_src sh
+sudo tlmgr update --self --all
+sudo tlmgr paper a4
+sudo tlmgr install collection-langjapanese
+#+end_src
+
+*** [[https://github.com/hokaccha/nodebrew][Nodebrew]]
+
+#+begin_src sh
+curl -L git.io/nodebrew | perl - setup
+exec $SHELL -l
+nodebrew install-binary stable
+nodebrew use stable && exec $SHELL -l
+
+npm install -g npm-check-updates \
+  @emacs-eask/cli \
+  traverse \
+  csslint \
+  intelephense \
+  jshint \
+  tern \
+  textlint \
+  @textlint/ast-node-types \
+  textlint-plugin-html \
+  textlint-plugin-org \
+  textlint-filter-rule-comments \
+  textlint-filter-rule-allowlist \
+  textlint-rule-preset-ja-technical-writing \
+  textlint-rule-preset-ja-spacing \
+  textlint-rule-ja-no-orthographic-variants \
+  @textlint-ja/textlint-rule-no-dropping-i \
+  textlint-rule-prefer-tari-tari \
+  textlint-rule-ginger \
+  textlint-rule-write-good
+#+end_src
+
+*** QuickLook
+
+#+begin_src sh
+sudo xattr -cr ~/Library/QuickLook/QLStephen.qlgenerator
+
+defaults write org.n8gray.QLColorCode textEncoding UTF-8
+defaults write org.n8gray.QLColorCode font RictyDiminishedDiscord-Reqular
+defaults write org.n8gray.QLColorCode fontSizePoints 10
+defaults write org.n8gray.QLColorCode extraHLFlags '-l'
+
+qlmanage -r cache
+qlmanage -r
+#+end_src

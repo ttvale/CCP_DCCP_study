@@ -1,0 +1,1 @@
+Simple script that allows you to put a limit on the number of words in a textarea field

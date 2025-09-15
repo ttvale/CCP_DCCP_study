@@ -1,0 +1,50 @@
+* b2g-js-ril
+
+This repository houses the JavaScript code for accessing the android
+radio interface layer (RIL) protocol. Using this project, along with
+the b2g-dialer-daemon
+(http://www.github.com/kmachulis-mozilla/b2g-dialer-daemon), on top of
+the gonk backend of B2G, the phone radio can be accessed from a
+desktop instance of Firefox for testing and development.
+
+* Development notes
+
+- B2G RIL notes on the Mozilla wiki - https://wiki.mozilla.org/B2G/RIL
+- Modules in Javascript - https://developer.mozilla.org/en/JavaScript_code_modules/Using
+- Typed Arrays - https://developer.mozilla.org/en/JavaScript_typed_arrays
+- ArrayBufferViews - https://developer.mozilla.org/en/JavaScript_typed_arrays/ArrayBufferView
+- Bottom Error Console Plugin - https://addons.mozilla.org/en-US/firefox/addon/bottom-error-console/
+- Printfing to error console - https://developer.mozilla.org/en/nsIConsoleService
+- Multiple profiles - https://support.mozilla.com/en-US/kb/Managing-profiles
+
+* Running tests
+
+Using the 'js' interpreter executable from a Firefox build:
+
+  js test.js
+
+* Port forwarding
+
+To forward the socket on the phone to the desktop (for desktop
+development), you first need to get rilproxy to expose it as such,
+rather than exposing it to Gecko:
+
+  adb shell
+  # touch /data/local/rilproxyd
+  # ps
+  <look for rilproxyd_pid>
+  # kill <rilproxyd_pid>
+
+Now on the desktop, run the following command:
+
+  adb forward tcp:6200 localreserved:rilproxyd
+
+* Interactive testing in Firefox
+
+This directory can be installed as a Firefox add-on. Simply drop a
+proxy file
+(https://developer.mozilla.org/en/Setting_up_extension_development_environment#Firefox_extension_proxy_file)
+called 'b2g-js-ril@mozilla.org' into your profile's 'extension' dir.
+Then open the testing page at 'chrome://ril/content/test.html' which
+is able to connect to the forwarded socket, thus mimicking the RIL IPC
+thread, and run the RIL worker code.

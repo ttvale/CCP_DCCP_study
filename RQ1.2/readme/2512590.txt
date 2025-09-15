@@ -1,0 +1,4 @@
+= advanced_my_calendar
+
+This plugin filters the Calendar on the 'My Page' page to only show issues assigned to you.  It also provides paging between weeks. 
+

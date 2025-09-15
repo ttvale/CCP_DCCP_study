@@ -1,0 +1,1 @@
+Ruby library for Microsoft Bing Search API

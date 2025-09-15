@@ -1,0 +1,1 @@
+Facebook's debug.js (what gets minified into sdk.js), updated every 10 minutes

@@ -1,0 +1,1 @@
+a plugin to add a reddit-style system of link sharing, commenting, and rating to WordPress

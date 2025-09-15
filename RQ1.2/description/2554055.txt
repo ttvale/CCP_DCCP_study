@@ -1,0 +1,1 @@
+Paster template for creating your pycms site

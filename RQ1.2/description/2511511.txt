@@ -1,0 +1,1 @@
+Permanent world generator. Plugin for Bukkit.

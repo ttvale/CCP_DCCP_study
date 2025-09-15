@@ -1,0 +1,1 @@
+A PHP library for emitting metrics as JSON

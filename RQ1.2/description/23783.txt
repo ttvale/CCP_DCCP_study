@@ -1,0 +1,1 @@
+This Markdown extension adds inline LaTeX support without the need for external images.

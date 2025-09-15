@@ -1,0 +1,1 @@
+a simple blog written in django- not yet working at all :)

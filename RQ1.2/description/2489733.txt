@@ -1,0 +1,1 @@
+The Logger is a simple program for logging activity throughout the day in a text file with Markdown formatting.

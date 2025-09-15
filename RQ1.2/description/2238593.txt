@@ -1,0 +1,1 @@
+Some javascript to help generate your next band/company name

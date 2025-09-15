@@ -1,0 +1,1 @@
+Ruby gem that scrapes gulesider.no. Can be used to lookup phone numbers

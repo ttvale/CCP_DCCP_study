@@ -1,0 +1,1 @@
+Sparkle updater for .NET

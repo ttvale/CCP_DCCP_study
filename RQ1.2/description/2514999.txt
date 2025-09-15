@@ -1,0 +1,1 @@
+Pyramid plugin for HTTP Basic access authentication

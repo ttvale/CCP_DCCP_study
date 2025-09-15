@@ -1,0 +1,1 @@
+Finds files that are or might become unreadable in the future

@@ -1,0 +1,1 @@
+Bookmarklet for faster login to VisitorNet. Hosted here and at http://mmind.me/vnetp

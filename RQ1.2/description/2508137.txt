@@ -1,0 +1,1 @@
+alternative symfony 1.4 admin generator

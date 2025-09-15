@@ -1,0 +1,1 @@
+javascript army list editor engine for all ArmyCalc apps to use.

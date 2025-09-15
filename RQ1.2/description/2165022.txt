@@ -1,0 +1,1 @@
+JavaScript written Class to evaluate a password (score from 0 to 100). Usefull to show how good is the choosen password.

@@ -1,0 +1,8 @@
+ideaList
+--------
+
+ideaList is a distributed list engine on the web, eg. for sharing shopping
+lists between multiple people. Or perhaps for sharing a TODO list between
+multiple devices.
+
+(C) Visa Putkinen

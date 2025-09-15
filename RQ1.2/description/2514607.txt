@@ -1,0 +1,1 @@
+Contains javascript file to be included in your webpage where dynamic element is being created. It has a function which does it all.

@@ -1,0 +1,1 @@
+Makes all selected elements the same height as the tallest element in the set. `equalizeHeights()` optionally accepts a minimum pixel height so you can ensure all elements are always at least as tall as you require.

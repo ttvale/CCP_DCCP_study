@@ -1,0 +1,1 @@
+Converts Journal module to online assignment for users who still have them in Moodle 2.0

@@ -1,0 +1,1 @@
+An ancient MS-DOS app written in Clipper 5.2 to manage competitive swimming events

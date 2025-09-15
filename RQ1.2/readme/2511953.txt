@@ -1,0 +1,15 @@
+Script to discard all pending Mailman requests.
+
+Works with the Mailman installation on SourceForge.
+
+Requirements:
+
+  curl
+  tidy
+  xmllint (part of libxml2)
+  xsltproc
+
+Install dependencies in Ubuntu: 
+
+  sudo apt-get install tidy curl libxml2-utils xsltproc
+

@@ -1,0 +1,1 @@
+A plugin for Melody and Movable Type that allows administrators to publish a site to a different directory for the specific purpose of creating a version of the site appropriate for offline distribution (e.g. a USB key fob)

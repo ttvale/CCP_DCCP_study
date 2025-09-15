@@ -1,0 +1,1 @@
+A django contrib with model url change

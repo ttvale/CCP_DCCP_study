@@ -1,0 +1,1 @@
+Economy plugin for tracking market prices and setting server store prices

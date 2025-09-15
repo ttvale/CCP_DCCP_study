@@ -1,0 +1,1 @@
+Zenchor is Chrome extension to monitor Zenoss events

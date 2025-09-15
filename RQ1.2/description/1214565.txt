@@ -1,0 +1,1 @@
+Redislite is a software library that implements a self-contained, serverless, zero-configuration, redis-compatible database engine.

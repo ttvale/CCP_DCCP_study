@@ -1,0 +1,73 @@
+Experimental project to build desktop application in Ruby via JRuby.
+
+Combines a SWING Java desktop, designed with Netbeans GUI builder, but almost exclusively implemented in Ruby code.
+
+ADAM concept is Asset Definition and Manipulation, enabling user to define database assets via XSD, XML, Excel, CSV etc,
+and then manage the transformation, import or export of such assets from populated databases.
+
+Use cases include migration of data between databases, or between databases and applications, 
+export/import of data requiring complex transformations as part of the process.
+
+
+### Development
+
+The main application Swing Window is in src/AdamMDIApplication.java
+
+Double click to edit in the Netbeans Swing GUI Editor
+
+Any GUI code that could not be written in JRuby, is in 
+
+    lib/autotelik/autotelik/swing
+    src/app/java
+
+### Gems and loading
+
+https://github.com/monkeybars/monkeybars-core/wiki/Use-ruby-gems-in-your-application
+
+gems are unpacked into lib/ruby e.g download builder gem save to lib/ruby
+
+    cd lib/ruby
+
+    jruby -S gem unpack builder.1.2.3
+
+    # Now rename the builder directory to remove any version info.
+    mv builder.1.2.3 builder
+
+    
+The main.rb file manages app init with manifest.rb setting load paths
+
+### Installation Details
+
+Requires Netbeans
+
+
+Uses MonkeyBars : https://github.com/monkeybars/monkeybars-core
+
+To install the monkeybars gem yourself :
+
+gem sources -a http://gems.neurogami.com
+
+gem i monkeybars
+
+
+Uses jruby-complete.jar : http://jruby.org
+
+
+
+### TODO
+
+JXTree is now broken since upgrading gems and jars, so some aspect of GUI now totally broken.
+
+Investigating QuickTable as a replacement : http://java.net/projects/quicktable/downloads
+
+Currently only runs from Netbeans Run Menu (F6)
+
+This is related to the manifest, there are two situations from filesystem
+or from jar. Netbeans triggers the filesystem optionms which I have concentrated on.
+
+Running from a jar requires different load paths.
+
+Work out how to use the Debugger, is it possible to break in Ruby code ?
+
+
+XSD Parser is nice idea but implementation bit naff and terribly slow for very large XSDs

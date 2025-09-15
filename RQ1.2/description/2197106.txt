@@ -1,0 +1,1 @@
+Free MT4 trade copier - Metatrader4 EA software to copy all trades from one to one or more Metatrader4 terminals written in MQL4 language (*.mq4)

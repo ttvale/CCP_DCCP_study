@@ -1,0 +1,1 @@
+Minimalist framework for python based on RoR. Exaple application.

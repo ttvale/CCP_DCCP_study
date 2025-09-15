@@ -1,0 +1,1 @@
+Standard rc files for linux/unix

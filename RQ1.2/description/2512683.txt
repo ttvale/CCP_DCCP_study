@@ -1,0 +1,1 @@
+A Backbone plugin to allow for Models structured with Fields.

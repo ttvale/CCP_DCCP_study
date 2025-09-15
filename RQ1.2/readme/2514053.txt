@@ -1,0 +1,59 @@
+Datatype 
+--------
+Prepared statement is used in all queries so it is important in all queries. 
+Datatypes are searched based on any field definition on a certain page in which the query 
+is defined.
+Logic:
+1. `select NAME txtmyname from USERS where EMPID=:txtempid|STRING`. 
+In this the datatype is appended inline in the expression. This overrides the **dbdatatype** 
+attribute shown below. 
+2. `select NAME txtmyname from USERS where EMPID=:txtempid`.
+In this **:txtempid** is searched in all fields in a page with **forid=txtempid**. If found the 
+dbdatatype attribute is used to get its data type.
+3. The last word in the expression is used to search in **forid=<last segment in expression>**
+eg. In expression :vs.form1[0].txtempid, txtempid will be used to search **forid=txtempid**.
+The txtmyname's datatype is ignored and no conversion is performed.
+and pushed on result map like **txtyname=<value>**. 
+
+Query Parameter evaluation
+--------------------------
+There are 4 types of evaluating query paramters.
+1. :inp.form1[0].txtempid - Ognl expression is evaluated agaist input data in inputDTO
+2. :res.form1[0].txtempid - Ognl expression is evaluated agaist result evaluated previously in 
+current request scope.
+3. :vs.form1[0].txtempid - vs means value stack. Ognl expression is evaluated against
+ `ValueStack`. 
+4. :ses.form1[0].txtempid - Session data, this must have an entry in the page xml so that it gets sent to backend
+ `ValueStack`. 
+5. :txtempid - Is evaluated from current record json object.
+
+
+arbitrary variables can be passes through inputDTO in any key, value pair except for 
+sessionvars, txnrec, bulkcmd.
+if bulkcmd is defined: it is processed as single command.
+if bulkcmd is null or inline then each record is parsed for command (inline). if found it is used to match with 
+//cmd[@name='xxx']  and do respective command processor.
+The form data must start with "form" eg. form1, form2 ...
+
+InputDTO has 
+PaginationDTO is used for jqgrid.
+ResultDTO also has pagination fields.
+
+
+ rules: {
+     name: "required",
+     email: {
+       required: true,
+       email: true
+     }
+   },
+   messages: {
+     name: "Please specify your name",
+     email: {
+       required: "We need your email address to contact you",
+       email: "Your email address must be in the format of name@domain.com"
+     }
+   }
+
+The ResultDTO will also contain the session variables that needs to be set at the end of this request. Like storing User Name, session_id,
+Role, Menu.   

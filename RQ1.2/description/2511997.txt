@@ -1,0 +1,1 @@
+Tool to publish posts on a Wordpress blog from the command line.

@@ -1,0 +1,1 @@
+pure data external to synthesize text to an array with espeak library

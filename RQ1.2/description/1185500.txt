@@ -1,0 +1,1 @@
+Habbo Hotel emulator targeting the "v13" client.

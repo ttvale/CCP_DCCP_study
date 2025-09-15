@@ -1,0 +1,1 @@
+this is a CLI script displays bullion prices.

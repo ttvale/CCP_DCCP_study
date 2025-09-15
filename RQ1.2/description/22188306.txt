@@ -1,0 +1,1 @@
+The engine used in the Socket.IO JavaScript server, which manages the low-level transports such as HTTP long-polling and WebSocket. 

@@ -1,0 +1,1 @@
+simple script to generate an ical/ics file of road cyling events in 2012 

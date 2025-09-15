@@ -1,0 +1,1 @@
+TwitBase is a running example used throughout HBase In Action

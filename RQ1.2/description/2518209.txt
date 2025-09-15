@@ -1,0 +1,1 @@
+A project with the aim to create a site presenting pictures that are being added on a specific date.

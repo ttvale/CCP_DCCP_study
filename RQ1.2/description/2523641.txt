@@ -1,0 +1,1 @@
+fixes imports and other API differences between Richfaces Selenium and Arquillian Ajocado

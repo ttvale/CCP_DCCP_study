@@ -1,0 +1,1 @@
+Library for Facebook-enabled network games, based on Three Rings' Game Gardens service

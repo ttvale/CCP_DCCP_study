@@ -1,0 +1,1 @@
+A user friendly IRC Client for KDE

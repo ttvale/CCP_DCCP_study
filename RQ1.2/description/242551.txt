@@ -1,0 +1,1 @@
+Objective-C 2 parser for recurrent rules with ability to parse iCalendar RRULE format (from RFC 5545 spec). ported from https://github.com/skyporter/rrule_parser   Currently testing on iOS 5+- under  MIT License

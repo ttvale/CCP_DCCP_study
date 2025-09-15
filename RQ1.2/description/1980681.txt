@@ -1,0 +1,1 @@
+Mediator pattern for Halo, a client-side MVC framework.

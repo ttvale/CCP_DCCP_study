@@ -1,0 +1,1 @@
+E-commerce prototype using Rails for store front with adding features, using Magento for product data store and order processing

@@ -1,0 +1,1 @@
+Graduated to js.scala: JavaScript as an embedded DSL in Scala

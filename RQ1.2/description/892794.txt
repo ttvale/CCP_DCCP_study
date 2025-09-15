@@ -1,0 +1,1 @@
+auto-split frame environment for LaTeX

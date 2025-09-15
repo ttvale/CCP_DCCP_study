@@ -1,0 +1,1 @@
+Extension of the agg svg parser from the agg distribution

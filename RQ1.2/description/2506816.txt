@@ -1,0 +1,1 @@
+Powershell tool to watch directory changes and autocommit them to local git repository.

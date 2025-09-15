@@ -1,0 +1,1 @@
+Swedish translation for the upcoming 2.2 release of Processwire with multi-language support.

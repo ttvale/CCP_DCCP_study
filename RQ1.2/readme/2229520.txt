@@ -1,0 +1,241 @@
+This class is used to greatly simplify the interaction of PHP with MySQL database via 
+Original MySQL API (http://www.php.net/manual/en/book.mysql.php) and 
+MySQL Improved Extension (http://www.php.net/manual/en/book.mysqli.php).
+
+main features of this class are
+
+1) Simple API - native SQL queries are used.
+2) Portable - single api is usable for MySQL,MySQLi,PostgreSQL(planned) et cetera.
+3) Build in escaper for protection against SQL injections (but for protection from XSS 
+(http://en.wikipedia.org/wiki/Cross-site_scripting) we need some HTML filtering functions not included in this package!)
+4) Singleton assembly of class - no multiple sql connection per script, and sql queries are accesible from every 
+scope of view - from class, from function, from global...
+5) Build in tools for logging SQL requests and their results.
+
+
+------------
+|CRASH DIVE|
+------------
+
+<?php
+include ('DB.php');
+
+DB::q('INSERT INTO users(`name`) VALUES ("'.DB::f($_POST['name']).'")'); 
+//execute query for creating new entry in table `users` (SQL-injection save)
+
+$users=DB::q('SELECT * FROM users'); 
+//execute query to fetch assotiated array of rows of table  `users`
+foreach($users as $user) 
+	{
+		echo $user['name']; //
+	}
+
+$stats=DB::s(); //fetch array with usefull statistical information about all mysql queries executed
+print_r($stats)
+?>
+
+----------
+|EXAMPLES|
+----------
+
+1) Inserting a row into table
+
+Native MySQL syntaxis
+******************
+$query='
+INSERT INTO users(`login`,`password`) 
+VALUES 
+(
+"'.trim(mysql_real_escape_string($_POST['login'])).'",
+"'.trim(mysql_real_escape_string($_POST['password'])).'"
+)';
+mysql_query($query,$link);
+
+if( !mysql_error($link)) echo 'New user created!';
+******************
+
+
+DBq version
+******************
+
+$new_user=array('login'=>$_POST['login'],'login'=>$_POST['password']);
+if(DB::insert('users',$new_user)) echo 'New user created! His/her id is '.DB::getLastInsertId();
+******************
+
+2) Reading array of users from table
+
+Native MySQL syntaxis
+************************
+
+$query='SELECT * FROM users';
+$res=mysql_query($query,$link);
+$b=mysql_num_rows($res);
+for($i=0;$i<$b;$i++)
+  {
+  echo '<p>'.mysql_result($res,$i,'login').'</p>';
+  }
+echo 'We have '.$b.' users!';
+************************
+
+DBq version
+******************
+
+$users=DB::q('SELECT * FROM users');
+foreach($users as $user)
+  {
+  echo '<p>'.$user['login'].'</p>';
+  }
+echo 'We have '.count($users).' users!';
+******************
+
+
+----------------
+|Instalation   |
+----------------
+1. copy everything to you project directory.
+2. Edit file 'DB.php' - enter the apropriate meanings for constants describing the connection
+credentials to database
+3. choose the driver to database communication - uncomment the string with this driver name
+4. Include file 'DB.php' to your project.
+5. Enjoy
+
+
+
+----------------
+|Full syntaxis |
+----------------
+
+Quick reference
+
+
+-------------------
+|DB::q($sql_query)|
+-------------------
+perform $sql_query with active database. If query returns rows, return an associated arrayes of rows,
+where rows are depicted as assotiated arrays or as objects if constant DB_FETCH_ROW_AS_OBJECT is true
+
+Example
+
+<?php
+$databases=DB::q('SHOW DATABASES');
+foreach($databases as $database)
+    {
+    echo $database['Database'].PHP_EOL;
+
+// or when DB_FETCH_ROW_AS_OBJECT is TRUE
+//    echo $database->Database.PHP_EOL;
+    }
+
+
+------------------
+|DB::f(string $a)|
+------------------
+
+Return escaped version of the string.
+See
+http://php.net/manual/en/function.mysql-real-escape-string.php
+http://php.net/manual/en/mysqli.real-escape-string.php
+for details.
+
+---------------------------------------------------------------------------
+|DB::update($table_name,$assosiated_array_of_parameters,$where_condition);|
+---------------------------------------------------------------------------
+Update table.
+For example
+
+$arr=array('name'=>'Jon');
+DB::update('USERS',$arr,'`id`=1');
+
+Will execute query
+
+UPDATE `USERS` SET `name`='Jon' WHERE `id`=1
+
+NOTE: statistical data on query will be accaunted!
+
+----------------------------------------------------------
+|DB::insert($table_name,$assosiated_array_of_parameters);|
+----------------------------------------------------------
+
+Insert data table.
+For example
+
+$arr=array('name'=>'Jon');
+DB::insert('USERS',$arr);
+
+Will execute query
+
+INSERT INTO `USERS`(`name`) VALUES ('Jon')
+
+NOTE: statistical data on query will be accaunted!
+
+----------
+|DB::s() |
+----------
+Returns information about all queries executed during this script running.
+This function returns array describing query information
+For example
+
+PRINT_R(DB::s())
+
+
+array(
+[0]=>array(
+    'type'=>'SELECT',			//type of query
+    'query'=>'SELECT * FROM `users`',	//query string
+    'time'=>20,				//duration of execution of query in miliseconds
+    'status'=>'OK',				//status of query
+    'affected rows'=>451,			//number of rows affected
+         );
+
+[1]=>array(
+    'type'=>'UPDATE',
+    'query'=>'UPDATE `users` SET `name`="Pasha" WHERE id=2',
+    'time'=>32,
+    'status'=>'OK',
+    'affected rows'=>1,
+         );
+
+[2]=>array(
+    'type'=>'INSERT',
+    'query'=>'INSERT INTO `users`(`name`) VALUES ("Pasha")',
+    'time'=>33,
+    'status'=>'MySQL error: duplicate key `name` for value "Pasha"',
+    'affected rows'=>0
+         );
+)
+
+---------------
+|DB::getLink()|
+---------------
+Returns mysql link descriptor
+for exapmle for use with mysql_query(' ,,, ',DB::getLink());
+The data type of return value depends on active driver!
+
+--------------
+|DB::getRes()|
+--------------
+Returns current resource descriptor for
+example for use with mysql_num_rows(DB::getRes());
+The data type of return value depends on active driver!
+
+-----------------------
+|DB::getLastInsertId()|
+-----------------------
+Returns the ID of last inserted value, where id - is Auto Incrementing key of table;
+
+----------------
+|DB::getError()|
+----------------
+Returns the string with description of last mysql error
+
+
+
+This is all!
+
+
+DBq is now used by (confirmed use)
+
+http://spravtorg.ru - Online Reference book of trading equipment
+http://teksi.ru - create free site with quikform in 10 seconds
+http://fotobase.org - community of professional photographers and photomodels
+http://s-tv.ru - teleprogramms for mass media

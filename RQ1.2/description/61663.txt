@@ -1,0 +1,1 @@
+Colourful & robust configuration files and utilities for Mac, Linux & BSD

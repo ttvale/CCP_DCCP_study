@@ -1,0 +1,1 @@
+Adds SCSS renderering capabilities to Pyramid, with optional caching.

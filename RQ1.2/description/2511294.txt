@@ -1,0 +1,1 @@
+ManageR-plugin (QGIS) fork that includes soRvi-specific GUI goodies

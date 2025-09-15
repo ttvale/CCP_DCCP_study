@@ -1,0 +1,1 @@
+Implementation of  Cynthia Brewer, Mark Harrower, and The Pennsylvania State University's ColorBrewer color schemes as found here: http://www.personal.psu.edu/cab38/ColorBrewer/ColorBrewer_RGB.html in Sass

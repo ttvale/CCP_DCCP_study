@@ -1,0 +1,1 @@
+Show death messages in the server console/log. Plugin for Bukkit.

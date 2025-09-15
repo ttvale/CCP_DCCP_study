@@ -1,0 +1,1 @@
+Calibrate a camera in C++ using OpenKraken. An exercise for IMAC (Engineering school). You select identical points in different photographies and the application finds the coordinates in 3d of these points. Useful !

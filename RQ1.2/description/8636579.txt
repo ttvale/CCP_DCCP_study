@@ -1,0 +1,1 @@
+A non_blocking_lock implementation for ActiveRecord adapters (well, just mysql2, at the moment). This is just a quick and dirty extraction due to the Rails 3.2 deprecation of vendor/plugins. README/tests/etc coming later.

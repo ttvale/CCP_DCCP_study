@@ -1,0 +1,1 @@
+Chooses a formatter for best displaying purpose

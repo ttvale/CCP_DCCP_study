@@ -1,0 +1,2 @@
+IMAP email client developed in ruby on rails..
+by Rq Bukhari

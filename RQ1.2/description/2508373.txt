@@ -1,0 +1,1 @@
+Code (prototyping) for a research project concerning the information capacity of the human motor system at HIIT.

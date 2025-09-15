@@ -1,0 +1,1 @@
+Signed and unsigned cookies based on Keygrip

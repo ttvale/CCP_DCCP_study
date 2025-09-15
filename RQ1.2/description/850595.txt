@@ -1,0 +1,1 @@
+A Scala Swing component that wraps javax.swing.JTree

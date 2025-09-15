@@ -1,0 +1,59 @@
+# Battlecode Server Tester
+# created by Steven Arcangeli
+
+##################
+## REQUIREMENTS ##
+##################
+    * Java
+    * Web browser (Chrome preferred, Firefox kinda supported)
+
+##################
+## ARCHITECTURE ##
+##################
+This tool is designed to have a server run on some computer visible on the internet.  This computer
+acts as the "master" and handles all of the administration.  It runs a web server through which the
+user queues and views matches.  The user can install this software on an arbitrary number of 
+"worker" computers that will actually run the matches.  The master receives the user commands, 
+sends the appropriate matches to the workers, and they send back the results.  The more workers, 
+the faster the results.
+
+####################
+## RUNNING SERVER ##
+####################
+The entry point is run.sh.  Use ./run.sh -h to view the options, but the basic way to start the
+server is:
+
+./run.sh -s
+(run.bat -s on windows)
+
+On the first run it will prompt you to create an admin user.  This is used for the web login.
+
+#####################
+## RUNNING WORKERS ##
+#####################
+The first run of the server will also generate a file named bs-worker.tar.gz.  You can either copy
+this file by hand or download it via the web interface (under the Admin tab).  Once you have that
+file on a worker machine, you simply unzip it and run it the same way you ran the server.  
+
+./run.sh -w [hostname]
+(run.bat -w [hostname] on windows)
+
+where [hostname] is the address of the master.  If your machine has multiple cores you can also 
+use the -c [cores] option to run multiple matches simultaneously.  Be warned that each running
+match eats up a lot of memory.
+
+While you *can* run both a master and a worker on the same computer, you should not run them from
+the same directory.
+
+#######################
+# UPDATE INSTRUCTIONS #
+#######################
+Unzip the contents of bs-tester.tar.gz into your current install directory.  That should overwrite
+all the necessary files.  You only need to do this to the server; the workers should all be
+updated automatically afterwards.
+
+If that does not work (or if you want to be extra-super-careful), unzip the new version into a new 
+directory and copy over
+static/matches
+static/scrimmages
+and all files that start with BSTesterDB

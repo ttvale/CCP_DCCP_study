@@ -1,0 +1,1 @@
+A very simple CMS for django with a different take on WYSIWYG editing. See the README for more details.

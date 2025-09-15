@@ -1,0 +1,1 @@
+🐪 my personal haskell configuration

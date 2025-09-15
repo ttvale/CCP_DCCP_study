@@ -1,0 +1,1 @@
+Web application in RoR that manages GPX treks and geotagged pictures

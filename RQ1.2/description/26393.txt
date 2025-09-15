@@ -1,0 +1,1 @@
+For my undergrad thesis I am building an automatic poet. The idea is to implement an evolutionary algorithm that can construct a poem using fitness functions trained on a text-based corpora.

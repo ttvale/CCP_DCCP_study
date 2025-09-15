@@ -1,0 +1,1 @@
+Converts Gmail to Google Spreadsheets

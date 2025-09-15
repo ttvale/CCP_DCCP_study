@@ -1,0 +1,1 @@
+nodejs library for mocking and stubing object, libs and method

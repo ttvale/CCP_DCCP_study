@@ -1,0 +1,1 @@
+Use DBIC::DeploymentHandler and DBIC::Fixtures together for a sane database versioning workflow

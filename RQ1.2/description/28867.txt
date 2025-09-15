@@ -1,0 +1,1 @@
+Standalone orgmode blog exporter. DEPECATED, NOT MAINTAINED

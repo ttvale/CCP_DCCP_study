@@ -1,0 +1,41 @@
+= My Dotfiles 
+
+Once inspired from Ryan Bates Dot Files (https://github.com/ryanb/dotfiles)
+
+These are config files to set up a system the way I like it.  They're
+bash/vim/ruby inclined (although ruby and vim are not required for the
+installation), and should work at least in Ubuntu (Arch to come).
+
+== Installation
+
+  git clone git://github.com/leucos/dotfiles.git ~/.dotfiles
+  cd ~/.dotfiles
+  ./install.sh
+
+This will install :
+ - dotfiles
+ - custom gitconfig
+ - basic packages for a proper server & ruby environment
+ - rbenv and your favorite ruby version
+ - vim scripts (with pathogen + submodules)
+
+You probably want to remove some scripts in bash.d according to your
+configuration.
+
+The rbenv install script will install rbenv system wide if install.sh is
+invoked as root
+
+During the script, when asked for confirmation, y means 'yes', n means 'no', A
+means 'always yes' and N means 'always no'. If you just press 'enter', it will
+use the last reply you made.
+
+You can add your own erb templates in templates/ and install scripts in
+scripts/
+For the latter, please name your scripts XX_what-my-script-does.bash where XX
+are two digits denoting execution order among all scripts (just like .bash.d/
+does in this setup).
+
+== Questions, flames, inquiries
+
+Please use github issues and pull requests !
+ 

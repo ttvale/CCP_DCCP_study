@@ -1,0 +1,1 @@
+Originally based on pyjenkinsci... release tree: https://github.com/salimfadhley/jenkinsapi

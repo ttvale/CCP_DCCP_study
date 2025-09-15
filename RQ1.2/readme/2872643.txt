@@ -1,0 +1,27 @@
+This is just a quick script I wrote to wrap the s3cmd sync command
+in a script I could use with a configuration file, rather than doing
+each directory line by line.
+
+I'm not thrilled with the XML config format, and would rather use an
+Apache style config, or something generally more legible. Although
+I'm thinking about rewriting it in Python, so it would be nice to keep
+the config file format fairly generic.
+
+See s3cmd_backup.conf.example in this root directory for the format of
+the XML config file.
+
+----------------------------------------------------------------------
+HISTORY
+
+1.1.0     2013-02-22 Fri
+          - Added ability for the script to detect if it's already
+            running, using the Sys::RunAlone perl module.
+          - Fixed problem in the example config.
+
+1.0.0     2012-01-03 Tue
+          - Put into production on my home server.
+
+----------------------------------------------------------------------
+
+
+

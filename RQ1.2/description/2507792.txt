@@ -1,0 +1,1 @@
+A Gosu type loader For JSchema (.jsc), JSON (.json) and JSchema-RPC (.jsc-rpc) documents

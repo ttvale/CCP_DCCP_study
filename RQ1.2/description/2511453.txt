@@ -1,0 +1,1 @@
+Truncate any string by a number of pixels. Perfect for when you need to shorten a string to take up a certain amount of space regardless of it's CSS styling.

@@ -1,0 +1,1 @@
+Quick and dirty decoder for SQLi attacks leverage CAST encoding

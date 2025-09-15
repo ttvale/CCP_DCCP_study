@@ -1,0 +1,20 @@
+# amethyst(mthyst) is ruby top-down parser generator and tool for pattern matching
+# A description can be found at http://kam.mff.cuni.cz/~ondra/amethyst/chap2.pdf
+# This version of amethyst is not thread safe.
+
+# Currently a supported architecture is x85_64 linux.
+ 
+# For initial build install gcc and ruby version 1.9.
+# Then type(on debian, adjust ruby1.9.1 name for other systems):
+ruby1.9.1 reset.rb
+
+# Use cases can be found in doc directory.
+
+# If you wish to change amethyst then recompiling is done by
+ruby1.9.1 bootstrap
+# If your grammar does not compile run reset.rb to restore to state at last commit
+
+# For improving speed we look at profile output. You need to install and run oprofile. Run script
+compiled/anotate #to get anotated source and assembly after you ran oprofile.
+
+# If you have uncrustify installed generated c files will be formatted with astyle according to uncrustify.cfg file.

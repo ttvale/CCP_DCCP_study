@@ -1,0 +1,16 @@
+== Markdown Editor in your Browser
+
+=== TODO
+
+* Close a document (Ctrl+w).
+
+* Save documents in (unested) Folders.
+* Have documents saved as files on server(?)
+
+* Keep a copy of unsaved changes in LocalStorage.
+* Erase LocalStorage on document save.
+* Cancel local changes (ie. manual erase of LocalStorage copy).
+* Check if document wasn't updated remotely before loading from LocalStorage.
+
+* Highlight markdown code in some way (bold titles, indented lists and blockquotes line breaks, etc).
+

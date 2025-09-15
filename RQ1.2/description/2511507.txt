@@ -1,0 +1,1 @@
+Mean-field self-consistent equations for slave-boson superconductivity.

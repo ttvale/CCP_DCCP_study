@@ -1,0 +1,1 @@
+A simple wrapper to provide Apache Jena as a gem to JRuby programs

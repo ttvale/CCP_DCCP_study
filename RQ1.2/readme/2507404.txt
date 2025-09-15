@@ -1,0 +1,101 @@
+== Description
+
+Xtypes provides scheme bindings for common datatypes used in xlib
+programming.  This egg is meant to be used mainly in conjunction with the
+xlib egg, as a convenience, because it exposes these various datatypes as
+high level scheme objects rather than opaque c-pointers.  Objects created
+by the make-* constructors here all have finalizers for automatic garbage
+collecting.
+
+This library has been developed on an as-needed basis, rather than a
+methodical one.  There are possibly many more datatypes that would be the
+proper domain of this library to handle, and those can be added as they
+are reported to me, or as need arises in my own work with xlib.
+
+=== Datatypes
+
+* XGlyphInfo
+* XRectangle
+* XRenderColor
+
+
+== Authors
+
+* John J Foerch
+
+
+== Requirements
+=== Chicken eggs
+
+* [[foreigners]]
+
+=== C headers
+
+* X11 development headers (libx11-dev)
+* XRender development headers (libxrender-dev)
+
+
+== API
+=== XRectangle
+
+<procedure>(make-xrectangle x y width height)</procedure>
+<procedure>(xrectangle-x rect)</procedure>
+<procedure>(xrectangle-y rect)</procedure>
+<procedure>(xrectangle-width rect)</procedure>
+<procedure>(xrectangle-height rect)</procedure>
+<procedure>(xrectangle-x-set! rect x)</procedure>
+<procedure>(xrectangle-y-set! rect y)</procedure>
+<procedure>(xrectangle-width-set! rect width)</procedure>
+<procedure>(xrectangle-height-set! rect height)</procedure>
+<procedure>(xrectangle->string rect)</procedure>
+
+Some of these procedures have the same names as procedures in the xlib
+egg, so if you are using xtypes and xlib together, you should change your
+xlib import form to look like this:
+
+<enscript highlight="scheme">
+(use
+ (except xlib make-xrectangle
+              xrectangle-x xrectangle-y
+              xrectangle-width xrectangle-height)
+ xtypes)
+</enscript>
+
+
+=== XGlyphInfo
+
+<procedure>(make-xglyphinfo)</procedure>
+<procedure>(xglyphinfo-x xginfo)</procedure>
+<procedure>(xglyphinfo-y xginfo)</procedure>
+<procedure>(xglyphinfo-width xginfo)</procedure>
+<procedure>(xglyphinfo-height xginfo)</procedure>
+<procedure>(xglyphinfo-xoff xginfo)</procedure>
+<procedure>(xglyphinfo-yoff xginfo)</procedure>
+
+
+=== XRenderColor
+
+The channel values of an xrendercolor are all normalized to a decimal
+number between 0.0 and 1.0.
+
+<procedure>(make-xrendercolor r g b [a])</procedure>
+<procedure>(xrendercolor-red color)</procedure>
+<procedure>(xrendercolor-green color)</procedure>
+<procedure>(xrendercolor-blue color)</procedure>
+<procedure>(xrendercolor-alpha color)</procedure>
+
+
+== Examples
+
+
+
+
+== License
+
+BSD
+
+
+== Version History
+
+* 0.1a (January 2, 2012) initial release
+* 0.1a2 (February 7, 2013) added xrectangle->string

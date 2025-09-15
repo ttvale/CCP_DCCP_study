@@ -1,0 +1,37 @@
+The Falling Things
+------------------
+
+* Change log
+
+v0.1a		20120103	Initial version.
+
+  - Basic falling things.
+  - Different speeds (random) for falling things.
+  - Detection collision with the padding.
+  - Detection of missed falling things.
+  - Variables: speed of falling things, amount of falling things and length of paddle are established but constant for now.
+  - User interaction with keyboard (left/right arrows) and mouse (horizontal movement).
+  - Keystrokes reset scenario (r), pause scenario (p) and quit sketch (q).
+  - Pause sign with image.
+  - Scores (catched/missed) plus variables info displayed.
+  - Falling things pushes other things below them if they are slower.
+  - Temporal graphical signs for catch/miss events with transparency.
+  - Keyboard shortcuts to control the speed limit of the fallings things and its amount.
+
+* Keys
+
+  Arrows (LEFT, RIGHT)	Moves the paddle
+  Arrows (UP, DOWN)	Control the speed limit of the falling things	
+  +,-			Control the amount of falling things
+  q			Quit
+  r			Reset
+  p			Pause
+
+* Resources
+
+  - Pause sign
+    http://openclipart.org/detail/108451/player-pause-by-anonymous
+  - Catched sign
+    http://openclipart.org/detail/65251/smiling-baby-by-laobc
+  - Missed sign
+    http://openclipart.org/detail/65257/sad-baby-by-laobc

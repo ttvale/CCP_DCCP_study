@@ -1,0 +1,1 @@
+A Joomla! extension that add a Facebook Like Box on the web site.

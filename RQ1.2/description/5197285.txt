@@ -1,0 +1,1 @@
+Mucking around with post-commit hooks in Git, in part to integrate with JIRA

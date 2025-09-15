@@ -1,0 +1,73 @@
+LICENSE
+
+   Copyright 2010, 2011 Edgar Simo-Serra
+
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU Lesser General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+OVERVIEW
+
+This is a simple C frontend for ARPACK. This allows easy access to
+calculating a subset of eigenvectors and eigenvalues of sparse matrices.
+Specifically it can solve two problems:
+ - Av = vd
+ - Av = Mvd
+Where A, M are sparse matrices, v is the subset of
+eigenvectors and d is the diagonal matrix of eigenvalues.
+
+
+DEPENDENCIES
+
+1) libsuitesparse (libsuitesparse-dev)
+2) libarpack (libarpack2-dev)
+
+On Ubuntu install the following with:
+
+# apt-get install libsuitesparse-dev libarpack2-dev
+
+
+INSTALLING
+
+To install run:
+
+# make install
+
+You will have to be root to install it unless you change the path in the Makefile.
+
+
+DOCUMENTATION
+
+To generate full documentation use the command:
+
+$ make docs
+
+Which will generate a pdf containing the full documentation in the directory.
+
+
+CHANGELOG
+
+- Version 1.1, January 2012
+   - Invert the eigenvector/value order to match octave/matlab's eigs(...) function.
+   - Support for EIGS_MODE_I_SHIFTINVERT with default driver backend.
+   - Support for EIGS_MODE_G_SHIFTINVERT with default driver backend.
+   - Added number of Lanczos vectors to use as a parameter.
+   - Added driver that uses UMFPACK backend (default).
+   - Added driver that tries Cholesky factorization, then LU and finally.
+   - Added driver that tries LU factorization then QR.
+   - Added driver that tries QR factorization.
+- Version 1.0, December 2011
+   - Initial Revision.
+   - Support for EIGS_MODE_I_REGULAR with default driver backend.
+   - Support for EIGS_MODE_G_REGINVERSE with default driver backend.
+

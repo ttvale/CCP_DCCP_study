@@ -1,0 +1,1 @@
+UITabBarController category for easily adding iAds with resizable views and auto rotation support.

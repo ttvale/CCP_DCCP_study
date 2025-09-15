@@ -1,0 +1,1 @@
+This is a client of Q4M to use in Symfony2 as a Bundle. this bundle is being developed now.

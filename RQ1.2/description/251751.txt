@@ -1,0 +1,1 @@
+Chrome extension that runs on WordPress.org plugins pages.  It adds a link to the plugin's SVN repo below the .zip file download link.

@@ -1,0 +1,1 @@
+EGPack is an archive utility, similar to the TAR utility.

@@ -1,0 +1,1 @@
+A Python wrapper for the Cosm/Pachube v2 API, using the twisted networking framework

@@ -1,0 +1,1 @@
+A bare cytoplasm blog, with no posts and a minimal configuration.

@@ -1,0 +1,1 @@
+OpenSSL/GnuPG encryption/signing gui for Linux implemented with Python & PyGTK

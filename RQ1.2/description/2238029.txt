@@ -1,0 +1,1 @@
+Emulate the summarizing of a URL the way Facebook does when you paste one in to your status updte.

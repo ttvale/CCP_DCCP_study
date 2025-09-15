@@ -1,0 +1,1 @@
+Hudson Plugin that reads jumble report and generates a report per build and a trending graph

@@ -1,0 +1,1 @@
+Utility classes for force.com apex I've collected.

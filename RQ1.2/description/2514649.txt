@@ -1,0 +1,1 @@
+This is a head counting software. Its aim is to be able to count the number of people present in a crowd, especially in protests, and provide an estimate as accurate as possible.

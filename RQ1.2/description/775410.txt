@@ -1,0 +1,1 @@
+This is the Yammer adapter for hubot that allows you to send a message to him with Yammer and he will happily reply the same way.

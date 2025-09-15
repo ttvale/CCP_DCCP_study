@@ -1,0 +1,1 @@
+Installer branch for the Sahana Vesuvius People Locator by the Sahana Software Foundation

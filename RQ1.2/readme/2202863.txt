@@ -1,0 +1,19 @@
+web-plotter 3D
+==============
+
+A very simple web-based 3d plotter, using jQuery, Silvester and canvas.
+This is a proof-of-concept made on a couple of hours to learn to draw on canvas, but could be easily wrapped as a jQuery plugin or something like that.
+
+Demo: [http://web-plotter3d.apsique.com]
+
+How to use
+==========
+
+Just clone the git and open the file plotter3d.html on your browser. That's all.
+On the main textarea you could insert point coordinates, using commas to separate the X,Y and Z values.
+The textarea at the right is the ortographic projection. You could change the
+values to distort the figure
+The a slider rotates the figure on vertical plane. The b slider rotates the figure on the horizontal plane. The s slider changes the scale.
+You could also rotate the figure using the mouse over the canvas.
+
+Have fun!

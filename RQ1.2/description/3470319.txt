@@ -1,0 +1,1 @@
+An old iOS application which displays the latest software updates from MacUpdate. Never published - No longer developed nor maintained.

@@ -1,0 +1,1 @@
+Allows a user to play the game boggle against a computer

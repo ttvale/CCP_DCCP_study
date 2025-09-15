@@ -1,0 +1,1 @@
+A Plone products used to replace the footer by a 3 level site map

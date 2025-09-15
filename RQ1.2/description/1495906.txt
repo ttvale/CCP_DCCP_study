@@ -1,0 +1,1 @@
+This extension allows you to resize/rotate images from Caja.

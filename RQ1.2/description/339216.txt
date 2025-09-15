@@ -1,0 +1,1 @@
+RequireJS / Jasmine / r.js / almond skeleton for javascript libraries and modules.

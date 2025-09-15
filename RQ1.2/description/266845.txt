@@ -1,0 +1,1 @@
+Android application that notifies you of your contacts' birthdays and anniversaries.

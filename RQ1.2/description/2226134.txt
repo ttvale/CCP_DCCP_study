@@ -1,0 +1,1 @@
+pic2osc is the communication auxiliary software for PICnome64/128, PICratchBOX_OSC and DORAnome2.

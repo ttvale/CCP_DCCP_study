@@ -1,0 +1,1 @@
+DEPRECATED - see https://github.com/okfn/ckan.js [Javascript client library and app for CKAN data hub software]

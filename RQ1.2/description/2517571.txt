@@ -1,0 +1,1 @@
+Ruby client for 88pages

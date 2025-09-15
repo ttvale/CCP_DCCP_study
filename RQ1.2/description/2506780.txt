@@ -1,0 +1,1 @@
+This is the WebGL Testproject from the IPGC-Leipzig e.V.

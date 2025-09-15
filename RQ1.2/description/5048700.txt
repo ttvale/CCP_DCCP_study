@@ -1,0 +1,1 @@
+Testium is a very Flexible and Plugin-able Test Automation Engine written in java. It is Open Source and fully supports the XML-based file formats of the Standardized Test Tool Interfaces as described in http://www.testtoolinterfaces.org/. Other file formats can be added through plugins.

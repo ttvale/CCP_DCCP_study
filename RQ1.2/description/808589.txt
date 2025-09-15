@@ -1,0 +1,1 @@
+A multitouch game for, with and because of Kivy

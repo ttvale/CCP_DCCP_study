@@ -1,0 +1,1 @@
+This is a php command line tool for getting data from www.getclicky.com. It uses the Clicky API and downloads the data in batches.

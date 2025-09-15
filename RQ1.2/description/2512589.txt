@@ -1,0 +1,1 @@
+A mechanism for bypass Plone security, accessing specific URLs while giving a secret token

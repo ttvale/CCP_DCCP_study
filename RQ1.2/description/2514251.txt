@@ -1,0 +1,1 @@
+A small IUT project. Displays a rotating cube in OpenGL.

@@ -1,0 +1,125 @@
+Sequencer
+A fast(?) fullscreen image-sequence player
+
+--------------------------------------------------------------------------------
+Demo:
+    https://sequencer.ertdfgcvb.xyz/#2
+
+--------------------------------------------------------------------------------
+How to use:
+    The minimum parameters are two filenames of an image sequence
+    or an array of filenames.
+
+    In the first case the parser tries to figure out the filename pattern:
+
+    const s1 = Sequencer.make({
+        from : 'pics/pig/DSC04701.JPG',
+        to   : 'pics/pig/DSC04775.JPG',
+    })
+
+    ...or just a plain numerical sequence:
+
+    const s2 = Sequencer.make({
+        from : 'pics/dog/1.png',
+        to   : 'pics/dog/100.png',
+    })
+
+    ...or with a provided list of filenames:
+
+    const s2 = Sequencer.make({
+        list : [
+            '1a.png',
+            '1b.png',
+            '2.png',
+            '3.PNG',
+            '4.jpg',
+            'img7.png',
+            'final.jpg'
+        ]
+    })
+
+    All options:
+
+    const opts = {
+        canvas           : null,        // A valid canvas element
+                                        // (will be created if null)
+        list             : []           // An array of paths
+                                        // to the images to load;
+                                        // as an alternative the three options
+                                        // 'from', 'to' and 'step' below
+                                        // can be used to fill the array
+                                        // programmatically
+        from             : '1.jpg',     // First file of the sequence
+        to               : '10.jpg',    // Last file of the sequence
+        step             : 1,           // Increment: to load only even images
+                                        // use 2, etc.
+        scaleMode        : 'cover',     // Can be: auto, cover, contain
+                                        // as in CSS3,
+        direction        : 'x',         // Can be: x, -x, y, -y
+                                        // and determines the pointer direction,
+                                        // applies only if playMode
+                                        // is drag or hover
+        playMode         : 'drag',      // Can be: none, drag, hover, auto
+        loop             : 'loop',      // Can be: loop, pong, none
+        interval         : 10,          // Interval in milliseconds
+                                        // between each frame,
+                                        // applies only if playMode is auto,
+                                        // if set to zero tries to update
+                                        // at every frame event
+        autoLoad         : 'all',       // Can be: all, first, none,
+                                        // if first or none is used the loading
+                                        // needs to be triggered manually
+                                        // with load().
+        fitFirstImage    : false,       // Resizes the canvas to the size of
+                                        // the first loaded image
+                                        // in the sequence
+        showLoadedImages : false,       // Show images while loading
+                                        // the sequence, may be jumpy because
+                                        // of async loading <- not a typo
+        dragAmount       : 10,          // Distance (in pixels)
+                                        // to trigger nextImage(),
+                                        // can be < 1, but must be > 0
+        hiDPI            : true,        // Use hiDPI if present
+        imageLoad        : function     // Callback for each image load
+        queueComplete    : function     // Callback for queue complete
+    };
+
+--------------------------------------------------------------------------------
+Changelog:
+
+      3.0.1
+    - fix bug (last image not loaded)
+    - add makefile
+
+      3.0
+    - better parser
+    - remove utils.js
+    - use rollup.js for compression
+    - minified version is a module
+
+      2.1
+    - update to ECMAScript 2015 (aka ES6)
+    - script is now an ES6 module (may need transpiling for legacy support)
+      and loaded as such in the examples
+
+      2.0
+    - multiple instances
+    - better parser (automatic leading zeroes detection)
+    - canvas only (2d)
+    - incremental drag
+    - removed default loader (a custom one can be implemented via callback)
+    - cover frame
+
+--------------------------------------------------------------------------------
+Todo:
+    - remove 'loop' option (merge with playMode)
+    - area hovering
+    - accept an image array as parameter
+    - accept a spritesheet as parameter
+    - WebGL support
+    - better touch support
+
+--------------------------------------------------------------------------------
+Author:
+    Andreas Gysin
+    ertdfgcvb.xyz

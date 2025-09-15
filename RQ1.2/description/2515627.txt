@@ -1,0 +1,1 @@
+Watches mysql's general_log and prints out sql queries with syntax highlighting

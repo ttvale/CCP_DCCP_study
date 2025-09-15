@@ -1,0 +1,1 @@
+A PostGIS db backend that works with standard_conforming_strings.

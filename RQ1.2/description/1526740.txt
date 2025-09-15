@@ -1,0 +1,1 @@
+Adroid version for the Sage Firefox extension

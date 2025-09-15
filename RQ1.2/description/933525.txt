@@ -1,0 +1,1 @@
+Manage your rails email templates with liquid. Bonus: Newsletters

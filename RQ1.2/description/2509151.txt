@@ -1,0 +1,1 @@
+Extendable app that assigns an facebook app/tab to a certain url

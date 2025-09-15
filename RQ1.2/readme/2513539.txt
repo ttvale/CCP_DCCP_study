@@ -1,0 +1,4 @@
+Primera Versión de la Red neuronal
+El algoritmo hace uso de Bias en cada capa oculta asi como en la capa de salida
+
+El Objeto funciona.rna es un respaldo de una configuracion que funciona

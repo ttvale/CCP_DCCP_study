@@ -1,0 +1,48 @@
+License : released under GPL v2.
+
+About Flashstat :
+-------------------
+Flashcache from facebook is a great project. Thanks the author Mohan Srinivasan.
+
+And this tiny tool flashstat is for flashcache status per second, 
+Flashstat retrieves information from dmsetup table/dmsetup status/sysctl
+
+Attention :
+-------------------
+this tool has been merged into Flashcache's utils, if you want new version, please go to the flashcache project:
+<https://github.com/facebook/flashcache>
+
+Update :
+-------------------
+2011-01-11 NinGoo version 0.3 parse /proc/../flashcache_stats instead of dmsetup status for new version flashcache
+
+Usage :
+-------------------
+You need sudo privileage to run this tool.
+
+flashstat [options]
+options:
+  -i|--interval         default is 1 second
+  -c|--count            default is 0, means never exit
+  -d|--device           flashcache mapping device name, default is /dev/mapping/cachedev
+  -n|--nocolor          no ANSI color mode
+  -h|--help             print help information
+
+output:
+  read/s                reads per second for cachedev
+  write/s               writes per second for cachedev
+  diskr/s               disk reads per second
+  diskw/s               disk writes per second
+  ssdr/s                ssd reads per second
+  ssdw/s                ssd writes per second
+  uread/s               uncached reads per second
+  uwrit/s               uncached writes per second
+  metaw/s               metadata ssd writes per second
+  clean/s               cleanings per second
+  repl/s                replacement per second
+  wrepl/s               write replacement per second
+  hit%                  read hit percent(current hit%|total hit%)
+  whit%                 write hit percent(current whit%|total whit%)
+  dwhit%                dirty write hit percent(current dwhit%|total dwhit%)
+
+NinGoo(seaman.ning@gmail.com)

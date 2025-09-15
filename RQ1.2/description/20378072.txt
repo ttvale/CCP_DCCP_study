@@ -1,0 +1,1 @@
+Topic content type (canned searches) for the Zope Content Management Framework (CMF)

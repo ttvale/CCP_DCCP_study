@@ -1,0 +1,4 @@
+Miraculous
+==========
+
+MIRAculous is a graphical interface for the sequence assembler MIRA.

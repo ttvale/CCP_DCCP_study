@@ -1,0 +1,39 @@
+
+[[File:http://ycanvas.yoz.sk/images/preview.jpg|preview]]
+
+== YCanvas ==
+YCanvas is an open source 2D tile renderer library written in ActionScript 3. It provides high performance solution for rendering world maps or projects like [http://onboard.yoz.sk onBoard]. The library also contains Stage3D (GPU) accelerated implementation based on [http://gamua.com/starling/ Starling].
+
+The engine is optimized for rendering speed as well as for releasing unused system resources. While GPU api for flash player requires textures at width and height at power of two, you can reach the best performance when using 256x256 or 512x512 tiles.
+
+=== YCanvasMap ===
+YCanvasMap is a more specific extension of YCanvas providing base implementation for map applications. It includes tools like polygons, strokes, markers and handlers for mouse or multi-touch navigation. The library works smoothly for web, Android or iOS applications. ([http://ycanvas.yoz.sk/maps/ example])
+
+=== Projects using YCanvas ===
+* [http://trainlord.com Train Lord] is a live massively multi-player game (MMOG) using real world data and maps. Get it on [https://play.google.com/store/apps/details?id=air.com.trainlord.ApplicationAndroid Google play] and [https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=661042774&mt=8 App Store]
+* [http://onboard.yoz.sk/ onBoard] is a massive collaborative painting and drawing canvas where you can draw, sketch, paint, zoom, rotate
+* Volcans d'Auvergne on [https://play.google.com/store/apps/details?id=air.com.etamin.volcans Google Play] or [https://itunes.apple.com/fr/app/volcans-dauvergne/id928571020?mt=8 Apple Store] - Tous les volcans de la chaîne des Puys dans votre poche !
+
+=== Compare ===
+See [http://ycanvas.yoz.sk/explorer Ycanvas explorer demo] ([http://ycanvas.yoz.sk/explorer/?debug=true +stats]) and compare the speed of YCanvas vs. the original implementation:
+* [http://wall-of-fame.com Wall Of Fame]
+* [http://webcanvas.com WebCanvas]
+* [http://www.superfreedraw.com/ SuperFreeDraw]
+* [http://www.jotwol.com Jotwol]
+* [http://www.mapquest.com MapQuest]
+* [http://www.esri.com/software/arcgis/index.html ArcGIS]
+* [http://www.openstreetmap.org Open Street Map]
+
+=== Repository content ===
+* '''ApplicationDemo''' - sources for simplest YCanvas implementation demonstrating implementation over Open Street Map available live on http://ycanvas.yoz.sk/demo
+* '''ApplicationExplrorer''' - sources for YCanvas explorer available on http://ycanvas.yoz.sk/explorer
+* '''ApplicationExplrorerMap''' - sources for YCanvas explorer for Android and iOS deployment
+* '''ApplicationMap''' - YCanvasMap implementation with [http://feathersui.com/ Feathers UI] available on http://ycanvas.yoz.sk/maps/ (available tiles: [http://www.arcgis.com/features/ ArcGIS Imagery], [http://www.arcgis.com/features/ ArcGIS National Geographic], [http://www.mapquest.com/ MapQuest], [http://www.openstreetmap.org/ OpenStreetMap], [http://www.mapbox.com/ MapBox], [http://cloudmade.com/ CloudMade], [http://www.bing.com/maps/ Bing Maps Imagery])
+* '''ApplicationMapMobile''' - sources for YCanvasMap implementation for mobile application
+* '''ApplicationMarkers''' - sources for YCanvas with markers available on http://ycanvas.yoz.sk/markers
+* '''ApplicationRemotair''' - sources for YCanvas with Remotair available on http://ycanvas.yoz.sk/remotair/ . This app lets you remote control YCanvas application with [http://remotair.yoz.sk Remotair]. Uses multitouch (two-finger) gestures to move, scale, rotate
+* '''YCanvasLibrary''' - sources for YCanvas library
+* '''YCanvasMapLibrary''' - sources for YCanvas map library
+
+=== Donations ===
+If you like YCanvas, feel free to [http://ycanvas.yoz.sk/donate.html donate via PayPal].

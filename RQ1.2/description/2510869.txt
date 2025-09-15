@@ -1,0 +1,1 @@
+HexEd is a simple program aiming to alter bytes in files.

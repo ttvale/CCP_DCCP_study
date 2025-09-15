@@ -1,0 +1,10 @@
+This is an interpreter for the Anna language. Anna is a computer
+language with a C-like syntax, structural typing and LISP-style
+macros. 
+
+The Anna interpreter is working and only has a small number of glaring
+functionality holes, but the standard library is still a barren
+wasteland. After installing Anna, the documentation should be
+available in HTML format in /usr/local/share/doc/anna/index.html. You
+can also check out the various example files in the util, perf and
+tests directories to get a feel for how the language works.

@@ -1,0 +1,1 @@
+This library is a lua client for SC-Server. It is a simple client that implements most of the interface of SC-Server.

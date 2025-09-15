@@ -1,0 +1,1 @@
+Service Administration (XEP-0133) library for node-xmpp

@@ -1,0 +1,1 @@
+[Ruby & Rails] Packages up common association patterns

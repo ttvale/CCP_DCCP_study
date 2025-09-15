@@ -1,0 +1,1 @@
+A very small Mac OS X application testing the CPU for 64 bits capabilities.

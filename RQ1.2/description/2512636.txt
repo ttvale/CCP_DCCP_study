@@ -1,0 +1,1 @@
+StratoSpera BSM-2 board schematics, firmware and web tracker.

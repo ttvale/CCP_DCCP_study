@@ -1,0 +1,1 @@
+A Bit Twiddling  implementation of "sieve of eratosthenes" in C and Java, 

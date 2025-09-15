@@ -1,0 +1,1 @@
+JQuery easing plugin registration for the Plone CMS

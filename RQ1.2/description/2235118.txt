@@ -1,0 +1,1 @@
+The mysql connection pooling module for a prefork server (like php). You can limit the number of connections by shariing connections bewteern a parent process and child processes

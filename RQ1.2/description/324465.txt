@@ -1,0 +1,1 @@
+A simple Chef report handler using ruby_gntp to send growl notifications

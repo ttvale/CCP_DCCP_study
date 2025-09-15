@@ -1,0 +1,1 @@
+The qWikiOffice Web Desktop is an open source project committed to providing an online experience that is unique and user friendly.  Ajax technology combined with the EXT-JS library and cutting edge graphics allow qWikiOffice and the web applications within to behave similar to a desktop environment.

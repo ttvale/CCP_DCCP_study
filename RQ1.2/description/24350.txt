@@ -1,0 +1,1 @@
+Share On is an extension for phpBB that allows users to share the topics and posts on social networks.

@@ -1,0 +1,1 @@
+Submits your clipboard text to PasteBin.com and gives you the URL to the paste, doing everything without requiring you to open your web browser.

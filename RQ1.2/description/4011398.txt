@@ -1,0 +1,1 @@
+Profiler is a software component to easier the investigation of the performance issue. It provides some tools to report the CPU usage and call times of the profiled places.

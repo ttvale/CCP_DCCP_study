@@ -1,0 +1,1 @@
+A Google Chrome extension for WorkFlowy to add markdown support and syntax highlighting in notes

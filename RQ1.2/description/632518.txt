@@ -1,0 +1,1 @@
+DO NOT USE. Riakkit. An ORM for Python Riak for RAD. Similar to mongokit and couchdbkit. This is about to be deprecated by kvkit

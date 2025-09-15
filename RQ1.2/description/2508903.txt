@@ -1,0 +1,1 @@
+Simple ssh/sftp remote server manager

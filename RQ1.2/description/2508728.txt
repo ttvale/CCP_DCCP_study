@@ -1,0 +1,1 @@
+Some resources for teaching javascript to my kids -- maybe works for others?

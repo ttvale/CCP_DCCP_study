@@ -1,0 +1,1 @@
+Firefox extension to chase the memory usage and garbage collector activity

@@ -1,0 +1,39 @@
+The Real Costs is a Firefox plug-in that inserts emissions data into travel related e-commerce websites.
+
+This project was created in 2006 by Michael Mandiberg. It was commissioned by Rhizome.org. 
+
+CONTRIBUTORS
+
+Michael Mandiberg
+P. Timon McPhearson
+Carlo Montagnino
+Evan Moran
+Sara Kladky
+
+HISTORY
+
+The Real Costs is a Greasemonkey script compiled to xpi, and it stopped working with Firefox 2.0.0.3
+We are currently in the process of rebuilding it to make it functional again.
+
+MORE INFO
+
+http://TheRealCosts.com
+http://mandiberg.com
+
+CURRENT VERSION INFO
+
+The current version of The Real Costs has been updated to add a fixed position header bar to airline websites
+The plugin runs best on these sites:
+	aa.com
+	alaskaair.com
+	continental.com
+	delta.com
+	orbitz.com
+	flysaa.com
+	cathaypacific.com
+	airfrance.us
+	singaporeair.com
+	southwest.com
+	
+Known Bugs:
+	Many sites (either completely or partially) do not work with our current method of working around AJAX content

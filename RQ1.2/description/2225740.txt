@@ -1,0 +1,1 @@
+A Scala tutorial for absolute beginners

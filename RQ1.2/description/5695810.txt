@@ -1,0 +1,1 @@
+Novabuild is a build system used by Be IP to generate Debian (.deb) packages out of upstream tarballs or repositories and a separate repository of 'debian/' directories.

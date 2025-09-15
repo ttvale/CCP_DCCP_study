@@ -1,0 +1,1 @@
+Fast poker hand evaluator written in c++/c

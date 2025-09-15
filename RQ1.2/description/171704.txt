@@ -1,0 +1,1 @@
+A small, lightweight framework to implement RESTful Webservices in Scala.

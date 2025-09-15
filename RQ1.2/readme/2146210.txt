@@ -1,0 +1,18 @@
+h1. Herbie and Jamal
+
+h2. Controls
+
+h3. Herbie
+* Movement: W, A, S and D
+* Action: Space
+
+h3. Jamal
+* Movement: Arrow keys
+* Action: Return
+
+h3. Debugging keys
+* F1-F4: Set in-game zoom
+* F5: Toggle fog of war
+* F6: Open skin selection screen
+* Tab: Swap player 1 and 2 controls
+* M: Mute music and sounds game

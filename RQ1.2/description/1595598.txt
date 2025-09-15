@@ -1,0 +1,1 @@
+Simplize using fusionchart free in ruby on rails

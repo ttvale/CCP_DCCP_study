@@ -1,0 +1,1 @@
+GTK+ for VLC npapi plugin on Linux

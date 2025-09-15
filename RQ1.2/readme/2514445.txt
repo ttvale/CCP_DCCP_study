@@ -1,0 +1,14 @@
+Install android adk
+Download android tools within eclipse (like 2.2 sdk)
+
+
+Need to send data to server
+
+
+FEATURE CREEP
+Map
+Map in detail view
+multiple pictures
+Context menu shortcuts
+Improved Cameras
+Server Polling

@@ -1,0 +1,1 @@
+TwEater (short for Twitter Eater) is a tool designed to help you archive long-term Twitter search queries. TwEater supports a variety of backends, from flat files to MySQL databases, and it's easy to plug in your own storage code. TwEater is released under a GPL v3 license; see the file LICENSE for more information.

@@ -1,0 +1,6 @@
+Some custom LaTeX packages that are mostly unoriginal.  Most of the interesting
+bits were ripped from StackOverflow answers or various blogs which can be found
+by a quick Google search.  In addition:
+
+- The delimiters are modeled after the commath package.
+- The applekeys package is from http://dl.dropbox.com/u/10932738/index.html

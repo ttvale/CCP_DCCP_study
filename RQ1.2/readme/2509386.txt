@@ -1,0 +1,20 @@
+Within s-spec.rkt you'll see a couple examples of the structure of how the tests should be.  Also, you'll find all the code that makes up this test suite.  
+
+Known bug(s) that I don't have the time to fix that I just found:
+
+1) Things like let don't work within the it-exp bodies because of how the accessor it-exp->should-be works.  Since let would would have the should-be exp in the body of the let this isn't where the accessor usually thinks it is.  So if you were to put a let expression in the it-exp body like I just tried to do you would get an error.  
+
+
+What's in each file? 
+
+s-spec.rkt - All of the code for the s-spec
+
+ll-interpreter10.rkt - Homework 10 which I tested upon in tester.rkt
+
+tester.rkt - Contains a full test for the homework 10 that we did in class.  This should give a good idea of what testing with this test suite would feel like.  Try changing the expected values to get the failed tests information to pop up.  Or even create your own!
+
+environment.rkt - contains our environment for homework 10
+
+
+
+

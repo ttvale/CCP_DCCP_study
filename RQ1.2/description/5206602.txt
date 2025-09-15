@@ -1,0 +1,1 @@
+This library hopes to provide a helper class to be used by any Java based reporting tool like Jasper/Pentaho

@@ -1,0 +1,1 @@
+A single process monitor for embedding into a plugin or extension.

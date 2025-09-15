@@ -1,0 +1,1 @@
+Automatically add whitelist entries to gld whitelist table

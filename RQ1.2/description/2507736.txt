@@ -1,0 +1,1 @@
+Javascript Library for ShowClix Search API

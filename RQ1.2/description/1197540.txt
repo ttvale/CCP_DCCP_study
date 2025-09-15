@@ -1,0 +1,1 @@
+SBT Plugin for ember.js

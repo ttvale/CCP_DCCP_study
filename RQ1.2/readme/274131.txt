@@ -1,0 +1,7 @@
+TODO:
+- resize based on height
+- change background to genetically generated image
+- allow javascript to be disabled
+
+Broswer test considerations:
+- haven't tested on anything but chrome on linux

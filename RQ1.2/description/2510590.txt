@@ -1,0 +1,1 @@
+A Restlet+OSGI try project managed with Maven, Pax-Construct and the pax:provision pluggin

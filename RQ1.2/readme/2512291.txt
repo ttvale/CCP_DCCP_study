@@ -1,0 +1,48 @@
+lib to download and install
+
+BeautifulSoup - http://www.crummy.com/software/BeautifulSoup/#Download
+
+pysqlite - http://pypi.python.org/pypi/pysqlite/
+
+if you want a full database to download: kiwitobes.com/db/searchindex.db
+
+-- Seeding database
+import nn
+reload(nn)
+mynet = nn.searchnet('nn.db')
+mynet.maketables()
+
+import searchengine
+reload(searchengine)
+crawler = searchengine.crawler('searchindex.db')
+crawler.createindextables()
+
+pages = ['http://kiwitobes.com/wiki/Categorical_list_of_programming_languages.html']
+crawler.crawl(pages)
+
+-- Searching
+import searchengine
+reload(searchengine)
+e = searchengine.searcher('searchindex.db')
+e.query('functional programming')
+
+
+-- Testing NN
+import nn
+reload(nn)
+mynet = nn.searchnet('nn.db')
+mynet.maketables()
+
+wWorld,wRiver,wBank = 101,102,103
+uWorldBank,uRiver,uEarth = 201,202,203
+mynet.trainquery([wWorld,wBank],[uWorldBank,uRiver,uEarth],uWorldBank)
+
+mynet.getresult([wWorld,wBank],[uWorldBank,uRiver,uEarth])
+
+allurls = [uWorldBank,uRiver,uEarth]
+
+for i in range(30): mynet.trainquery([wWorld,wBank],allurls,uWorldBank); mynet.trainquery([wRiver,wBank],allurls,uRiver); mynet.trainquery([wWorld],allurls,uEarth);
+
+mynet.getresult([wWorld,wBank],allurls)
+mynet.getresult([wRiver,wBank],allurls)
+mynet.getresult([wBank],allurls)

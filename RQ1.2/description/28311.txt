@@ -1,0 +1,1 @@
+Goto CSS declaration in an open *.css file

@@ -1,0 +1,2 @@
+Hide ads from Vkontakte.ru
+Not required JQuery ;)

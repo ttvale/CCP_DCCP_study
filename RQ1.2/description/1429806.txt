@@ -1,0 +1,1 @@
+An Ace of Spades clone / fork / experiment, written in Python and using Pyglet for OpenGL.

@@ -1,0 +1,60 @@
+Pynientos
+=========
+
+Description
+-----------
+A python API interface for 500px.com website
+Its based on [Pyblr](https://github.com/ToQoz/Pyblr/) by Takatoshi Matsumoto.
+For more detailed information about the 500px take a look at [500px Devel Docs](http://developer.500px.com/)
+If you want to know what methods are available in this version, take a look to [this](https://github.com/reiven/pynientos/blob/master/available_functions.txt) file
+
+About the name
+--------------
+The 'pynientos' name came from a play on words on spanish between 'python' and 'quinientos' (five houndred)
+
+
+Python libraries needed
+-----------------------
+[python-oauth2](https://github.com/simplegeo/python-oauth2)  
+[poster](http://atlee.ca/software/poster/index.html)
+[certifi](https://pypi.python.org/pypi/certifi)
+
+Example usage
+-------------
+
+    import pynientos
+
+    client = pynientos.pynilib.Pynientos()
+
+    # authenticate your key and secret
+    client.auth(key='consumer key', secret='consumer secret')
+
+    # if you already have a token and token_secret, you can call the lib like this
+    client.auth(key='consumer_key', secret='consumer_secret',token='token_key',token_secret='token_secret')
+
+    # get last photo of a photo stream
+    client.get_photos_user(username="reiven",sort="created_at",rpp="1")
+
+    # get lastest 5 photos from editors choice
+    client.get_photos_editors(rpp="5")
+
+    # get the detail of a photo, at largest size and comments
+    client.get_photo_detail(id="1857992",image_size="4",comments="1")
+
+    # get authorized user profile (if token and token_secret was provided)
+    client.get_user()
+
+    # to post new photos, you need an upload_key (see [this](http://developer.500px.com/docs/photos-post) and [this](http://developer.500px.com/docs/auth-upload))
+    p = client.post_photo(name="from the api")
+
+    # now, proceed to upload the photo itself
+    client.upload_photo(file="/home/pynientos/testfile.jpg",upload_key=p['upload_key'],photo_id=p['photo']['id'])
+
+License
+-------
+This package is distributed under BSD License. See also [LICENSE](https://github.com/reiven/pynientos/blob/master/LICENSE)  
+
+
+----------------------------------------------------------------
+For bug report, feedback, or any other reasons:
+Federico Reiven <reiven AT gmail DOT com>

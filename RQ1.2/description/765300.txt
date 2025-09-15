@@ -1,0 +1,1 @@
+Safely execute shell commands and get their output.

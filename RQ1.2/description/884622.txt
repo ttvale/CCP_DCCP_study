@@ -1,0 +1,1 @@
+NGINX module providing userspace cooperative multitasking for IO-bound content-handlers

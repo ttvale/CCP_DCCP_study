@@ -1,0 +1,1 @@
+Oil Standard is a greasemonkey script that converts all US Dollar prices on every webpage into the equivalent value in barrels of oil, with a live price feed from the New York Mercantile Exchange. A commission of Turbulence.org.

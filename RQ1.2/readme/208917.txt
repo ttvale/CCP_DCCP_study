@@ -1,0 +1,1 @@
+Personal irc bot for the #srs channel.

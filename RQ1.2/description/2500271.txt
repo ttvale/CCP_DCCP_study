@@ -1,0 +1,1 @@
+An easier to maintain clash compiler

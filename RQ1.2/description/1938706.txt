@@ -1,0 +1,1 @@
+Java Iterator library like LINQ.

@@ -1,0 +1,1 @@
+A simple perl module for PoundPay. This is an obsolete implementation.

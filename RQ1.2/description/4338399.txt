@@ -1,0 +1,1 @@
+Small Python script that takes a list of directories zips them and uploads the zip to a ftp server. Also deleting all zips older than the configured stale option. Thought it could be useful to someone out there.

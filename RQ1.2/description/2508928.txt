@@ -1,0 +1,1 @@
+Shell script that automate the installation of java tools

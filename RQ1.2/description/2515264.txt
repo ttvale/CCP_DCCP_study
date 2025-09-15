@@ -1,0 +1,1 @@
+minimal example demonstrating scala on android with opengl es

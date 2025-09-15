@@ -1,0 +1,1 @@
+Simple SilverStripe module for managing liks to pages not part of the normal menus - such as link in the footer or header

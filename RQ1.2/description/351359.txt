@@ -1,0 +1,1 @@
+My personal Vim installation, following the same procedures as the Janus project

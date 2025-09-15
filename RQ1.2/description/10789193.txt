@@ -1,0 +1,1 @@
+solver for bubble blast 2 game on android

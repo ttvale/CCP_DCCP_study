@@ -1,0 +1,1 @@
+Playing around with JS sound, inspired by Max Goodman's presentation "Making Waves: A Primer in Pure JS Generated Audio".  See http://chromakode.com/misc/waves/pow.html

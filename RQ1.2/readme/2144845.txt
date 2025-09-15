@@ -1,0 +1,352 @@
+Name
+    nginx-xsltproc-module - an extended version of the standard module
+    HttpXsltModule that allows you to specify a stylesheet in fastcgi
+    script by passing a specified header.
+
+Synopsis
+    #nginx.conf
+        location / {
+            xsltproc        on;
+
+            xsltproc_stylesheet_caching on;
+            xsltproc_stylesheet_root /var/www/example.com/template;
+            xsltproc_stylesheet_check_if_modify on;
+
+            xsltproc_profiler on;
+            xsltproc_profiler_stylesheet /var/www/example.com/template/profiler.xslt;
+            xsltproc_profiler_repeat on;
+
+            xsltproc_memcached on;
+            xsltproc_memcached_server 1.1.1.1:11211;
+            xsltproc_memcached_server 2.2.2.2:11211;
+            xsltproc_memcached_key_prefix site1_;
+            xsltproc_memcached_key_auto on;
+            xsltproc_memcached_expire 60m;
+
+            xsltproc_types  application/xml;
+
+            xml_entities    /site/dtd/entities.dtd;
+
+            fastcgi_pass    127.0.0.1:9009;
+            fastcgi_index   index.fcgi;
+            fastcgi_param   SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+            include         fastcgi_params;
+        }
+
+    #index.fcgi
+        #!/usr/bin/perl
+
+        use strict;
+        use warnings;
+
+        use CGI::Fast;
+
+        my $socket  = FCGI::OpenSocket("127.0.0.1:9009", 256);
+        my $request = FCGI::Request(\*STDIN, \*STDOUT, \*STDERR, \%ENV, $socket);
+
+        while ($request->Accept() >= 0) {
+
+            print
+                "X-Xslt-Stylesheet: /xslt/test.xslt?param1=1&param2='test'\r\n",
+                "Content-type: application/xml\r\n\r\n",
+                "<root></root>";
+        }
+
+Description
+    This module extends the standard module HttpXsltModule to specify
+    a stylesheet in fastcgi script by passing a specified header.
+
+    Header must be specified as:
+    X-Xslt-Stylesheet: <stylesheet_path>[?<param>=<value>[&<param>=<value>...]]
+
+    Stylesheet path is root-relative.
+
+    Parameter values must be escaped with the URI escaping mechanism.
+
+Directives
+    xsltproc
+        syntax: *xsltproc on|off*
+
+        default: *xsltproc off*
+
+        context: *http, server, location, if in location*
+
+        Turning this directive on will enable XSLT processing.
+
+    xsltproc_stylesheet_root
+        syntax: *xsltproc_stylesheet_root <root_path>*
+
+        default: *no*
+
+        context: *http, server, location, if in location*
+
+        Sets the root directory for xslt-templates.
+
+    xsltproc_stylesheet_caching
+        syntax: *xsltproc_stylesheet_caching on|off*
+
+        default: *xsltproc_stylesheet_caching off*
+
+        context: *http, server, location, if in location*
+
+        Turning this directive on will enable stylesheet caching.
+
+    xsltproc_stylesheet_check_if_modify
+        syntax: *xsltproc_stylesheet_check_if_modify on|off*
+
+        default: *xsltproc_stylesheet_check_if_modify off*
+
+        context: *http, server, location, if in location*
+
+        Turning this directive on will check if a stylesheet has been modified
+        on every request and will update cache if need.
+
+    xsltproc_profiler
+        syntax: *xsltproc_profiler on|off*
+
+        default: *xsltproc_profiler off*
+
+        context: *http, server, location, if in location*
+
+        Turning this directive on will enable collection the profile information.
+
+    xsltproc_profiler_stylesheet
+        syntax: *xsltproc_profiler_stylesheet <stylesheet_path>*
+
+        default: *no*
+
+        context: *http, server, location, if in location*
+
+        If parameter is specified, the profile information added with this template
+        in the resulting HTML document.
+
+        The structure of profile information:
+            <profiler parse_header_time="44" parse_body_time="10">
+                <stylesheet uri="main.xsl" time="111">
+                  <profile>
+                    <template rank="1" name="" match="*" mode="" calls="20" time="444" />
+                    ...
+                  </profile>
+                  <document>
+                    <root>
+                      ...
+                    </root>
+                  </document>
+                  <params>
+                    <param name="name1" value="'value1'" />
+                    ...
+                  </params>
+                </stylesheet>
+                ...
+            </profiler>
+
+        An example the result document:
+            <html>
+                <head>
+                    ...
+                </head>
+                <body>
+                    ...
+                    <!-- the result of applying the profiler stylesheet -->
+                    <div id="profiler" class="profiler">
+                        ...
+                    </div>
+                </body>
+            </html
+
+    xsltproc_profiler_repeat
+        syntax: *xsltproc_profiler_repeat on|off*
+
+        default: *xsltproc_profiler_repeat off*
+
+        context: *http, server, location, if in location*
+
+        Turning this directive on will run the transformation 20 times.
+
+    xsltproc_memcached
+        syntax: *xsltproc_memcached on|off*
+
+        default: *xsltproc_memcached off*
+
+        context: *http, server, location, if in location*
+
+        Turning this directive on will enable using memcahed.
+
+    xsltproc_memcached_server <name:[port]>
+        syntax: *xsltproc_memcached_server <url>*
+
+        default: *none*
+
+        context: *http, server, location, if in location*
+
+        Push a server into the list of memcahed servers.
+
+    xsltproc_memcached_key_prefix <prefix>
+        syntax: *xsltproc_memcached_key_prefix <prefix>*
+
+        default: *none*
+
+        context: *http, server, location, if in location*
+
+        The memcached key is "$prefix..."
+
+    xsltproc_memcached_key_auto
+        syntax: *xsltproc_memcached_key_auto on|off*
+
+        default: *xsltproc_memcached_key_auto off*
+
+        context: *http, server, location, if in location*
+
+        Turning this directive on will calculate a memcached key as md5sum
+        of the body + stylesheet info (uri, mtime, params).
+
+    xsltproc_memcached_expire <time>
+        syntax: *xsltproc_memcached_expire <time>*
+
+        default: *0*
+
+        context: *http, server, location, if in location*
+
+        Expiration time.
+
+    xml_entities
+        syntax: *xml_entities <path>*
+
+        default: *no*
+
+        context: *http, server, location, if in location*
+
+        Specifies the DTD file which describes symbolic elements (xml entities).
+        This file is compiled at the stage of configuration. For technical
+        reasons it's not possible to specify entities in the XML being processed,
+        therefore they are ignored, but this specially assigned file is used
+        instead. In this file it is not necessary to describe structure of
+        processed XML, it is sufficient only to declare necessary symbolic
+        elements, for example:
+            <! ENTITY of nbsp "  ">
+
+    xsltproc_types
+        syntax: *xsltproc_types mime-type [mime-type...]*
+
+        default: *xsltproc_types text/xml*
+
+        context: *http, server, location, if in location*
+
+        Permit processing responses with specified MIME-types in addition to "text/xml".
+        If XSLT output mode is HTML, then the response MIME-type changes to "text/HTML".
+
+Using XSLT functions
+    <xsl:stylesheet version="1.0"
+        xmlns:ngx="http://nginx.org/xsltproc"
+        extension-element-prefixes="ngx"
+    >
+
+    ...
+
+    </xsl:stylesheet>
+
+    ngx:join
+        syntax: *string ngx:join(node-set, sep)*
+
+        Returns a string created by concatenating the string arguments and using
+        the sep argument as the separator.
+
+        example: ngx:join('string1', 'string2', /root/item, ', ')
+
+        xml: '<root><item>item1</item><item>item2</item></root>'
+
+        result: 'string1, string2, item1, item2'
+
+    ngx:uc
+        syntax: *string ngx:uc(string)*
+
+        Converts the string argument to upper-case
+
+        example: ngx:uc('abcDEF')
+
+        result: 'ABCDEF'
+
+    ngx:lc
+        syntax: *string ngx:lc(string)*
+
+        Converts the string argument to lower-case
+
+        example: *ngx:lc('abcDEF')*
+
+        result: 'abcdef'
+
+    ngx:ltrim
+        syntax: *string ngx:ltrim(string)*
+
+        Strip whitespace from the beginning of a string
+
+        example: ngx:ltrim('   string')
+
+        result: 'string'
+
+    ngx:rtrim
+        syntax: *string ngx:rtrim(string)*
+
+        Strip whitespace from the end of a string
+
+        example: ngx:rtrim('string    ')
+
+        result: 'string'
+
+    ngx:trim
+        syntax: *string ngx:trim(string)*
+
+        Strip whitespace from the beginning and end of a string
+
+        example: ngx:trim('    string    ')
+
+        result: 'string'
+
+
+Installation
+    Grab the nginx source code from nginx.org (<http://nginx.org/>), for
+    example, the version 1.0.11, and then build the source with this module:
+
+        wget 'http://nginx.org/download/nginx-1.0.11.tar.gz'
+        tar -xzvf nginx-1.0.11.tar.gz
+        cd nginx-1.0.11/
+
+        ./configure --add-module=/path/to/nginx-xsltproc-module
+
+        make -j2
+        make install
+
+    Download the latest version of the release tarball of this module from
+    nginx-xsltproc-module file list
+    (<https://github.com/yoreek/nginx-xsltproc-module/tags>).
+
+Copyright & License
+    This module is based on the HttpXsltModule module in the Nginx 1.0.11 sources.
+    The original code is copyright Igor Sysoev.
+
+    Copyright (c) 2012, Yuriy Ustyushenko <yoreel@yahoo.com>.
+
+    This module is licensed under the terms of the BSD license.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are
+    met:
+
+    *   Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+
+    *   Redistributions in binary form must reproduce the above copyright
+        notice, this list of conditions and the following disclaimer in the
+        documentation and/or other materials provided with the distribution.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+    IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+    TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+    PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+    HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+    SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+    TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+    PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+    LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+    NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

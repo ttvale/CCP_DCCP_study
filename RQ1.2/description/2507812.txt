@@ -1,0 +1,1 @@
+Exploring node.js with the goal of creating a simple chat server

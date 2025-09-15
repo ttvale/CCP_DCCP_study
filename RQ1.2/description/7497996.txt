@@ -1,0 +1,1 @@
+A proof-of-concept job board written in Python using the Flask framework, mongoengine and hosted on Heroku

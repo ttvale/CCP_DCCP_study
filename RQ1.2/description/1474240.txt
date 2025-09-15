@@ -1,0 +1,1 @@
+PIL for Ubuntu(changes for successfull build under Ubuntu)

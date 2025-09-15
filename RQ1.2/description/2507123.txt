@@ -1,0 +1,1 @@
+Yet Another Event Broker for C# (and Castle Windsor)

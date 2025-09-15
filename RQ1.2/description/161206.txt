@@ -1,0 +1,1 @@
+A LESS.js framework for common design patterns [untested, incomplete]

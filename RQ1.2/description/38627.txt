@@ -1,0 +1,1 @@
+Core part of Jackson that defines Streaming API as well as basic shared abstractions

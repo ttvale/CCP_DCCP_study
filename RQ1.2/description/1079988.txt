@@ -1,0 +1,1 @@
+iOS 5 Container View Controller that mimcs the behaviour of the Path 2.0 and Facebook apps.

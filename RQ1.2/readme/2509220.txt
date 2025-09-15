@@ -1,0 +1,3 @@
+Rails tutorial Hartl: sample application
+
+HARTL FOR THE HOLIDAYS!

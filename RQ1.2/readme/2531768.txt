@@ -1,0 +1,19 @@
+
+Algorithms and Analysis Summer 2012 Assignment skeleton.
+
+Includes:
+
+* 2-3 implementation
+* CppUnitLite unit test framework
+* basic Makefiles
+* skeleton code provided to students
+* timing code.
+
+Changelog:
+
+-v0.2
+* added bst implementation
+* added linkedlist implementation
+* added tests
+-v0.1:
+* now compiles on yallara (using gmake)

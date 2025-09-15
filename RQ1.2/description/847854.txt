@@ -1,0 +1,1 @@
+clojure interface to interact with (java-)objects in the hibernate ORM

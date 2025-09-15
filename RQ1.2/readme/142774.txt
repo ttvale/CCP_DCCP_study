@@ -1,0 +1,7 @@
+== InterMix
+
+Building a global consciousness from the bottom up. InterMix is designed not so much to surmount as to go around the organizational boundary problems that prevent civil society from uniting in earnest.
+
+== License
+
+GNU General Public License, version 3 (GNU GPLv3) http://www.gnu.org/licenses/gpl-3.0.html

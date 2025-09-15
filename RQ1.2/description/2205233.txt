@@ -1,0 +1,1 @@
+An example of how to integrate a blog with a Rails 3 site using the native RSS module. 

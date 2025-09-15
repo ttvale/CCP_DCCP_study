@@ -1,0 +1,13 @@
+Generic event-based CSS parser written in C.
+
+Features:
+
+  - Fast
+      Parser is written in C. It uses LEX and YACC. Has its own memory pool.
+
+  - Relevant
+      Follow W3 specifications and recomendations. The parser handles media
+    queries, css3 selectors, paged media, css namespaces and so on.
+
+  - Useful
+      Can be used in a multithreaded environment.

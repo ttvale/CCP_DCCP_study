@@ -1,0 +1,1 @@
+When the object or arg to a delayed_job is a Mongoid document, store only a small stub of the object instead of the full serialization.

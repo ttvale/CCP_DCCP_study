@@ -1,0 +1,5 @@
+== Web template for band website and administration written with Ruby on Rails
+
+This template allows managing bands website, it has administrator user to allow adding events, bios, cds and fans
+
+

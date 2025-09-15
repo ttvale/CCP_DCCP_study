@@ -1,0 +1,1 @@
+A plugin template for WordPress. Initialize a new plugin, build, and include desired libraries.

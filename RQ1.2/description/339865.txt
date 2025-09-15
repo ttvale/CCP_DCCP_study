@@ -1,0 +1,1 @@
+A string extensions library for node.js

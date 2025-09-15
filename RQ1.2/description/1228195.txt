@@ -1,0 +1,1 @@
+Jenkins plugin for JBoss.org project analysis tool Tattletale

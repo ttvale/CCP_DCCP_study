@@ -1,0 +1,1 @@
+Interpreto pentru pseudo-cod (Interpreter for pseudo-code)

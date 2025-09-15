@@ -1,0 +1,1 @@
+Maven HTMLCompressor Plugin allows to compress HTML/XML files by adding a few lines to the pom file.

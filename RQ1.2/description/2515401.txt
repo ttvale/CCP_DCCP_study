@@ -1,0 +1,1 @@
+A simple god mode that watches for players in a Mob Arena

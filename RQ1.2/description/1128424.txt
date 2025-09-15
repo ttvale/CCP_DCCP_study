@@ -1,0 +1,1 @@
+A touch controller for cocos2d used for pinch-zooming and panning around

@@ -1,0 +1,1 @@
+A Django based framework for quickly creating RESTful interfaces to NoSQL and relational databases

@@ -1,0 +1,1 @@
+A log writer for Kohana 3 that logs to a loggly account.

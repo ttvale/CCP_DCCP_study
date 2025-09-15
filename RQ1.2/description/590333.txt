@@ -1,0 +1,1 @@
+Modern, statically typed, duck typed, generic, imperative programming language, inspired by C++, Go, and Scala.

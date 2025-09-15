@@ -1,0 +1,1 @@
+Implementation of Business::OnlinePayment for Poundpay. This is an obsolete implementation.

@@ -1,0 +1,1 @@
+PHP logging library that is highly extendable and simple to use.

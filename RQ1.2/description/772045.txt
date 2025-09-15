@@ -1,0 +1,1 @@
+A badass Django project template

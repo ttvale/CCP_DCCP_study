@@ -1,0 +1,1 @@
+Spatial tests on PostGIS based on OpenStreetMap data

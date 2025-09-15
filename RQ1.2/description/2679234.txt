@@ -1,0 +1,1 @@
+common tests to check for copyright and license notices

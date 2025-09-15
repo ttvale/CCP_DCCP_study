@@ -1,0 +1,1 @@
+Rails Excel strategy to write xlsx files through rubyXL gem

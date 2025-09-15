@@ -1,0 +1,1 @@
+set of scripts to install development software on to a vanilla Ubuntu installation

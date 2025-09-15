@@ -1,0 +1,7 @@
+This is my tutorial from the Sitepoint book "Build mobile websites and apps for smart devices"; By Earle Castledine, Myles Eftos, and Max Wheeler.
+
+As I was working with just the html and css, I wanted to be able to actually add the items and make it more real as I went through
+the book. 
+
+
+It will be a work in progress I move through the book.

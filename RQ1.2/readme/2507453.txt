@@ -1,0 +1,86 @@
+===TestDev
+This plugin creates DSL for performance testing. By default it runs tests for developement database. Syntax is similar to TestUnit and Rspec.
+
+Each test is being run two times, so you can see how caching works (look at example at the end of this doc).
+
+Created for Rails 2.3.x
+
+
+== Usage
+Install
+  script/plugin install git://github.com/dawid-sklodowski/test_dev.git
+Run generator
+  script/generate test_dev install
+It creates:
+  test/test_dev_helper.rb
+  test/test_dev/example_test.rb
+Then you can run prepared example test
+  ruby test/test_dev/example_test.rb
+
+
+== Example test file
+    require File.dirname(__FILE__) + '/../test_dev_helper'
+
+    class TestingSelf < TestDev
+
+      before :all do
+        puts 'Start testing'
+      end
+
+      before :each do
+        @test_num ||=0
+        @test_num += 1
+        puts "\n\n\nRunning test number #{@test_num}"
+      end
+
+      after :all do
+        #Do Something
+      end
+
+      after :each do
+        #Do Something
+      end
+
+      test 'doing some time expensive operation' do
+        #You can use Active Record here.
+        #User.all.first.albums.collect
+        sleep 1
+      end
+
+    end
+
+== Example test output
+Testing one of my applications.
+  test 'loading albums of the first user' do
+    User.all.first.albums.collect
+  end
+
+Results
+
+    Start testing
+
+
+
+    Running test number 1
+    Testing loading albums of the first user
+         user     system      total        real
+    First Run  0.020000   0.000000   0.020000 (  0.030463)
+    Queries: --------------------------------------------------------------------------------------------------------------
+     SQL (0.2ms)   SET NAMES 'utf8'
+     SQL (0.2ms)   SET SQL_AUTO_IS_NULL=0
+     User Load (1.3ms)   SELECT * FROM `users`
+     Album Load (1.0ms)   SELECT * FROM `albums` WHERE (`albums`.user_id = 1) ORDER BY updated_at DESC
+     Album Columns (2.5ms)   SHOW FIELDS FROM `albums`
+     Photo Columns (1.9ms)   SHOW FIELDS FROM `pictures`
+     Photo Load (0.7ms)   SELECT * FROM `pictures` WHERE (`pictures`.`id` IN (45,128,17) AND (parent_type = 'Album')) AND ( (`pictures`.`type` = 'Photo' ) )
+
+    ------------------------------------------------------------------------------------------------------------------------
+    Second Run  0.000000   0.000000   0.000000 (  0.003862)
+    Queries: --------------------------------------------------------------------------------------------------------------
+     User Load (0.6ms)   SELECT * FROM `users`
+     Album Load (0.4ms)   SELECT * FROM `albums` WHERE (`albums`.user_id = 1) ORDER BY updated_at DESC
+     Photo Load (0.5ms)   SELECT * FROM `pictures` WHERE (`pictures`.`id` IN (45,128,17) AND (parent_type = 'Album')) AND ( (`pictures`.`type` = 'Photo' ) )
+
+    ------------------------------------------------------------------------------------------------------------------------
+
+Copyright (c) 2011 {Lean Logics}[http://leanlogics.com], released under the MIT license

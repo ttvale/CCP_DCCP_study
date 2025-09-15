@@ -1,0 +1,1 @@
+Parallel Primes (P^2): a parallel implementation of a prime number generator

@@ -1,0 +1,361 @@
+EasyMineLauncher
+----------------
+
+An easy and lightweight launcher for Minecraft which takes some of the hassle
+away.
+
+Due to the way Minecraft is launched beginning with the 1.6 snapshots and the 1.6 release it is not possible to launch these versions with EasyMineLauncher.
+
+
+What it does:
+-------------
+
+ * Removes the need to login if you just want to play offline or on
+   a private server
+ * There's no check for an update, you're directly catapulted to the main menu
+   or connected to a server
+ * Additional parameters (f.e. start as maximized window or loading of
+   certain versions from different directories)
+
+
+What it does not:
+-----------------
+
+ * Remove the need to authenticate at servers if they demand it
+ * Loading and applying updates
+ * Lets you play Minecraft for free, you'll still need to get an account and
+   download the binaries
+
+
+How does it work?
+-----------------
+
+Basically this is just mimicking the behavior of the official launcher,
+except that it removes the online authentication and the update process.
+I figured most of that out with Trial & Error, that's why it's looking
+a little bit crude and has debugging output all over the place.
+
+
+Compatibility
+-------------
+
+This launcher is compatible with the following versions:
+
+ * Indev
+ * Infdev
+ * Alpha
+ * Beta
+ * 1.0 - 1.5
+
+This launcher does not work with the 1.6 snapshots and release or any later version.
+
+
+Where to get it?
+----------------
+
+Ready-to-use jars are available from [the Download-Section](http://easyminelauncher.bonsaimind.org/).
+
+
+What can I do with it?
+----------------------
+
+Awesome stuff?
+
+Here's the output from `--help`:
+
+    Usage: EasyMineLauncher.jar [OPTION]
+    Launch Minecraft directly.
+    
+    --help                   Prints this help.
+    --version                Prints the version.
+
+
+    --jar-dir=DIRECTORY      Set the directory for the jar files.
+    --jar=MINECRAFT.JAR      Set the path to the minecraft.jar.
+                             Either specify jar-dir or this.
+    --lwjgl-dir=DIRECTORY    Set the directory for the jar files
+                             of lwjgl (lwjgl.jar, lwjgl_util.jar, and jinput.jar)
+    --password=PASSWORD      Set the password.
+    --mppass=MPPASS          Same as --password=PASSWORD (backwards compatibility)
+    --native-dir=DIRECTORY   Set the directory for the native files of lwjgl.
+    --additional-jar=JAR     Load the specified jars.
+                             This might be needed by some mods.
+                             Specify multiple times or list separated with ','.
+    --parent-dir=DIRECTORY   Set the parent directory. This effectively changes
+                             the location of the .minecraft folder.
+    --applet=APPLET          The (full) name of the applet to load. Normally this
+                             points to the Minecraft-Applet.
+    --blend-with=JAR         Blend the (found) minecraft.jar with JAR.
+                             That means that the content of JAR is copied into
+                             a temporary jar and then is supplemented with the
+                             missing files from minecraft.jar.
+                             Please be aware that this means that two archives are
+                             merged together at every start, that takes on my SSD
+                             a whooping 1.2 seconds.
+    --blend-jar-name=NAME    The NAME of the blended jar, defaults to
+                             minecraft_blended.jar.
+    --blend-keep-manifest    Copy the manifest from the given JAR to blend...that
+                             might not work.
+    --port=PORT              Set the port of the server, if not set it will revert
+                             to 25565.
+    --texturepack=FILE       Set the texturepack to use, this takes only
+                             the filename (including extension).
+                             Use 'Default' for default.
+    --server=SERVER          Set the address of the server which directly
+                             to connect to.
+    --authenticate           Use the given username and password to authenticate
+                             at the Mojang server. This will override the given
+                             session id (if given) and the username with that
+                             returned from Mojang (case corrected).
+    --authentication-failure=Set the behavior if the authentication fails,
+                             following values are possible:
+      SILENT_CONTINUE        Just continue, there will only be a notification
+                             on the error output.
+      ALERT_CONTINUE         Display a dialog with the reason why it failed,
+                             but still continue on.
+      SILENT_BREAK           Stop execution and exit, there will only be
+                             a notification on the error output.
+      ALERT_BREAK            Stop execution and exit, and also display a dialog
+                             with the reason why authentication failed.
+                             This is the default behavior.
+    --keep-alive-tick=TICK   Set the interval (in seconds) in which the
+                             authentication at the Mojang server is renewed.
+                             Default is 300 seconds.
+    --session-id=SESSIONID   Set the session id.
+    --launcher-version=VER   Report this launcher version when authenticating.
+                             Default is "381".
+    --auth-address=ADDRESS   Authenticate at this address instead of
+                             the Mojang server.
+    --options-file=FILE      Copy the options.txt from this location.
+                             Please be aware that this overwrites the options.txt
+                             in the Minecraft directory. This will also be done
+                             before --texturepack and --set-option.
+    --set-option=NAME:VALUE  Set this option in the options.txt file.
+    --username=USERNAME      Set the username to user.
+    --use-lastlogin          Read username and password from the lastlogin file
+                             within the parentdir. Overrides provided username and
+                             passwords.
+    --save-lastlogin         Writes back the username and password into
+                             the lastlogin file, but only after successfull
+                             authentication (therefor --authenticate must be
+                             provided, too).
+    --keep-username          Do not override the username with that returned from
+                             Mojang. Only applies when --authenticate is provided.
+    --demo                   Trigger Demo-Mode. This might break other stuff.
+
+
+    --title=TITLE            Replace the window title.
+    --height=HEIGHT          The width of the window.
+    --width=WIDTH            The height of the window.
+    --x=X                    The x-location of the window.
+    --y=Y                    The y-location of the window.
+    --maximized              Maximize the window.
+    --no-frame               Remove the border of the window.
+    --always-on-top          Make the window stay above all others.
+    --fullscreen             Makes the window the same size as the whole desktop.
+                             This is basically shorthand for
+                               --width=SCREENWIDTH
+                               --height=SCREENHEIGHT
+                               --x=0
+                               --y=0
+                               --no-frame
+                               --always-on-top
+                             This might yield odd results in multi-monitor
+                             environments.
+    --opacity=OPACITY        Sets the opacity of the window, were 1 is fully
+                             visible, 0 is invisble and 0.5 is half visible.
+                             This might or might not work depending on your WM and
+                             or compositor. This also forces --no-frame.
+    --dump                   Chickens out before doing anything and prints all
+                             of the configuration values.
+    --no-exit                Does not exit on failure (if Minecraft could not be
+                             loaded), only returns.
+
+You can also keep different versions around and launch them with ease,
+f.e. with such a directory/file-layout:
+
+    bin
+     +- Beta 1.6.6.jar (renamed minecraft.jar)
+     +- Beta 1.7.3.jar
+     +- Beta 1.8.2.jar
+     +- lwjgl
+         +- lwjgl jars go here
+     +- natives
+         +- lwjgl natives go here
+
+With the following command you can launch the versions:
+
+    java -Xmx1024M -Xms1024M -jar EasyMineLauncher.jar --jar=./bin/Beta \1.6.6.jar --lwjgl-dir=./bin/lwjgl/ --native-dir=./bin/natives/ --username=Terminator
+
+
+Notes on the parameters
+-----------------------
+
+### --additional-jar=JAR
+
+This will allow you to load other jars into memory. Please be aware that this
+does nothing but load the jars so that they're available via reflection. There
+are some mods which need external jars or the official launcher...you can
+specify them with this.
+
+You can specify this either multiple times:
+
+      --additional-jar=./first.jar --additional-jar=./second.jar --additional-jar=./third.jar
+
+Or you can specify a list, whatever suits your needs:
+
+      --additional-jar=./first.jar,./second.jar,./third.jar
+
+There's also the possibility that this might not work, drop an Issue with
+the mod and I'll have a look.
+
+### --parent-dir=PARENTDIR
+
+This will allow you to change the location of the minecraft directory which
+is normally located in `~/`. Please be aware that this will only change
+the location of the `.minecraft` directory, f.e. `/mnt/data/Minecraft/Data/`
+becomes `/mnt/data/Minecraft/Data/.minecraft/`.
+
+### --blend-with=JAR
+
+Please be aware that this option does merge two archives together. So depending
+in your machine, this may take between 1 and 10 seconds *every start*.
+
+
+Great...so how do I compile this?
+---------------------------------
+
+### The easy way
+
+Download the ready-to-use jar from [the Download-Section](http://easyminelauncher.bonsaimind.org/).
+
+### The normal way
+
+Run `ant`.
+
+### The hard way
+
+ 1. Create a manifest file `MANIFEST.MF` in the base directory with the following content:
+
+        Manifest-Version: 1.0
+        Main-Class: org.bonsaimind.easyminelauncher.Main
+
+ 2. Execute the following commands:
+
+        $ mkdir build dist
+        $ javac -d build src/org/bonsaimind/easyminelauncher/*
+        $ jar -cvfm dist/EasyMineLauncher.jar MANIFEST.MF -C build build/org/bonsaimind/easyminelauncher/*
+
+ 3. Find the ready-to-use jar in `dist`.
+
+
+Examples
+--------
+
+Launch whatever is installed (same as hitting "Offline Mode" in the official launcher):
+
+    java -Xmx1024M -Xms1024M -jar EasyMineLauncher.jar
+
+Launch the current version of Minecraft with a certain username:
+
+    java -Xmx1024M -Xms1024M -jar EasyMineLauncher.jar --username=MyAwesomeName
+
+Launch the current version of Minecraft with an updated lwjgl version which resides in a different directory:
+
+    java -Xmx1024M -Xms1024M -jar EasyMineLauncher.jar --lwjgl-dir=/home/user/updatedLWJGL/ --native-dir=/home/user/updatedLWJGL/native/ --username=MyNotSoAwesomeName --maximized
+    
+Launch the current version of Minecraft and directly connect to a server:
+
+    java -Xmx1536M -Xms1536M -jar EasyMineLauncher.jar --username=MyAwesomeName --server=myprivate.server.com
+
+Launch specific jar, with different lwjgl directory, connect to a server on a different port, maximize the window and rename it:
+
+    java -Xmx1024M -Xms1024M -jar EasyMineLauncher.jar --jar=./bin/Beta\ 1.7.3.jar/ --lwjgl-dir=./bin/lwjgl/ --native-dir=./bin/natives/ --username=Octiface --server=awesome.server.com --port=666 --maximized --title=UberGame
+    
+A simple portable launcher:
+
+    java -Xmx1024M -Xms1024M -jar EasyMineLauncher.jar --jar-dir=./bin/ --parent-dir=./
+
+Authenticate at Mojang:
+
+    java -Xmx1024M -Xms1024M -jar EasyMineLauncher.jar --username=YourOfficialName --password=shutup --authenticate
+
+Or maybe like this:
+
+    java -Xmx1024M -Xms1024M -jar EasyMineLauncher.jar --use-lastlogin --authenticate
+
+Some more authentication options:
+
+    java -Xmx1024M -Xms1024M -jar EasyMineLauncher.jar --username=YourUsername --password=shooooootu --authenticate --keep-alive=240 --authentication-failure=ALERT_CONTINUE
+
+
+Not so fast...
+--------------
+
+...okay, step by step.
+
+How do make your Minecraft portable, if you already have a `.minecraft`
+directory, skip to step 4:
+
+ 1. Start the official launcher, download the binaries
+ 2. Launch Minecraft one time to create the data directory and necessary files
+ 3. Exit Minecraft
+ 4. Copy the `~/.minecraft` directory to `/media/yourUsbStick/`
+ 5. Rename it to something more meaningful
+ 6. Create a sript with the following contents:
+ 
+        #!/bin/sh
+        # Launcher.sh, /media/yourUsbStick/MinecraftPortable/
+        
+        java -Xmx1024M -Xms1024M -jar EasyMineLauncher.jar \
+          --jar-dir=./bin/ \
+          --parent-dir=./ \
+          --username=YourOfflineUsername
+ 
+ 7. Make the script executable, done.
+ 
+Okay, now to something more sophisticated, let's extract and split
+the `.minecraft` directory so that we can have multiple versions
+with ease (assuming you already have different versions and a `.minecraft` dir):
+
+ 1. Create a directory as target, e.g. `~/Minecraft/`
+ 2. Create the following sub-directories: `bin`, `data`, `lwjgl` and `natives`
+ 3. Copy `~/.minecraft/bin/minecraft.jar` to `~/Minecraft/bin/VERSION.jar`
+ 4. Copy `~/.minecraft/bin/*.jar` to `~/Minecraft/lwjgl/*.jar`
+ 5. Copy `~/.minecraft/bin/natives/*.so` to `~/Minecraft/natives/*.so`
+ 6. Copy everything from `~/.minecraft/` to `~/Minecraft/.minecraft/` except the `bin` directory
+ 7. Copy the `EasyMineLauncher.jar` into `~/Minecraft/`
+ 8. Create the `Launcher.sh` script and make it executable:
+ 
+        #!/bin/sh
+        # Launcher.sh, ~/Minecraft/
+    
+        java -Xmx1024M -Xms1024M -jar EasyMineLauncher.jar \
+          --jar=./bin/$1.jar \
+          --lwjgl-dir=./lwjgl/ \
+          --native-dir=./natives/ \
+          --parent-dir=./data/ \
+          --username=YourOfflineUsername \
+          --title=Minecraft\ $1
+    
+ 9. Create a version specific script and make it executable:
+ 
+        #!/bin/sh
+        # VERSION.sh, ~/Minecraft/
+        
+        ./Launcher.sh VERSION
+    
+ 10. Repeat steps 3 and 9 to add further versions.
+
+
+Problems? Let's see...
+----------------------
+
+### ClassNotFoundException
+
+If you're using a mod and you're getting a `ClassNotFoundException: net.minecraft.Launcher` error,
+you need to specify the original Minecraft-Launcher with the `--additional-jar` option.
+
+### Dude, my achievements are gone!
+
+Oh yeah, should have told you before, somehow version hopping seems to mess up the achievements, so you might lose all of them.

@@ -1,0 +1,1 @@
+A jquery placeholder plugin similar to tumblr's based on MrColes' jsfiddle snippet.

@@ -1,0 +1,1 @@
+ruby library for reading nt registry hives offline

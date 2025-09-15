@@ -1,0 +1,1 @@
+Simple class designed to cache results into a Dictionary for quick and easy retrieval.

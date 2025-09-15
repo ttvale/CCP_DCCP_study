@@ -1,0 +1,1 @@
+open-source app for managing generalised "like" lists

@@ -1,0 +1,1 @@
+search through Fasta and Fastq files as fast as grep (because it is)

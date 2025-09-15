@@ -1,0 +1,1 @@
+some Python projects I am writing to learn Python based off Marty Stepp's 143 Python lectures and assignments.

@@ -1,0 +1,1 @@
+A web browser that has offline features like a Web Camera,  Games,Email and many more.You dont have to be online to navigate the Anansi Browser.

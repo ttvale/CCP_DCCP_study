@@ -1,0 +1,1 @@
+Rack Middleware which retrieves KML from Rails and produces KMZ for the client.

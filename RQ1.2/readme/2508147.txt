@@ -1,0 +1,15 @@
+=== Description ===
+This is a small chess engine and AI I wrote for kicks. It's designed to work
+with XBoard (run with ./rooked) but has silly command line abilities for
+2-player and AI games.
+
+=== Goals ===
+Simple board that supports most legal moves (not castling until I'm really
+bored), small move generator and a simple evaulation function. I'd like to
+optimize move ordering later on so alpha-beta pruning is more effective. In the
+end I'd like the AI to be better than I am. So far, it doesn't do too well.
+
+=== TODO ===
+ * Add pawn promotion to board.c
+ * Add endgame evaluation/more aggressive mating late game
+ * Continue strengthening early and midgame evaluation

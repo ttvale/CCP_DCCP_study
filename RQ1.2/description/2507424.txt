@@ -1,0 +1,1 @@
+Micro animation framework using requestAnimationFrame with setTimeout fallback.

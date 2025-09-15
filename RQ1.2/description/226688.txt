@@ -1,0 +1,1 @@
+A MultiWorld/MultiCurrency economy plugin for Craftbukkit * DEPRECATED. Go in http://github.com/greatman/Craftconomy3 *

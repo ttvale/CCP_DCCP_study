@@ -1,0 +1,1 @@
+Django simple checkout app designed to work well with django-cart (but won't require it)

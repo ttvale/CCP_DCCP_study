@@ -1,0 +1,1 @@
+PHP script to respond to git hooks and does a pull command when a specified branch is updated. Then emails will be sent to committer to know that the server has their changes now.

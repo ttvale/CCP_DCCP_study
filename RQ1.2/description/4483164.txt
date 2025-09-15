@@ -1,0 +1,1 @@
+various pieces of code used by many of my projects

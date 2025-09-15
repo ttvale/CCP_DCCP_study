@@ -1,0 +1,1 @@
+A bot to go through public github repos, apply universal changes like security fixes, and issue a pull request to pull the changes in. Written in Scala.

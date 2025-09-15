@@ -1,0 +1,1 @@
+My ubuntu config settings that I usually use setting up a new vm or machine

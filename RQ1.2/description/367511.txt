@@ -1,0 +1,1 @@
+Tell StatsD about request time, GC, objects and more. Latest Rails 4 and Ruby 2.1 support, and ancient Rails 2 and Ruby 1.8 support.

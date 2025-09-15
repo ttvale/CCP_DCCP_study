@@ -1,0 +1,1 @@
+"QuickRestClient" is Simple RESTful client API for Java.

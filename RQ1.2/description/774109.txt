@@ -1,0 +1,1 @@
+setup http proxy or database(oracle) sms msg table monitor to send/receive sms using telecomunication industry's SGIP/SMPP protocol 

@@ -1,0 +1,1 @@
+SQL Map is a (very) simple SQL mapper. Most suitable for daemon development or Android stuff.

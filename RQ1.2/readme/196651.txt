@@ -1,0 +1,6 @@
+For installation and configuration instructions, please see the 
+NetReg Adminstrator's Manual section of the NetReg Wiki.
+
+They may be currently be found at their new home:
+
+http://github.com/fsweetser/netreg

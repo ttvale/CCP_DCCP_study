@@ -1,0 +1,1 @@
+This repository is Japanese translations of W3C CSS specification. 

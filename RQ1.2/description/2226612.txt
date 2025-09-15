@@ -1,0 +1,1 @@
+Prototype object system for Common Lisp and more. KR: Constraint-Based Knowledge Representation

@@ -1,0 +1,1 @@
+Boom is an application which is intended to crash, like the Bomb.app application of the first Mac OS X betas. 

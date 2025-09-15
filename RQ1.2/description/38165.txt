@@ -1,0 +1,1 @@
+A Penn Treebank-style parsed corpus of historical Greek from Homer through the Greek New Testament.

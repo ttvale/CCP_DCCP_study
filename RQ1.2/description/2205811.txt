@@ -1,0 +1,1 @@
+A simple little plugin to add the 'view' data binding to knockout

@@ -1,0 +1,1 @@
+Some random snippets made on my machine. Version controlling to manage it across systems and for revisions. Branches #FTW

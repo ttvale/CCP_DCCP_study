@@ -1,0 +1,14 @@
+Projekt Lama
+
+Github:
+https://github.com/lubiluk/Lama
+
+Wymagania do uruchomienia:
+Ruby z RubyOnRails
+PostgreSQL z rozszerzeniem PostGIS
+
+Po wykonaniu w katalogu projektu polecenia 
+bundle install
+wszystkie wymagane biblioteki się zainstalują automatycznie.
+
+Baza danych tworzy się z użyciem mechanizmu migracji RoR

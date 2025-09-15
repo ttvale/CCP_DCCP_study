@@ -1,0 +1,2 @@
+Read installation and configuration related documentation -
+http://github.com/tasawrteam/TasawrSingleSignOnService/wiki/Tasawr-Single-Sign-On-Service

@@ -1,0 +1,1 @@
+Used for exploring the use of Clojure for developing Android applications

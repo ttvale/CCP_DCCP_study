@@ -1,0 +1,1 @@
+A multi user realtime canvas application using Node.js and websockets using Socket.IO

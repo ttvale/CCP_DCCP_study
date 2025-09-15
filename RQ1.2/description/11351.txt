@@ -1,0 +1,1 @@
+An embedded HTTP server for performing queries and test automation

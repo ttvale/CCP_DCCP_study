@@ -1,0 +1,1 @@
+simple and light-weight XMPP Instant Messaging server implementation

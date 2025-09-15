@@ -1,0 +1,1 @@
+Official repo is in bitbucket: https://bitbucket.org/sillsdev/l10nsharp

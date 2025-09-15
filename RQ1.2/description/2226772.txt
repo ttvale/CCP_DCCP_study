@@ -1,0 +1,1 @@
+A faster and more .Net centric couchbase client

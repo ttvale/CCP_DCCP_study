@@ -1,0 +1,1 @@
+Utitlity to help translations of Serendipity blogging system

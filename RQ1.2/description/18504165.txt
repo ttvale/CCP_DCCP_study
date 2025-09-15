@@ -1,0 +1,1 @@
+Android build sources used for the compilation of XOSP 

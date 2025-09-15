@@ -1,0 +1,1 @@
+A little IRC bot that when asked nicely will tell you the names of the open cards in a list on a Trello board

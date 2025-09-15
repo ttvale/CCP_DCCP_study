@@ -1,0 +1,1 @@
+Opens youtube URLs in ProTube app instead of YouTube app.

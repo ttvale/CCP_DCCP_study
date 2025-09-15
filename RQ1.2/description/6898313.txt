@@ -1,0 +1,1 @@
+General Input Interface library fo LibGGI

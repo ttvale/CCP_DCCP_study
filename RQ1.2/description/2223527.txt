@@ -1,0 +1,1 @@
+syslog-notify provides real-time popup notification of system log messages via the freedesktop notification standard

@@ -1,0 +1,6 @@
+This is a tutorial made to improve my knowledge in RoR.
+It will follow Michael Hartl tutorial, which you can see at: 
+"http://ruby.railstutorial.org/".
+Every day I will write a piece of code.
+Thx :D
+

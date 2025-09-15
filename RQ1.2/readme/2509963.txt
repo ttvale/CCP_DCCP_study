@@ -1,0 +1,25 @@
+aegir fimafeng 0.3 - bash provision script for aegir by milk
+https://github.com/milkmiruku/fimafeng
+
+this is a script for my setup. i don't trust my bash skills enough yet so you are responsible for using it! checks the script first, somethings might break on your system. to add; checks for portablity.
+
+note:
+  shflags - uses getopt - no long flags on some systems
+  ./base/ - containing base make/info files in git repo subfolders
+  ./projects - will contain project profile (.make/.info/theme) git repos (cloned from ./base)
+
+installation:
+  cd /var/aegir
+  git clone git@github.com:milkmiruku/fimafeng.git ff
+  git submodule add git@github.com:milkmiruku/d7base.git base/d7base.git
+  git submodule add git@github.com:milkmiruku/d7core.git base/d7core.git
+  wget http://shflags.googlecode.com/files/shflags-1.0.3.tgz
+  tar xvzf shflags-1.0.3.tgz
+  mkdir projects
+
+usage:
+  ./fimafeng.sh --help
+
+history:
+  0.3 - 25/12/2011 - further refactored the whole thing.
+

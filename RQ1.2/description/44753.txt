@@ -1,0 +1,1 @@
+1% of what a mature configuration management tool does, written in bash

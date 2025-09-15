@@ -1,0 +1,1 @@
+Page Visibility API emulation for Firefox 5+

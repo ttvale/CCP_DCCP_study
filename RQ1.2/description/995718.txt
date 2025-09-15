@@ -1,0 +1,1 @@
+An openFrameworks addon to show several different methods of using openCV for foreground/background image segmentation

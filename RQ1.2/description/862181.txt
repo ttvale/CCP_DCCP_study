@@ -1,0 +1,1 @@
+Gallery view for Plone using jquery.fancybox

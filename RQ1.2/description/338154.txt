@@ -1,0 +1,1 @@
+SequenceParser is a C++ library to detect sequences, files and folders.

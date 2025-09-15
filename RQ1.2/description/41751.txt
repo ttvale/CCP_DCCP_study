@@ -1,0 +1,1 @@
+Set of tools and scripts for converting raw data (csv, tsv, $sv, and other custom formats), creating links, and managing a triple store

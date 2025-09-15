@@ -1,0 +1,1 @@
+Modified deluge scheduler plugin with 'force start' support

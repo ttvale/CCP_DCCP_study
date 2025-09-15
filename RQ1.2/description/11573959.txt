@@ -1,0 +1,1 @@
+Unofficial GnuTLS with added custom native Visual Studio project build tools. GnuTLS: GnuTLS is a secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them.

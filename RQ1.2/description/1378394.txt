@@ -1,0 +1,1 @@
+A Latex presentation template which looks like a Keynote presentation

@@ -1,0 +1,1 @@
+GNU Aspell is an Open Source spell checker

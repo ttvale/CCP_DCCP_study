@@ -1,0 +1,1 @@
+[UNMAINTAINED] Quickly discover which versions of rails all your apps are running

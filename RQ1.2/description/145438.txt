@@ -1,0 +1,1 @@
+A client/server indexer for c/c++/objc[++] with integration for Emacs based on clang.

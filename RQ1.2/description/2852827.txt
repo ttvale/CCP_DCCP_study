@@ -1,0 +1,1 @@
+Simple no-frills terminal emulator using VTE -- for (x)dwm

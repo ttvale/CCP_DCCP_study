@@ -1,0 +1,1 @@
+A static asset manager for django, built on the assumption that statics are served using application code

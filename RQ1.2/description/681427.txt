@@ -1,0 +1,1 @@
+A wrapper for Swing aiming to provide more concise syntax and extra functionality. Still in heavy development, syntax may change radically.

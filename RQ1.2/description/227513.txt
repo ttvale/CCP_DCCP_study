@@ -1,0 +1,1 @@
+HTTP metrics monitoring endpoint

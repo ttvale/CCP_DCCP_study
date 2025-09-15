@@ -1,0 +1,1 @@
+Pull information about a Code Repository into your PHP application. (Okay, really just Git for now.)

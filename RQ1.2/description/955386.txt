@@ -1,0 +1,1 @@
+Using onwire sensors, a prepay 3g card, two linux machine (client, server), I want to monitor temperature, humidity, etc.

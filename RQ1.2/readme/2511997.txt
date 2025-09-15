@@ -1,0 +1,25 @@
+WPTool:
+  A utility to publish posts to a Wordpress blog from the command line.
+
+Dependencies:
+  * ImageMagick command line tools (identify).
+  * Ruby 1.9.x
+  * rubygems
+  * wordpress gem > 0.2.x
+
+Installation: 
+  * Copy the file wptool to your $PATH and give chmod +x.
+  * Create a file named ~/.wptool.rb and save settings in following format.
+
+#####
+# WPTool settings
+# Syntax: Ruby 1.9
+AUTH = {
+  username: "admin",
+  password: "rot13",
+  host: "http://example.com/wp-login.php",
+  asset_host: "http://img.example.com"
+  scp_target: "login@example.com:/var/www/html/example.com/uploads/"
+}
+#####
+

@@ -1,0 +1,1 @@
+Library of commonly-used helper functions for Haskell

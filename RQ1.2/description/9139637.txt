@@ -1,0 +1,1 @@
+OpenStack nova with backports for Essex

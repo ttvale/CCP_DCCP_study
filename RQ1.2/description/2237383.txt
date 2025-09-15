@@ -1,0 +1,1 @@
+This is a starting point for creating a serve prototype using the less framework.

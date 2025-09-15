@@ -1,0 +1,13 @@
+README for archiver
+
+Introduction
+------------
+
+Archiver is a tool for making backups at Dahnielson.com. Currently making 
+incremental backups of MySQL databases and storing them in Amazon S3 is 
+supported.
+
+Requirements
+-----------
+
+Archiver require s3cmd to be installed and configured to work.

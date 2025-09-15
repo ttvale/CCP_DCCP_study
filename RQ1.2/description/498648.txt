@@ -1,0 +1,1 @@
+similar to the methodOverride in Express except it overrides GET requests as well.  This is useful for APIs servicing requests via JSONP.

@@ -1,0 +1,1 @@
+A set of C++ libraries based on different premises than the STL/Boost libraries

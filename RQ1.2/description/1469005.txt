@@ -1,0 +1,1 @@
+Boundaries is a small Corona SDK project showing how to calculate min/max visible X & Y values and actual screen dimensions

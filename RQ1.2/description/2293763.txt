@@ -1,0 +1,1 @@
+Experiment for using Nancy and WebKit.NET to create a windows desktop application using web technologies.

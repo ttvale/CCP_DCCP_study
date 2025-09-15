@@ -1,0 +1,1 @@
+A PHP RCON wrapper for controlling BF2 servers

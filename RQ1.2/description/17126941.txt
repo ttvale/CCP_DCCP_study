@@ -1,0 +1,1 @@
+OCCI gateway DLL for mingw32 (and possibly other compilers too actually)

@@ -1,0 +1,1 @@
+svn clone http://dangerous-prototypes-open-hardware.googlecode.com/svn/trunk/Bus_Pirate

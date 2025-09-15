@@ -1,0 +1,1 @@
+The karmapoints scanner app in cross-platform Titanium (hopefully)

@@ -1,0 +1,1 @@
+Git managed home directory and file teleportation. "There's no place like /home."

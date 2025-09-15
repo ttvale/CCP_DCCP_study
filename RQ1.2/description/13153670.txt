@@ -1,0 +1,1 @@
+A pre-configured scripting client environment for the WISEBED experimentation facilities based on the BeanShell Java interpreter

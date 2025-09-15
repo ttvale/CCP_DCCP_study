@@ -1,0 +1,1 @@
+Natural Language processing library for Macedonian (MK)

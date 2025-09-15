@@ -1,0 +1,1 @@
+A ruby gem and command-line tool for interfacing with the MF60 Personal Hotspot

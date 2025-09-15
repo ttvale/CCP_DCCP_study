@@ -1,0 +1,1 @@
+svgcleaner could help you to clean up your SVG files from the unnecessary data.

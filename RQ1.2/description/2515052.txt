@@ -1,0 +1,1 @@
+AsyncEventEmitter is an asynchronous implementation of EventEmitter found in Node.js

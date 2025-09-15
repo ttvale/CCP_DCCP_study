@@ -1,0 +1,1 @@
+This is a patch fixed the #hashDos# bug.

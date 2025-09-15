@@ -1,0 +1,1 @@
+Token generator and processor to provide automatic login links for users.

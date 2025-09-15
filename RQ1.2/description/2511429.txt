@@ -1,0 +1,1 @@
+Move every regular file in a given directory into year/month/ subdirectories

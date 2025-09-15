@@ -1,0 +1,1 @@
+A pyrocms module that adds Facebook page or profile photo albums to your website

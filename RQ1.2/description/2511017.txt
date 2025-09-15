@@ -1,0 +1,1 @@
+Tool for managing academics for college students. Manages their courses, keeps a track of attendance, grades, assignments and their respective deadlines.

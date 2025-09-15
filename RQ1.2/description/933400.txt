@@ -1,0 +1,1 @@
+decl is a javascript function that creates a prototype object and returns its constructor.

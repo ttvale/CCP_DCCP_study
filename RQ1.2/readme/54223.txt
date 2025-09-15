@@ -1,0 +1,11 @@
+COLIBRI: Construction as Linguistic Bridges
+	Maarten van Gompel 
+	proycon@anaproy.nl
+	Radboud University Nijmegen
+
+	Licensed under GPLv3 (See http://www.gnu.org/licenses/gpl-3.0.html)
+
+Colibri is a collection of software developed for the Ph.D. research project Constructions as Linguistic Bridges. This research examines the identification and extraction of aligned constructions or patterns across natural languages, and the usage of such constructions in Machine Translation. The aligned constructions are not identified on the basis of an extensive and explicitly defined grammar or expert database of linguistic knowledge, but rather are implicitly distilled from large amounts of example data. Our notion of constructions is broad and transcends the idea of words or variable-length phrases. We also consider constructions with one or more gaps, as well as context-sensitive machine learning techniques. Our aim is to find new methods that prove beneficial in a Machine Translation setting.
+
+Documentation for Colibri is available from: http://proycon.github.com/colibri .
+

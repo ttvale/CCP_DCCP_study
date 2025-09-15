@@ -1,0 +1,93 @@
+cpdb - crazy pili's database
+
+1) Introduction
+2) Features
+3) Requirements
+4) Example Code
+5) Maintenance
+6) Tests
+7) Contact
+
+---------------------------------------------------------------------------
+Introduction
+
+cpdb is a NoSQL database for node.js.
+
+---------------------------------------------------------------------------
+Features
+
+* Stores key / values pairs persistent in the file system
+* Supports transactions
+* Generate unique keys
+
+---------------------------------------------------------------------------
+Requirements
+
+* DB keys must be strings
+* DB values must be serializable using JSON.stringify and JSON.parse
+
+---------------------------------------------------------------------------
+Example Code
+
+Here's some example code which stores values in a database:
+
+var db = require('cpdb').DB('path/to/my/db/directory');
+
+var trans = db.newTransaction();
+trans.set('key', { value: 'hello world!' });
+if(somethingWentReallyBad){
+	trans.rollback();
+}
+else{
+	trans.commit(function(){
+			// success
+			console.log('Data stored');
+		},
+		function(e){
+			// error
+			console.log('Error: ' + e);
+		});
+}
+
+And some more code which retrieves values from the database:
+
+var db = require('cpdb').DB('path/to/my/db/directory');
+
+var readOnly = true;
+var trans = db.newTransaction(readOnly);
+trans.get('key', function(data){
+		// success
+		if(data === undefined){
+			console.log('Nothing stored in DB');
+		}
+		else{
+			console.log('Got ' + data);
+		}
+	},
+	function(e){
+		// error
+		console.log('Error: ' + e);
+	});
+
+---------------------------------------------------------------------------
+Maintenance
+
+The database uses some temporary files and folders for implementing
+transactions. Sometimes these transaction data is not delete correctly. It is
+safe to manually clear the transaction data when all database instances are
+shut down.
+
+To clear the transaction data remove the transactions directory below your
+database directory.
+
+---------------------------------------------------------------------------
+Tests
+
+Execute the tests using make:
+
+$ make test
+
+---------------------------------------------------------------------------
+Contact
+
+* Markus Peröbner <markus.peroebner@gmail.com>

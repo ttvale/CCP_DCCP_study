@@ -1,0 +1,1 @@
+ncurses based IDE with debugger support - in search of a new maintainer

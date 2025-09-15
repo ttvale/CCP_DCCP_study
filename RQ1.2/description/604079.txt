@@ -1,0 +1,1 @@
+RESTful API to access GORM-managed entities

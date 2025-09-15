@@ -1,0 +1,1 @@
+Object Relational Mapper for structured data encoded with Google's Protocol Buffers

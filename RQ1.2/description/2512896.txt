@@ -1,0 +1,1 @@
+LoginReward takes the idea that was started in DailyBonus, LoginBonus, RewardMe, etc. and extends it for full control and customization.

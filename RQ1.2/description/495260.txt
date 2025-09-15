@@ -1,0 +1,1 @@
+A script to help cutting releases of your projects in a single step (following some conventions).

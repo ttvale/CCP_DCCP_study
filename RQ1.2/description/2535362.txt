@@ -1,0 +1,1 @@
+CoffeeScript code for example applications of "Professional XMPP Programming with JavaScript and jQuery"

@@ -1,0 +1,1 @@
+MiniTest assertions and expectations for testing Capistrano recipes

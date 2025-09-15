@@ -1,0 +1,1 @@
+Utility (inteded to run in the background, as a Cron Job) that checks for chanegs on your BROU (http://brou.com.uy) account. If it find changes, it sends a notification email to your account in Gmail.

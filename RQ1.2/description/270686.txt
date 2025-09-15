@@ -1,0 +1,1 @@
+ Onyx is a Ruby on Rails image gallery. It is designed to be clean and intuitive, flexible, customizable, and quick. 

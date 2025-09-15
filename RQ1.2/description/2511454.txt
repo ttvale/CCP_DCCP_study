@@ -1,0 +1,1 @@
+Screenshot taking and management tool.

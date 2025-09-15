@@ -1,0 +1,17 @@
+Here are some training materials to get started with Dojo Ajax Toolkit.
+The idea is to have a series of lessons in different areas which are organized by level of difficulty.
+
+Each lesson have four parts;
+
+1. Description and reference
+2. Working sample code
+3. Exercise
+4. Solution of exercise
+5. Complete App
+
+Each part should be as small as possible, but no smaller. Two-three paragraphs of description is perfect, for example.
+
+NOTE: All exercises should be accessed from a web-server, not as files loaded from a filesystem, e.g. as http://localhost/training/../foo.html *not* as file://training/.../foo.html
+
+These exercises are provided as-is by the Dojo Ajax Toolkit contributor Peter Svensson (psvensson@gmail.com) under the DWTFYW license.
+

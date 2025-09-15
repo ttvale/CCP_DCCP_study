@@ -1,0 +1,32 @@
+Final Sevens
+
+Dependancies:
+ Python 2.7.2
+ Pygame 1.9.1
+
+To run:
+ Type 'python Final-Sevens.py' on the command line.
+
+In this game numbered blocks fall one at a time from the top of the screen.
+When three blocks in a row/column add up to 7 or 21, they are destroyed and
+the player's score increases. The game ends when the block spawner becomes
+blocked.
+
+BUGS
+
+TODO
+ *Refactor
+ *Add a spot on the right-side menu for displaying the next shape
+ *Clean up the pause screen function
+ *Remove Score from the pause screen at add in on the right-side menu
+ *I could rewrite the program to avoid the use of sys.exit() and totally
+  remove the sys import.
+ *Have variable difficulty where the number blocks have to add up to is
+  increased. Also increase the numbers on blocks spawned
+
+FEATURES
+ *3 modes of block color:
+   Normal (easy) mode - blocks have basic colors
+   Hard mode - blocks are all white
+   Random mode - blocks are all given random colors
+ *Reset blocks during the game to restart (also resets score)

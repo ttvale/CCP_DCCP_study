@@ -1,0 +1,1 @@
+Quartz listeners that publish events over AMQP. Developed to be used in Clojure projects with Quartzite.

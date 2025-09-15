@@ -1,0 +1,1 @@
+:house_with_garden: configuration files commonly found in one's home directory (.bashrc, .vimrc, etc), customized to my personal preferences

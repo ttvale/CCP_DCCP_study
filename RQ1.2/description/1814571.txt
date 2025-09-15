@@ -1,0 +1,1 @@
+ActionSmser Rails gem == SMS && ActionMailer. Simple way to use SMS (Short Message Service) in the same way as ActionMailer. Includes also delivery reports and easy way to add custom gateways. See examples below.

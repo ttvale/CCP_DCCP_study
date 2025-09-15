@@ -1,0 +1,1 @@
+Selenium tests for Scout/Jira integration

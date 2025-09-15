@@ -1,0 +1,1 @@
+An adoption of my e4 contacts demo for GWT, using the GWT MVP architecture with activities, places, event bus, etc.

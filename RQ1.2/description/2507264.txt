@@ -1,0 +1,1 @@
+Source for my blog.  Blog hosted on GitHub Pages at msgehard.github.com

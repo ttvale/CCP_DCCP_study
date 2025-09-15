@@ -1,0 +1,1 @@
+Notes for the Oracle Certified Java Programmer (OCJP) course (java 6)

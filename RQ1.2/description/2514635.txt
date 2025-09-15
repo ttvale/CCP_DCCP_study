@@ -1,0 +1,1 @@
+Simple OSX LaunchAgent to automatically set the Location based on a wireless SSID

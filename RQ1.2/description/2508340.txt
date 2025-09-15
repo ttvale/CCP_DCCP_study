@@ -1,0 +1,1 @@
+Event-based neural network simulator for pulse coupled neurons

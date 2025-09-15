@@ -1,0 +1,1 @@
+Safe compile-time module loading from a variable

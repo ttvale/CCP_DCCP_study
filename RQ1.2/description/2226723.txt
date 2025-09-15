@@ -1,0 +1,1 @@
+Daemon that manages power for thinkpad laptops

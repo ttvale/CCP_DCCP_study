@@ -1,0 +1,29 @@
+LAST MODIFIED BY: Kara Kundert
+CONTACT AT: kkundert@oberlin.edu
+
+OPERATION: 
+
+	COMPILE: make plotter
+	RUNNING: ./readdata_continuous <data file>
+
+Jan 05, 2012: Fixed up readdata_continuous to produce eps files from plots in
+grace. In order to make a pdf file, use the command:
+
+	ps2pdf plots.eps
+
+Jan 06, 2012: Modified readdata_continuous to produce a plain text file with
+the data listed in order of spectra number, beam number, coarse bin number, and power
+value. Collects the first 140 spectra and writes them to the file spectraldata.
+
+Jan. 11, 2012: Modified readdata_continuous to include hitpower and fftbin.
+Still stops after limited number of spectra (to save time). specplot.py only
+plots average coarse power. It will be modified shortly to plot individual
+hits.
+
+Jan. 13, 2012: Made header data structure and began working on function to read
+out header data into said structure.
+
+Jan. 17, 2012: Still working on function to read the header data. Currently
+working on grabbing the header information, which will then be sorted later.
+
+

@@ -1,0 +1,1 @@
+BeanSpy is an open source Java servlet technology provided by Microsoft to retrieve JMX information from Java EE application servers

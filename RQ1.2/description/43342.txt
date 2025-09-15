@@ -1,0 +1,1 @@
+Implementation of BCP 47 and rfc 5646 for xml:lang language tags in C#

@@ -1,0 +1,27 @@
+A collection of essential tools for Role Playing Game masters.
+
+It includes:
+
+- Name generator
+- Inspiration tool
+- Inintiative management
+- Character DB
+
+Some of this is implemented yet.
+
+Help welcome
+
+Thorsten Sick
+
+License
+=======
+As a library it is licensed as LGPL 3, the other code is GPL 3.
+Or newer.
+
+
+History
+=======
+
+The name generator was formerly known as libnamegen. Hosted on sourceforge.
+
+

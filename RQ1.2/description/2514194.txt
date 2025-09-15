@@ -1,0 +1,1 @@
+Swiff is intending to be a efficient, portable SWF runtime library.

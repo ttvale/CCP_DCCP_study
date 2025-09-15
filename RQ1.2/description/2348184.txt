@@ -1,0 +1,1 @@
+This program "appelizes" your music collection into a separate directory, by recoding FLAC and OGG and hardlinking all the others.

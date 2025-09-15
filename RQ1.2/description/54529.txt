@@ -1,0 +1,1 @@
+Lightweight Ray class and operations for openFrameworks (e.g. hit detection, intersection). For more intense use check bullet physics

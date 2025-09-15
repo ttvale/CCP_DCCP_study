@@ -1,0 +1,1 @@
+Personal configuration for my Arch Linux systems

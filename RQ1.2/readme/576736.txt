@@ -1,0 +1,12 @@
+citation, logging and multi-purpose archive = clmpr
+a minimal bookmarking engine
+
+clmpr allows you to save urls simply
+
+running on http://clmpr.com
+
+requirements:
+- php
+- mysql
+
+see TODO for progress

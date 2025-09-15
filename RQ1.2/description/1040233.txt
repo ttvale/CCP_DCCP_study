@@ -1,0 +1,1 @@
+Socket.IO-client in Rails asset pipeline

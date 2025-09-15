@@ -1,0 +1,1 @@
+Shibboleth Native SP support for Grails Spring Security

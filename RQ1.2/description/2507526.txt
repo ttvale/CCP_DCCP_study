@@ -1,0 +1,1 @@
+BD_BOX is an open source, scalable Brownian dynamics package for UNIX/LINUX platforms. BD_BOX uses flexible bead models to represent macromolecules

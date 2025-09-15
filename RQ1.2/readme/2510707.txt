@@ -1,0 +1,24 @@
+A parallel version of the Sieve of Eratosthenes implemented using MPI
+Reference: "Parallel Programming in C with MPI and OpenMP" by Michael J. Quinn
+(International Edition 2003)
+
+To compile both versions (sequential/parallel) under Linux the makefile can be 
+used (simply run "make" in the directory). A Visual Studio project for the 
+parallel version is also supplied.
+
+Running the applications can be done as follows (in these examples 1000 is the 
+limit):
+
+Sequential:
+Windows:
+primes_sequential.exe 1000
+
+Linux:
+./primes_sequential 1000
+
+Parallel:
+Windows:
+mpiexec -n 4 -machinefile machines.txt primes_parallel.exe 1000
+
+Linux (note the full path to the executable):
+mpiexec -n 4 -f machines.txt /home/adrian/primes/primes_parallel 1000

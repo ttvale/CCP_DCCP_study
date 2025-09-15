@@ -1,0 +1,1 @@
+Use your own class object to easily load and save configuration settings to App/Web/Custom .config or .xml file.

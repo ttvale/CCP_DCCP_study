@@ -1,0 +1,1 @@
+This header file enforces Clang warnings to bu turned-on for specific flags (almost everyone, at least each one I was able to find).  

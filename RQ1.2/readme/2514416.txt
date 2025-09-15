@@ -1,0 +1,14 @@
+h1. Formee
+
+*_Formee_* eases and helps out to build html forms designs, and also validates its data from both client-side and server-side based on model validation annotations.
+
+h2. Features
+
+- It has all the features of _formee_
+- A _form_ wraps an single model
+- Automate validations from client-side based on Play model annotations by using _jquery.validate_ plugin.
+- Homogeneous error messages from both client-side and server-side, i.e., they appear in the same place.
+
+p(note). This play! module it's designed to work with model objects, don't expect correct behavior if used objects that are not extends from Model.
+
+See "full documentation":https://github.com/omaroman/formee/blob/master/documentation/manual/home.textile for more information.

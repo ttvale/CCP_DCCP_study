@@ -1,0 +1,1 @@
+Asynchronous Proxy Engine for SilverStripe 3.0 - export DataObject class methods to javascript

@@ -1,0 +1,1 @@
+A port of my hlbsp project (rendering BSP v30 files from Halflife and it's mods (expecially CS 1.6)) to JS and WebGL (It's currently a project for school)

@@ -1,0 +1,1 @@
+Useless Linux Kernel Module to control your mouse through a char device

@@ -1,0 +1,3 @@
+DanielLib.Util.WPFMediaKit : http://wpfmediakit.codeplex.com/
+AmazingWPFControls: http://amazingwpfcontrols.codeplex.com/
+Surface2.0ÓÅ»¯·½°¸£ºhttp://ttsurface.codeplex.com/ Change Set 8689¡£

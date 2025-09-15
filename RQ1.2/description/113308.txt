@@ -1,0 +1,1 @@
+Running Django Sentry on Heroku.

@@ -1,0 +1,1 @@
+Codecgraph is a tool to generate a graph based on the ALSA description of a High Definition Audio codec.

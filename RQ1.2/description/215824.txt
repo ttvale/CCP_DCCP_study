@@ -1,0 +1,1 @@
+A Backbone.Sync replacement for Lawnchair.js based JSON storage

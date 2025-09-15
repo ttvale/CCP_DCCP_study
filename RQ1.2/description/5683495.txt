@@ -1,0 +1,1 @@
+Simple, scaleable carousels for jQuery (MIT)

@@ -1,0 +1,1 @@
+This is a free APi to create dinamically QR Codes. Support several types of images like PNG, SVG, EPS.

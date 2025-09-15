@@ -1,0 +1,1 @@
+Adaptation/Encapsulation of Spip-PMB plugin for Ritimo network

@@ -1,0 +1,1 @@
+Android native build using Moai Lua game sdk

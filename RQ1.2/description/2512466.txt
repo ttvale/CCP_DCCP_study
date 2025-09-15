@@ -1,0 +1,1 @@
+simple logger for python but with new approach for logging per module

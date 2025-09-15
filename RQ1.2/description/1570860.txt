@@ -1,0 +1,1 @@
+Modulo's Open Distributed SCAP Infrastructure Collector, or modSIC, makes it easier for security analysts to scan an environment vulnerabilities based on OVAL-Definitions. It's an open-source service specialized in distributed network assessments.

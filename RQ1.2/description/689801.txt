@@ -1,0 +1,1 @@
+Barron helps you with locking. It uses file-system locks, but eventually configurable backends would be nice.

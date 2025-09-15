@@ -1,0 +1,1 @@
+My .janus dir, containing vim config and plugins in addition to janus vim distro

@@ -1,0 +1,1 @@
+A simple coffeescript MVC framework with a emphasis on Model reliability and usability across "Flakey" internet connections.

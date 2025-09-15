@@ -1,0 +1,1 @@
+Haskell bindings to the HLA 1.3 RTI interface (supports 1.3NG and DLC APIs)

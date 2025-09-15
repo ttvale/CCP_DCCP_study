@@ -1,0 +1,1 @@
+Make blogname and tagline editable for everyone. Not only the administrator anymore.

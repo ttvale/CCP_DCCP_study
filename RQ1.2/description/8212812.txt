@@ -1,0 +1,1 @@
+A chat that mimics hacker movies chatrooms, where each character typed instantaneously appears on the other peers screen.

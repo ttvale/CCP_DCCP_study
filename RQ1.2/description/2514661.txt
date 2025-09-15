@@ -1,0 +1,1 @@
+Object management and configuration application programming interface.

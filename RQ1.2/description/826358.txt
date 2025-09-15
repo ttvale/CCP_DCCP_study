@@ -1,0 +1,1 @@
+Adding support in cctools/parrot for reading from CVMFS.

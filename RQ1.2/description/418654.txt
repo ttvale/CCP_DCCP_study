@@ -1,0 +1,1 @@
+Jayson is a simple but featureful JSON-RPC 2.0/1.0 client and server for node.js

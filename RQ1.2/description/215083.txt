@@ -1,0 +1,1 @@
+A Rails interface for Intuit's Quickbooks Web Connector

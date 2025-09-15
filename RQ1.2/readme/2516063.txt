@@ -1,0 +1,115 @@
+myGalleryPlugin
+=================
+
+
+This plugin provide possibility to add pics gallery to your models, 
+which will allow to administratop add/remove/sort pictures.
+
+TODO: make a demo
+
+Installation
+------------
+
+  * Install the plugin
+
+        $ git clone git://github.com:228vit/myGalleryPlugin.git plugins/myGalleryPlugin
+        $ ./symfony plugin:publish-assets
+        $ ./symfony cc
+
+  * If you do migrations, run them now:
+
+        $ ./symfony doctrine:generate-migrations-diff
+        $ ./symfony doctrine:migrate
+
+How to make something galleryable?
+-------------
+
+Add behavior in your schema:
+
+  * edit config/doctrine/schema.yml
+
+        YourModel:
+          actAs:
+            Galleryable: ~
+            # others behaviors
+
+Build your project:
+
+  * If it's a new project (you don't have build all, so do it !)
+
+        $ ./symfony doctrine:build --all
+
+  * If it's an old project, you're adding galleryable ability to:
+
+        $ ./symfony doctrine:build --all-classes
+
+At this point behaviour doesn't change or add anything to the model, so migrations will do nothing.
+
+
+How to manage gallerys?
+-------------
+
+Activate modules in backend
+
+  * edit apps/backend/config/settings.yml
+
+        enabled_modules:        [..., myGalleryAdmin]
+
+  * edit apps/backend/modules/news/config/generator.yml
+      list:
+        display:            [=id, =title, _upload]
+      form:
+        display:
+          NONE:             [ title, extract, is_published, published_at, pic ]
+          Content:          [ content ]
+          Gallery:          [ _gallery ]
+  * edit app.yml
+    all:
+      my_gallery:
+        thumb_helper: thumbnail_crop # thumbnail_crop_watermarked, thumbnail_crop, thumbnail_resize
+
+  
+  * copy templates dir from plugins/myGalleryPlugin/modules/example/templates to apps/backend/modules/news/templates 
+  
+  * create apps/backend/modules/news/config/view.yml and edit it
+    indexSuccess:
+      javascripts:
+        - <?php echo sfConfig::get('sf_gallery_js_dir', '/myGalleryPlugin/js').'/jquery.uploadify.v2.1.4.min.js'.PHP_EOL ?>
+        - <?php echo sfConfig::get('sf_gallery_js_dir', '/myGalleryPlugin/js').'/swfobject.js'.PHP_EOL ?>
+        - <?php echo sfConfig::get('sf_gallery_js_dir', '/myGalleryPlugin/js').'/jquery.fancybox.pack.js'.PHP_EOL ?>
+
+      stylesheets:    
+        - <?php echo sfConfig::get('sf_gallery_css_dir', '/myGalleryPlugin/css'). '/jquery.fancybox.css'.PHP_EOL ?> 
+        - <?php echo sfConfig::get('sf_gallery_css_dir', '/myGalleryPlugin/css'). '/uploadify.css'.PHP_EOL ?> 
+        - <?php echo sfConfig::get('sf_gallery_css_dir', '/myGalleryPlugin/css'). '/gallery.css'.PHP_EOL ?> 
+
+
+Activate module in frontend
+
+  * edit apps/frontend/config/settings.yml
+
+        enabled_modules:        [..., myGallery]
+
+Add the form and/or the list of gallerys wherever you want
+
+  * edit your action file
+
+        public function executeIndex(sfWebRequest $request)
+        {
+          $this->news = Doctrine::getTable('News')->find($request->getParameter('id'));
+        }
+
+  * edit your template file
+
+        <?php include_component('gallery', 'view', array('object' => $news)) ?>
+        <?php include_component('gallery', 'carouselle', array('object' => $$news)) ?>
+
+And ... that's all !
+You only need to get your object and to pass it to the template and two components do the rest.
+
+
+
+Contact
+-------------
+email: 228vit@gmail.com 
+skype: vit228

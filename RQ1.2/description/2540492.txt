@@ -1,0 +1,1 @@
+Contented aims to be an exceptionally stable and well-tested Rails app to serve as a basis for launching new apps (particularly ones that need content such as a blog, etc.) quickly without having to reinvent the wheel every time.

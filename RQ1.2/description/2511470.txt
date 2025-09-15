@@ -1,0 +1,1 @@
+A fork of http://www.devbridge.com/projects/autocomplete/jquery/. Added a callback function after each ajax call completes.

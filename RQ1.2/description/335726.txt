@@ -1,0 +1,1 @@
+Change Ruby I18n localize to use parsi digits and jalaly dates in farsi locale

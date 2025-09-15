@@ -1,0 +1,1 @@
+ZOMG Memes! Realtime! Node.js! Kittehs! memecached is a community meme generator website/app written with Node.js. Meme publishing and consumption is realtime thanks to Now.js.

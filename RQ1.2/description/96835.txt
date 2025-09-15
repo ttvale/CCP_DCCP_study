@@ -1,0 +1,1 @@
+My emacs25 text editor configuration

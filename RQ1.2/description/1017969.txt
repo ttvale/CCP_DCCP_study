@@ -1,0 +1,1 @@
+Adds caret moving and newline entering commands.

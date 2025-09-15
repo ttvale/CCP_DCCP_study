@@ -1,0 +1,1 @@
+Data winners is a data collection application supporting multiple channels like sms, web and smartphone. Goal is to enable seamless data collection, reporting and visualization.

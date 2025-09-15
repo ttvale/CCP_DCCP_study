@@ -1,0 +1,1 @@
+Spring MVC sample project, which is using iBatis. Now it's still under construction.

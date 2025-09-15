@@ -1,0 +1,6 @@
+Roll Your Own OS - based on James Molloy's tutorial Roll Your Own Toy Unix (http://www.jamesmolloy.co.uk/tutorial_html/index.html)
+
+This code runs out of the box on a 4x4Play Virtual Box, link to download that box will appear here soon.
+
+Coming later: Norwegian tutorial on rolling your own OS, at http://www.RollYourOwnCode.com
+

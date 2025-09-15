@@ -1,0 +1,1 @@
+Rack Middleware that plugs into r509-ca-http and records the validity status of issued certificates to a Redis database.

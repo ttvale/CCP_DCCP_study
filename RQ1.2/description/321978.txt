@@ -1,0 +1,1 @@
+Python-like class sugar. No more "var that = this"!

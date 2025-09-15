@@ -1,0 +1,1 @@
+One finger touch in the browser with Javascript - get direction, distance and speed of a swipe from both mouse and touch events.

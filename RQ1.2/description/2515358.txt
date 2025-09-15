@@ -1,0 +1,1 @@
+The second app for Ruby on Rails Tutorial.

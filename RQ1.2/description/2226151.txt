@@ -1,0 +1,1 @@
+Configuration for loading Gitocello into Squeak or Pharo

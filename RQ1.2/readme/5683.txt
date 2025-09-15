@@ -1,0 +1,186 @@
+OpenCPI HDL Tree - README
+ssiegel 2010-06-10 Created
+ssiegel 2010-07-26 ISE 12.2 Updates
+ssiegel 2010-09-17 Included LICENSE.TXT
+ssiegel 2010-11-22 Added to FAQ
+ssiegel 2010-11-29 Touched README
+ssiegel 2010-12-28 AXI *removed* from WIP. "WIP" (WCI,WSI,WMI,etc.) now implies OCP
+ssiegel 2011-01-14 Board Targets become platforms 
+ssiegel 2011-03-03 ISE 13.1
+ssiegel 2011-03-13 Took Dan Zhang's patch changes (see FAQ) 
+ssiegel 2011-08-16 ISE 13.2, Quartus 11.0(sp1)
+ssiegel 2011-10-04 USE 13.3 prep
+ssiegel 2011-12-12 64b Host address capability
+ssiegel 2012-01-19 ISE 13.4 Library Build
+ssiegel 2012-01-30 Bluespec Release 2012.01.A (BRAM Prims Updated)
+ssiegel 2012-10-28 ISE 14.3 / Vivado 2012.3 refresh
+ssiegel 2014-01-26 ISE 14.7 / Vibado 2013.4 / Added USB-UART to CP for ML605 platform
+Principal Author: Shepard Siegel, Atomic Rules LLC
+<shepard period siegel at atomicrules period com>
+OpenCPI website: www.opencpi.org
+
+1. Getting Started
+  Browse the documentation at $(OCPI_DIR)/doc
+  When you see a sub-dir named "pen", that is a "holding-pen" for files that may be depricated
+
+  To build a bitstream, first make sure the appropriate tools are installed
+    e.g. Install Xilinx ISE 13.x to build Xilinx bitstreams
+    e.g. Install Altera Quartus 11 to build Altera bitstreams
+    As of 2012-01-19 ISE 13.4     or greater is required for Xilinx builds.
+    As of 2011-08-16 Quartus 11.1 or greater is required for Altera builds.
+    If you are not using the same tools version as the distribution, you may need to rebuild XST libraries
+
+  Source code is under git verson control - if you care, install git and say
+    $ git status
+
+2. Building a Bitstream for a Target
+
+  Set the environment variable OCPI_DIR to point to this distribution
+    e.g. setenv OCPI_DIR $(HOME)/projects/ocpi
+
+  You may need to set certain environment variables, for example...
+    source /opt/Xilinx/13.4/ISE_DS/settings64.csh
+    setenv XIL_PAR_DESIGN_CHECK_VERBOSE 1
+    setenv XIL_TIMING_ALLOW_IMPOSSIBLE  1
+
+  If needed, first specialize the HDL sources for a particular target. (We plan to remove the need for this step in a future release). 
+
+  From $(OCPI_DIR) say
+    $ make <target>
+  where <target> is one of these board platform names...
+     ml555
+     alder
+     schist
+     xupv5
+     biotite
+     nf10
+     illite
+     ml605
+     sp605
+     alcy4
+     alst4
+     htgs4
+     n210
+
+  Make will copy files into $(OCPI_DIR)/build/tmp-<target> and run the vendor tools. When the build sucessfully completes, the build/tmp-<target> directory will be remaned build/<target>-<timestamp>
+
+3. Loading the a Bitstream for the First Time
+  OpenCPI allows you to load a bitstream while the Linux host is running. However to achieve this capability, there is the one-time requirement of loading an OpenCPI bitsream into Flash so that the BIOS sees an OpenCPI PCIe endpoint when Linux boots.
+
+4. Normal (not the first time) Loading of the bitstream
+  Use $(OCPI_DIR)/scripts/loadBitStreamXXXX <bitstream.bit> <pcie slot> <usb port>
+  e.g $ ./loadBitStreamSX95 ../build/sx95t-20100608_1209/fpgaTop.bit 0000:03:00.0 usb21
+
+5. Setting Host to Reserve Memory to Allows User-Mode DMA w/o Kernel-Mode Driver
+   5.1 Edit grub.conf to reserve 256MB of memory...
+   e.g. 	kernel /vmlinuz-2.6.18-194.3.1.el5 ro root=/dev/VolGroup00/LogVol00 rhgb quiet memmap=256M$0x5f700000
+   5.2 Set env vars to use that memory (still using old version in some programs)
+     setenv CPI_DMA_MEMORY        256M\$0x5f700000     # depricated use on 2010-05-25
+     setenv OCPI_DMA_MEMORY       256M\$0x5f700000
+   5.3 Either 32b of 64b host addreses may be used. The FPGA hardware will use the appropriare 3DW or 4DW
+   signalling depending on if the host address is below or above 4 GB. Be sure to follow the getting started
+   guide for determining the correct address to reserve on the host. For 32b vs 64 testing; a common set seen
+   with 16GB systems has been:
+     32b host address on 16GB machine:
+     export CPI_DMA_MEMORY=512M\$0x7f790000     # depricated use on 2010-05-25
+     export OCPI_DMA_MEMORY=512M\$0x7f790000
+     64b host address on 16GB machine:
+     export CPI_DMA_MEMORY=512M\$0x340000000     # depricated use on 2010-05-25
+     export OCPI_DMA_MEMORY=512M\$0x340000000
+
+ 6. Running a DMA Sanity Test from $(OCPI_DIR)/bin (you probably need set addresses in script)
+      [shep@core960 bin]$ ./dmaTestBasic
+      admin probe 
+      OCCP Admin Space
+       Open:         0x4f70656e "nepO"
+       CPI:          0x43504900 ""
+       revision:     0x00000001
+       birthday:     0x4c111672 Thu Jun 10 16:44:34 2010
+       workerMask:   0x00007c1c workers 2 3 4 10 11 12 13 14 exist
+       pci_dev_id:   0x00000300
+       timeStatus:   0x10000000 timeSetSticky 
+       timeControl:  0x00000000
+       gpsTimeMS:    0x4c113d1b (1276198171) Thu Jun 10 19:29:31 2010
+       gpsTimeLS:    0xc33394e1 (3274933081)
+       deltaTimeMS:  0x00000000
+       deltaTimeLS:  0x00000000
+       refPerPPS:    0x00000000 (0)
+      Log is: /home/shep/projects/ocpi/bin/testDMA14752.log
+      ...
+      For -r1im -r3om -N0o 3 -N1i 3 -N3o 3 -N0i 3 -I 16 -i 1000 ... SUCCEEDED
+      For -r1im -r3om -N0o 3 -N1i 3 -N3o 3 -N0i 3 -I 32 -i 1000 ... SUCCEEDED
+      testDMA done
+
+7.  Running a functional simulation of DMA with ISim
+      $ make isim
+
+8.  Compiling infrastructure IP written in BSV using the Bluespec compilier (requires bsc)
+      $ make platform_{xupv5|ml555|schist|ml605}
+      (see Makefile for valid targets)
+
+9. FAQs
+  "My bitstream build failed, where can I look to see what went wrong?"
+     Look in the $OCPIDIR/scripts/buildhdl directory at the script "build_fpgaTop" and then at the appropriate
+     .xst and .prj files. Also look in the $OCPIDIR/build/tmp-<target> directory, where an incomplete build's
+     artifacts will remain.
+
+  "I want to learn more about Bluespec SystemVerilog (BSV), where do I start?"
+     The e-Book "Bluespec by Example is a good place...  (bsv_by_example.pdf)
+     http://www.bluespec.com/forum/viewtopic.php?p=827#827
+
+  "How to I switch between 4B and 16B application data paths?; the later is needed for maximum througput"
+     Dan Zhang has supplied this text and changes to the files listed. This patch is for extending the OpenCPI datapath from 4B to 16B.
+     This is especially useful for the ML605 to take advantage of the 2.0GB/s theoretical PCI-E 2.0 4x connection between the FPGA and DRAM.
+     Streaming tests show that we can achieve ~1.6GB/s bidirectional.
+     To switch between the two, `define USE_NDW4 instead of USE_NDW1.
+     The patch can similarly be extended for 8B and 32B datapaths, although this has not yet been done.
+     There is currently an issue where the fpgaTop-ml605.prj file needs to be changed each time you want to change the datapath width. Any suggestions?
+     Files : (noted chnages from 4B)
+      Makefile : (set line 380 -D USE_NDW4)
+      fpgaTop-ml605.prj : (use 16B v ariants, plus use DelayWorker instead of scaerio0)
+      Config.bsv : (DEFINE_NDW 4)
+      FTop_ml605.bsv.bsv : ( use 16B CTop)
+      OCInf.bsv : ( use 16B DPs)
+      OCDP.bsv :  ( set NDW4)
+      CTop.bsv :  ( set NDW4)
+      OCApp.bsv : ( set NDW4, NumAlias)
+     Thank you Dan! -Shep
+
+  "ISE 13.2 or ISE 13.3 map crashes at the end of operation"
+    Try executing this line in a bash shell after X is running but before map:
+      export LD_PRELOAD=/opt/Xilinx/13.2/ISE_DS/ISE/lib/lin64/libAntlr.so
+      See the link on the next line:
+      http://forums.xilinx.com/t5/Implementation/ISE-13-1-MAP-crashes-on-Ubuntu-11-04/m-p/158198#M3304
+
+  "What's up with the multiple GIT repos?"
+    This work started out in this (once private) disti as an upstream sandbox:
+      https://github.com/ShepardSiegel/ocpi
+    With the intent that select files would be merged to the OpenCPI public repo:
+      https://github.com/opencpi/opencpi
+    At this writing 2012-10-28, the transition is underway. Stay tuned.
+
+  "The FPGA timebase is not advancing, with or without a GPS input signal, what do I do?"
+    Look at the timeStatus and timeControl registers. You can observe the various signals on
+    the PPS output signal. Make sure the FPGA has an in tolerance X0 (usually 200 MHz) connected.
+    and that the code is compiled to expect the correct frequency. A future feature may be to allow
+    the frequency of the XO to be set as a configuration property. Now it is compiled into the code.
+    If the incident XO is too far out of tolerance; there may be no timebase at all.
+
+10. Standard USB-UART Settings (for the UART intergrated into the Control Plane)
+  115200 baud, 8 data bits, 1 stop bit, no parity
+  Baud rate is programable from 115200 default
+  Write ASCII byte codes to Admin offset 0x70 to send TX data
+
+11. Notes
+2010-12-18 ISE 12.4 Libraries
+2010-12-16 XUPV5 testOK on core920
+2010-12-16 ML605 testOK, but some issue (same) with SX95T and ML555 (multiple changed in flight?)
+2011-01-31 tweaks
+2011-03-03 ISE 13.1 Libraries
+2011-03-13 Switch back to 16B (4DW) baseline
+2011-04-20 Multiple GIT repos
+2011-09-30 ISE 13.3 Libraries
+2012-01-19 ISE 13.4 Libraries
+2012-01-30 Bluespec Release 2012.01.A (BRAM Prims Updated)
+2012-10-28 Bluespec Release 2012.09.beta1B (more aggressive rule schedules) ISE 14.3 / Vivado 2012.3
+2014-01-26 Bluespec Release 2013.01.beta5, ISE 14.7 / Vivado 2013.4 / Quartus 

@@ -1,0 +1,1 @@
+A demo iPad app to showcase retail-specific features.

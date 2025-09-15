@@ -1,0 +1,1 @@
+A django application built to handle and render a calendar with events scheduled for particular days.

@@ -1,0 +1,1 @@
+An experiment to replicate a music visualiser (originally created in Processing) in Python.

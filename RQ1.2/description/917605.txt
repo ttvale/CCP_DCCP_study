@@ -1,0 +1,1 @@
+My dotfiles. Everything but Emacs, which has its own repository: https://github.com/sshaw/emacs.d

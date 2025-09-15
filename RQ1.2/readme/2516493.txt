@@ -1,0 +1,13 @@
+R_porter
+========
+
+This is a small program for scan folders and generate reports.  
+It can save the results in a database. Current version only for Windows.
+
+
+Documents
+------------------
+   * Website: [http://ex.github.com/R_porter][1]
+	
+   
+[1]: http://ex.github.com/R_porter "R_porter"

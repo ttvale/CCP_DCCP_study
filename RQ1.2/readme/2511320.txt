@@ -1,0 +1,18 @@
+/**********************************************************************
+ * Developer:   Ezra Velazquez http://ezraezraezra.com
+ * Company:     TokBox         http://www.tokbox.com
+ * 
+ * Date:        January 2011
+ *
+ * Title:       PosterousChat       
+ * Description: Create a new site, along with a post with an embed
+ *		TokBox video chat. Meant as a server-side script
+ *
+ * Tech:        PHP, Posterous API, TokBox API
+ * Last Update: January 6th, 2012
+ ***********************************************************************/
+                     
+ NOTE: *** PROJECT COMPLETED ***
+       May be viewed at: http://www.tokbox.com/opentok/plugnplay
+       Click on "Get App Now" -> "Don't have a website"
+       Enjoy!

@@ -1,0 +1,1 @@
+KNVS is a light weight javascript library for canvas animations

@@ -1,0 +1,1 @@
+#WordPressPlugin: Lets you make a WordPress page (or other content type) link to an external URL of your choosing, instead of its WordPress URL.

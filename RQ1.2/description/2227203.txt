@@ -1,0 +1,1 @@
+A simple Ruby script to backup the entirety of a GitHub project to a local folder.

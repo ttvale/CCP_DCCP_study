@@ -1,0 +1,1 @@
+A collection of practice exams for exams in core curriculum CS courses at RIT.

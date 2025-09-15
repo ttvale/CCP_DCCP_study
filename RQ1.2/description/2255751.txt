@@ -1,0 +1,1 @@
+SOLID PHP & Code Smells - Part 1: Single Responsibility Principle Source

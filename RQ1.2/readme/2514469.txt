@@ -1,0 +1,46 @@
+== GLVote Is
+
+GLVote is a simple web application to facilitate balloting according to the
+bylaws of the New Jersey Grand Lodge of Free and Accepted Masons.  It should
+be trivial to implement your own election but note that we make the following
+assumptions:
+
+* Voting booths are touch screen computers running Firefox or Chrome full screen.
+* There is one or more registration desk (poll worker station).
+* Voter registration is handled outside the context of this application.
+* A private wired network consisting of one or more registration desk / poll
+  worker stations, one or more voting booth stations, and one computer running
+  the Thin web server that is assumed to be free of eavesdroppers by virtue of
+  the network being physically secure.
+
+== GLVote Is Not
+
+GLVote is not a general purpose election application. Do not pretend it is. We
+make many assumptions to keep the system simple and reliable.
+
+GLVote takes advantage of client-side enhancements that enable real-time
+functionality.  The test suite uses Firefox and we test with Chrome.  We do not
+even attempt to support Internet Explorer although it very well may work just fine.
+
+== Test Suite Quirks
+
+The Cucumber test suite assumes the availability of a Faye server running on the
+localhost on port 9393.  This can be launched with the command <tt>rackup -s thin -E production -p 9393 faye.ru</tt>.
+
+A Guardfile is included.  To use it run: <tt>guard start</tt>.
+
+== Production Use
+
+We use SQLite for production but feel free to modify database.yml and use something else.
+Use <tt>rake db:setup</tt> to setup your own database.  The reason we stick with SQLite
+is for the simplicity and lack of need for anything high performance.
+
+A production-ready Procfile is included.  To use it run: <tt>foreman start</tt>.
+
+== To Do
+
+The first thing on our to do list is to write down a to do list and post it here.
+
+== Contributing
+
+While this is an internal project at the moment feel free to contribute.  Fork, modify, and create a pull request.  Pull requests will only be considered if it includes tests.

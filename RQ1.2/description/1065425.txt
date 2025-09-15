@@ -1,0 +1,1 @@
+Fix for wellcom a88 armv6

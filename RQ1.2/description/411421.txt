@@ -1,0 +1,1 @@
+Integrate Ajax-Chosen javascript library with Rails asset pipeline

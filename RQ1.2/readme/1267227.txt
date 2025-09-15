@@ -1,0 +1,7 @@
+# Todo
+
+- onClick event is buggy with the fancy Button!
+- correct text
+- add special-condition chek-boxes 
+- form validation
+- scroll to top isn'T consistent...

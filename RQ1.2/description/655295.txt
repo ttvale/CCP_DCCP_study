@@ -1,0 +1,1 @@
+Blacklist of common words for web applications that give out subdomains to their users

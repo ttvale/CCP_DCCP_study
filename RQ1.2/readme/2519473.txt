@@ -1,0 +1,4 @@
+This will one day soon be a functioning blog.
+
+This blog is written using Django with mod-wsgi on top of Apache, postgresql, jQuery, and CKeditor.
+

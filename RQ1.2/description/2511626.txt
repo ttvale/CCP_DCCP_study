@@ -1,0 +1,1 @@
+Easy way to manage one or more Resque processes during testing

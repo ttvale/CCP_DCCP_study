@@ -1,0 +1,1 @@
+Support for Spring's RestTemplate within native Android applications

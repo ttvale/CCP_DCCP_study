@@ -1,0 +1,1 @@
+node.js API wrapper for Morale

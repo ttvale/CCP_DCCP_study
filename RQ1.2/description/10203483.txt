@@ -1,0 +1,1 @@
+Pull OpenSecrets.org campaign finance info into MySQL

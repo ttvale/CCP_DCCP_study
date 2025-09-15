@@ -1,0 +1,1 @@
+A daemon for pianobar (6xq.net/projects/pianobar), the command-line pandora client. Pianoserver allows a pianobar user to run it in the background as a daemon and control it from any terminal on demand.

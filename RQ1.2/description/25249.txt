@@ -1,0 +1,1 @@
+[WordPress Plugin] Move your Pages/Posts/Custom Post Type admin links from the sidebar to a Content menu that nests everything where it should be

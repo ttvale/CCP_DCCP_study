@@ -1,0 +1,1 @@
+That project will follow an RoR tutorial that I find during my researches. This project will be usefull to learn more about this amazing Meta-Framework.

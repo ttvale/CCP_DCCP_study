@@ -1,0 +1,41 @@
+This is locksmith, a utility for manipulating public and private keys.
+
+http://github.com/nevali/locksmith
+
+Current status:
+	! Encrypted keys can't be read or written at the moment. NO CARE IS
+	! TAKEN to use a sensible RNG or secure memory when handling private
+	! keys.
+
+	- Keys can currently be read in PEM, DER or PEM-encoded PKCS#8
+	  formats. For DER private key input, you must explicitly specify
+	  the type of key using '-t TYPE'. This is not required when
+	  reading public keys.
+
+	- Public keys can be written in PEM, DER, SSH-2, OpenSSH, plain text,
+	  PGP, RDF/XML and Turtle, DNSSEC DNSKEY, IPGP CERT, PKA, and SSHFP
+	  formats.
+
+	- Private keys can be written in PEM, DER, plain text, DNSSEC (BIND 9)
+      and PEM-encoded PKCS#8 formats.
+
+	- The -C option can be used to specify a user ID when writing PGP keys.
+	  Using this requires a private key, because a user ID must be
+	  accompanied by a signature packet. Without -C, only a single PGP
+	  public key packet will be written.
+
+	- DSA support is spotty (DSA keys cannot currently be generated).
+
+Examples:
+
+	Read an RSA private key in PEM format and emit a PGP public key with
+	a signed user ID. The PGP key timestamp will match the private key
+	file timestamp:
+
+	    $ locksmith -i rsa-private.pem -o rsa-private.pgp -O pgp \
+	        -C 'Joe Bloggs <joe.bloggs@example.com>'
+
+	Read an RSA public key in PEM format and print just the SSH (MD5)
+	fingerprint:
+
+	    $ locksmith -i rsa-public.pem -O ssh2 -f -n

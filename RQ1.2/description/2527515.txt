@@ -1,0 +1,1 @@
+Collection of shell scripts to provide extra nifty features for client side subversion usage.

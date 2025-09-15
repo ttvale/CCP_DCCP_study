@@ -1,0 +1,1 @@
+A suite of extensions for testng and maven to better integrate testing both in and out of the IDE

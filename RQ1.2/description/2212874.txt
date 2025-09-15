@@ -1,0 +1,1 @@
+a lightweight package for ini style configuration/settings text files.

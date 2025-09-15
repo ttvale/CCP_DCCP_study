@@ -1,0 +1,1 @@
+LocationReminder is an application where the user can store tasks connected to a specific location.

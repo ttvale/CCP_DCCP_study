@@ -1,0 +1,1 @@
+Server-side aggregator of RSS, email, tweets, google+, etc

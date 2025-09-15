@@ -1,0 +1,1 @@
+Go Relational Persistence - an ORM-ish library for Go

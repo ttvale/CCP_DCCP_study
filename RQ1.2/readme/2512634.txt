@@ -1,0 +1,19 @@
+These are some of the mathematical libraries
+I use when I program in C. So far, we have the
+following:
+    2 Libraries for using Complex Numbers
+        1 for complex in binary form
+        1 for complex in polar form
+    1 Library for using Distributions
+    1 Library for using Graphs
+    1 Library for using Matrices
+    1 Library with extra functions for matrices
+        that involve Vectors
+    1 Library with some basic statistic
+    1 Library for using Vectors
+All of them are released under the Catware license
+and the GPL license.
+
+There's a README in each folder explaining what
+functions havee been implemented, and in the code
+there're some comments about what the function do.

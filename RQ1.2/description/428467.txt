@@ -1,0 +1,1 @@
+Sublime Text 2 command to format long SQL statement to a more readable form (also available via Package Control)

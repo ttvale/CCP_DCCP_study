@@ -1,0 +1,1 @@
+Sample implementation of a presence server for createjs.

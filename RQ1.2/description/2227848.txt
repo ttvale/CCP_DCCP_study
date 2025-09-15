@@ -1,0 +1,1 @@
+Tesselate is a jQuery plugin to create grid-based (Nivo Slider-like) image transition effects

@@ -1,0 +1,147 @@
+Tempi
+=====
+
+About
+-----
+Tempi is a dataflow programming C++ library aimed at multimodal sampling.
+
+Tempi is a C++ library for multi-modal sampling through a strongly-typed dataflow language. It allows recording and playback of flows of messages whose types can be arbitrary. We can then record series of events encoded as numbers, texts, 3D trajectories, list of images or sounds files. For example, one could use Tempi to store musical notes sequenced over time, to do rapid prototyping of motion, or any type of changes that are then easy to reproduce again.
+
+Tempi eases routing data, and provides tracks in which one can store the changes overt time in those streams of data. It also provides some game logic bricks such as behaviour trees. Streams can be passed through filter nodes in order to smooth changes, detect thresholds, change their scale or script finite state machines according to what happens in the streams. For each state, one could play different tracks, or choose different filters to apply on the transmitted data. Furthermore, it is possible to extend Tempi through extensions. Some extensions already provide OSC and MIDI input and output. In short, Tempi provides basic building blocks for building interactive digital art works.
+
+
+History
+-------
+Tempi is inspired by the Toonloop application, developed since 2008 by the artist-developper Alexandre Quessy. Tempi is developed at the Society for Arts and Technology [SAT] as part of the Metalab 2011-2013 research projects. Toonloop is an in situ frame by frame animation editor, whose clips are played back as we add frames to them. It eases spontaneous creation. Tempi expands this idea to apply it to any type of data that can be produced by sensors.
+
+The first prototypes have been done as of August 2011. It now supports sending and receiving OSC messages. It provides a dataflow environment in which you can connect nodes in a graph.
+
+This library offers new possibilities for in situ data sampling. One can record trajectories, data from any kind of sensor, as well as image and sound files. These tracks could potentially be integrated to timeline-based graphical editors.
+
+
+License
+-------
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License and GNU General Public License as published by the Free Software Foundation; either version 3 of the Licenses, or (at your option) any later version.
+
+
+Authors
+-------
+Authors who contributed to the core of Tempi:
+
+* Alexandre Quessy <alexandre@quessy.net>
+
+Authors who contributed to the base plugins for Tempi:
+
+* Alexandre Quessy <alexandre@quessy.net>
+* Emmanuel Durand <emmanueldurand@gmail.com>
+* Michal Seta <mis@artengine.ca>
+* Nicolas Bouillot <nicolas.bouillot@gmail.com>
+
+
+Project URL
+-----------
+http://code.sat.qc.ca/redmine/projects/tempi
+
+The source code is currently managed at http://code.sat.qc.ca/redmine/projects/tempi
+
+Some documentation is online at http://tempi.toonloop.com
+
+To clone::
+
+  git clone git://code.sat.qc.ca/tempi.git
+
+
+Sponsors
+--------
+This project is made possible thanks to the Society for Arts and Technologies. [SAT] http://www.sat.qc.ca/
+Thanks to the Ministère du Développement économique, de l'Innovation et de l'Exportation du Québec (MDEIE).
+
+
+Installation
+------------
+Here is how to build and install it on Debian GNU/Linux or Ubuntu::
+
+  sudo apt-get install help2man gettext automake bison build-essential flex libtool 
+  sudo apt-get install doxygen
+  sudo apt-get install libxml2-dev libclutter-1.0-dev libglib2.0-dev libboost-all-dev libportmidi-dev libasound2-dev liblo0-dev liblog4cpp5-dev
+  sudo apt-get install libatom-dev
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
+  sudo ldconfig
+
+Some dependencies are optional. If you can, you can install these libraries to get extra node types::
+
+  sudo apt-get install libspatosc-0.4-dev
+  sudo apt-get install libv8-dev
+  sudo apt-get install liblua5.2-dev
+
+Spatosc is available from the http://code.sat.qc.ca/redmine/projects/spatosc or https://launchpad.net/~sat-metalab/+archive/metalab URL. Libmapper can be retrieved at http://www.idmil.org/software/libmapper and should be compiled from source. (and libmapper requires the latest liblo from source as well)
+
+Here is how to build and install Tempi on Mac OS X::
+
+  sudo port install gettext libtool automake autoconf-archive autoconf bison log4cpp boost libxml2 portmidi liblo glib2-devel pkgconfig
+  ./autogen.sh
+  CPPFLAGS="-I/opt/local/include -L/opt/local/lib" ./configure
+  make
+  sudo make install
+  sudo ldconfig
+
+Note: actually, there is a missing library that is called "atom". It can be found at http://code.sat.qc.ca/redmine/projects/libatom and you first need to compile and install it, since Tempi relies on it.
+
+Also, if you want to write to serial devices, you will need to make sure your UNIX user can write to the serial device. Add it to the tty and dialout groups, if it's not already a member of them.
+
+  sudo addgroup <username> tty
+  sudo addgroup <username> dialout
+
+
+More about dataflow programming
+-------------------------------
+
+Tempi is a new dataflow programming environment inspired by Miller Puckette's Pure Data and Max/MSP software. Dataflow programming is a programming paradigm that models a program as a directed graph of the data flowing between operations. Tempi has been created in the will to fix some design flaws present in Pure Data, in order to provide artists a great tool to build digital artworks. Here is a list of differences from the Pure Data software:
+
+* Tempi is strongly-typed. A string "2" will no be interpreted as a float if its type is "s". (string)
+* Tempi proposes a real separation between the graphical user interface and the underlying engine. (right now, there is no graphical user interface at all, but it is usable)
+* Tempi provides named entities, not numbered ones. Inlets, outlets as well as node attributes are named, which makes the file format suitable to be be managed by revision control systems, such as Git, CVS or Subversion. 
+* Tempi provides no internal node types. The audio engines should be written as separate external libraries, if any.
+* The file format is XML, which allows comments and an arbitrary order in the tags. It is easy to understand by a human.
+* Tempi (will soon) provide system-wide configuration files (for default paths for libraries) as well as per-user configuration files.
+* Being a C++ library, Tempi is easy to embed in programs written in C++, or via some of its language bindings.
+
+
+How to use it
+-------------
+
+For now, there is no graphical user interface to write your graphs. Use a text editor to edit XML files readable by Tempi. Some examples files are in the "examples" directory in Tempi's source code repository. (check out the "develop" branch if you want the bleeding edge latest version of the source code) To know which node types are available and what are their attributes, methods, inlets and outlets, use tempi-inspect. The tempi-inspect utility is located in the src/tempi-inspect directory. Once it is installed in your system, it should be available system-wide. To run your graph, use tempi-launch. (located in src/tempi-launch)
+
+Nodes' attributes can be set via each node's "__attr__" inlet. When they are changed, their new value is output via the "__attr__" outlet, prefixed by the name of the attribute. Nodes' methods can be called via the "__call__" inlet. Their return value is output via the "__return__" outlet, prefixed by the name of the method.
+
+You should check out the Nodejs addon that is located at http://code.sat.qc.ca/redmine/projects/node-tempi since it allows you to create Web user interfaces with Tempi under the hood.
+
+
+Documentation
+-------------
+
+To build the web documentation, run the bash script ./utils/gen-web-pages.sh
+
+To build the Doxygen-generated C++ documentation, run `make html`.
+
+
+Utilities
+---------
+
+* tempi-draw: Simple example on how one can use samplers in Tempi.
+* tempi-launch: Launches XML Tempi graphs and run them.
+* tempi-inspect: Prints information about Tempi nodes, formatted in ReStructuredText.
+* tempi-osc-looper: Loops OSC messages.
+* tempi-midi-looper: Loops MIDI events.
+* tempi-osc-forward: Forwards OSC messages.
+
+Known bugs
+----------
+
+* Favours Tempi plugins from /usr/local/lib/, rather than ./ if present.
+* [base.clutter.stage]: creates segmentation faults
+* Loader doesn't work on Microsoft Windows
+

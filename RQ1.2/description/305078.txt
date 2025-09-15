@@ -1,0 +1,1 @@
+Cocoa wrapper for Apple's LaunchServices framework

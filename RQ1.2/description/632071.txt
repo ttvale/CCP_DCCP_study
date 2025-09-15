@@ -1,0 +1,1 @@
+A wicked fast and robust AS3 library for playing Animated GIFs in Flash.

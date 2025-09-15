@@ -1,0 +1,1 @@
+Progetto di esempio per Continuous Integration con Jenkins e Phing

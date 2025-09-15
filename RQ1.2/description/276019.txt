@@ -1,0 +1,1 @@
+[OBSOLETE] Create your own framework on top of Symfony

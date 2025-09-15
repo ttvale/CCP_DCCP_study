@@ -1,0 +1,142 @@
+First, let's state the problem.
+
+We have a doll supply chain hierarchy:
+
+COOL, RUSSIAN DOLLS!
+                                                                                                                        
+          . ...........                                                                                                 
+      . .,?+I?7O$IZOI?..                                                                                                
+      .?77?IIO=+?I7?7$Z7=.                                                                                              
+     ,$IIIN=======?Z7I7OZI.                                                                                             
+    .$$?+==+========+=$OOOI                                                                                             
+    .ZI=8$:7~=~=ONM+=++INO$                                                                                             
+    .Z++=8N====~:NN====O8OZ..                                                                                           
+     O8+=++==~~..?====+88OZ=.                                                                                           
+    .O8=+?++=:~~=+?+==D88OOI.                                                                                           
+    .O8O?++==~~~~~===N8888O7.                                                                                           
+    :OO888==~~~:=~~N888888O$             .. .=+++: .                                                                    
+    =OO8888ZZZ8O88DOO88888OZ.            I7?+IO$I?Z7I:.                                                                 
+    ?OO88N8OO$OZ$OOOD88888OO.         .7OIO??::=I?$I$$7.                                                                
+    7OO8DO8$$ZDOOO88OD8+8I8O~         $O7?Z~::~~=?I?IZZI                                                                
+   .I+888DNZ$$OOOODMNO7Z7ODOZ.        Z8Z~==:~.~=~==$OZ7.                                                               
+   .I?88888$77O8ZO88O88I++88Z.        Z8=$NN:=:~NN=+=OO7.                                                               
+   ,?O88888$7,==,:OOO888O88DZZ        ZO===~~:.:~===~OO$~                                                               
+   7ZO888+,,+?$7?==:8O88$+I7+Z=      .ZO==++~I:7=++~OOO$=.             ... .                                            
+   7I?88==III~,,OOZI+~8,ZO88OI8      .O8O~~~~:,,:~=OOOOZI.          .~77??Z?$~..                                        
+   $$7I?,ZO$$$O$.OZI=:?OOO888Z$.     .OOOOOI:~:,+OOOOOOZ7         . $IIII?~$I?$?.                                       
+   ZOOZ7:$O$=.:,.ZOZ7+O8OO8888Z$     .8OOO8OZ7$8ZONOOOOOZ:        .7ZZ+~::~~==7Z.                                       
+   OO8OZ7$O$O7ZO.$$7I=IOOO8888Z8..   7+OO8OOZIZZOOOO8OO8ZI        .O+~+NZ~~~M7=$.                                       
+  ,O8888ZI$OOOOO$$7I::OOOO8888OO..   8~OOOOO$~.=8ND8OOO88$        .ON~~Z$~~~~==Z:                                       
+ .:O88888$I7ZOOZ+=++$OOOO8Z888OO..   8~OOZ7.,:::.ZOOOOOZ8$.       .OO====,~~=+?Z=          .+7???+..                    
+  ,OO8888888O:+~=~IOOO8O88O88$?D.. .~=Z=O.:~....+~:IO,=~~O7       .OOO:=:.?~~7OZ?        .IZ$II?Z???                    
+   ZO88888888OOOOOOOOO888888ZI+O.. .I++~Z=7I.Z$.7I=:,ZOZO?7.      7ZOOOD7.O88DOO$        .OI777++$+I .                  
+   $OOO788888O8OOOO8O88888888OOO.. .IZZI~++ZZ77Z$+,.OOOOOZ$.    . 7ZOO8O7,88OOOOZ~.      .OI+7M++N+$..      .,.         
+   7=7+Z88888O88OOOO888888888O78.. .I8OOO:+ZOZZZ?=~?OOZIIZ?=    .=ZZOO88I.::~7D8ZI       ,OD++~=+??O~.    .?IIII.       
+   $O:ZO8O88OOOOOOOOOOOOOO888$DD.. .?OOOOO.:+ZZ$=:,,OOOOO8?+    .?ZOOOOO..I$7+:7$Z+     .$8887=:++888.   .Z+???7+       
+   IZ?ZO8888OOOO8OOOOOO7?7$$7ID8   .:8OOOOOO.,:,., OOOOOOO8+    .7$ZZO8=I78,:OO7+7I..   .88888=.88888.   .Z=+?OI?.      
+    ZOIZO8OOOZ?$OOOOOOOI==+++D8I     OOOOOOOOZZOOOOOOOOO7=O?    .O=$7+~7OZ~OOZZO+8O..   =N8888I?88888D.   O8??7IZ.      
+   .788+$ZZZ$I,?I=ZZZZ7+O88888O.     :$OOOOOOZOOOOOZ?==::8Z:    .Z$ZOOOOOZZ~OOO8OOO..   ZDD?+I$$Z$Z$DN.   O8D88DO+      
+   .~ZOO$=~::ZO~+??I??+O88888OZ.     Z:::ZOOZ$7$$OOO7+~O88Z.     O7ZOOOOO$$+OOOO?8O..   OD?8O88??888ZN   .88D7?78Z.     
+    .$OO8888888OOI==?Z8888888O..     .NOIIZZZI+:?ZZ7?~$DND7.    .ZO$77Z$I=~7OO$+8M8     Z88888ZO8ZI8ZD.  .8D=Z$78$      
+     +ZO8888888888OOO8888888O$        ZOO+?II+:,:===:7O8DO+     .$OOOZ+$Z=$Z$ZZONNI     IN88887?+78888   .D?8DI$8Z+     
+     .7OO88888888888888888OO$.       .=ZOZI~:Z8OZII$OOOZO7      .:$ZOOZZOOOOZ?O888.     .DDO88OZ888OZN.  .DNODDDDOI     
+      :$OO8888888888O88OOOOZ7.        .7ZZOOOOOOOOOOOOOO$:       .I+I7I=+?II=?888$.     .$88$7Z8O$$$D,   .O8$888877     
+      .=$OO88O88888OOOOOOOOZ.         ..$ZOOOOOOOOOOOOOZ7.        :7I~?OOZ$ZO888Z.       .O8888OZO8OZ.    .O8DD8D8.     
+        ?ZOOOOOOOOOOOOOOOOZ7.          .IZZOOOOOOOOOOOZ$..         ?ZZOOOOOOOO8O.        ..8888888OZ..    ..8DDDD..     
+       . 7ZOOOOOOOOOOOOOO...            .7ZOOOOOOOOOOO...         . .ZOOOOOOOOO..         ..?O888O..        .... .      
+         .. ... .........                ..............              ..... .....            .....                       
+                                                                                                   
+
+We have two types of dolls
+-------------------------------------
+Russian doll -- Can have either a Russian doll or a solid doll inside it
+Solid doll   -- It cannot have anything inside it.
+
+We have three types of relationships
+-------------------------------------
+Supplier  -- manufactures the actual dolls
+Us        -- the middle man
+Customers -- could be a reseller or a consumer
+
+Type  From        To          Which
+-------------------------------------
+A     Supplier    Us          Russian doll
+B     Supplier    Us          Solid doll
+C     Supplier    Customer    Russian doll
+D     Supplier    Customer    Solid doll
+E     Us          Customer    Russian doll
+F     Us          Customer    Solid doll
+G     Customer    Customer    Russian doll
+H     Customer    Customer    Solid doll
+
+
+Each doll has a type.  
+Each doll has a containing doll, which also has a type.
+At some point, the containing doll is null (we've hit the outermost item).
+The supplier only gives out outermost dolls and solid dolls.
+
+Our hierarchy looks like:
+
+        A            B         C      D
+     |----|                 |----|
+     E    F                 G    H
+   |--|                   |--|
+   G  H                   G  H
+ |--|                    ...
+ G  H
+...
+
+Write code that can do the following:
+1) Given a type, list the possible parent types
+2) Given a type, list the possible child types
+
+-----------------------------------------------------------------
+
+The Rules:
+
+* Find 1 to 2 partners.
+* None of your partners can be on your current project.
+* You have 15 minutes to complete this exercise.
+
+Protip:  You should probably use technology you are familiar with given the time constraints.
+Protip:  Ask questions if anything is unclear.
+
+-----------------------------------------------------------------
+
+How to get started:
+
+Go clone this (or feel free to fork it if you have a github account):
+>> git clone git@github.com:brweber2/HowWouldYouTalk.git
+
+Create a branch with your username
+>> git checkout -b <username>
+Do some work...
+Add your code
+>> git add .
+Commit your work
+>> git commit -m "Rock on"
+Push your branch (or create a pull request)
+>> git push origin <username>
+
+Warning: Do not push to master!!!
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+WHEN TIME EXPIRES...
+
+-----------------------------------------------------------------
+
+Let's ponder a few questions.
+
+-----------------------------------------------------------------
+
+Let's look at a few solutions.
+
+  My first solution
+  Yours?
+  My second solution
+

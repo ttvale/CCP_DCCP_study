@@ -1,0 +1,1 @@
+Content provider instructions to access the feeds and items provided by the News Reader application for WIMM, an android powered smartwatch

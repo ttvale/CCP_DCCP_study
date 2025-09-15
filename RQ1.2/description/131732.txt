@@ -1,0 +1,1 @@
+Tray icon for Rhythmbox 3+

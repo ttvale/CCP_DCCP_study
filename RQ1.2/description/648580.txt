@@ -1,0 +1,1 @@
+An example website template for managing a band using Ruby on Rails

@@ -1,0 +1,1 @@
+simple bot that connects to a IRC room and save the transcripts to a txt file

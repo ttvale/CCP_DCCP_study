@@ -1,0 +1,9 @@
+Please see http://******.com/pages/SimpleUpdater.xhtml
+
+Debug Instructions
+* Open Updater project properties
+* Go to Debug tab
+* Enter the command line options for manifest location & app location
+Example: C:\Programs\ExampleApp\ExampleApp.manifest C:\Programs\ExampleApp\ExampleApp.exe
+* Set working directory
+Example: C:\Programs\ExampleApp\

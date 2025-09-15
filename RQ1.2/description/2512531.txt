@@ -1,0 +1,1 @@
+ICU4C as an RPM for RHEL6

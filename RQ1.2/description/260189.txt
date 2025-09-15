@@ -1,0 +1,1 @@
+TV notification service. Reimplementation of seriesly without Google's App Engine or Django

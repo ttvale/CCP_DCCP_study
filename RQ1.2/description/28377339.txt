@@ -1,0 +1,1 @@
+Sinatra::Mapping extension is a minimal module that is useful for create map names for Sinatra web application.

@@ -1,0 +1,119 @@
+GitSync
+=======
+
+GitSync aims at providing an automated git-based synchronization system.
+It watches the content of one or more git repository and add/remove/commit
+the changes which are made there.
+
+This way it kind of provide a similar service then dropbox or
+sparkleshare but:
+- in python (no mono-pile to install)
+- in cron or using file system watch (set your frequency as desired or get
+    the changes in in real time)
+- in git (get real track changes).
+
+
+INSTALL
+=======
+
+== Dependencies
+
+* Python2 or Python3
+    (From 2.6 to 3.5)
+* pygit2
+    (tested with 0.20.3 and 0.24.2)
+* watchdog
+    (tested with 0.7.1 and 0.8.3)
+
+== Install the program
+
+
+=== Link from git
+The easiest way is just to clone the git repo and make a link from ~/bin
+or /usr/local/bin to the gitsync.py file.
+
+
+== Via the setup.py
+Clone the source and install them simply using python setup.py install.
+
+
+=== Via rpm.
+Make a tarball of the project and run rpmbuild -ts <tarball>.
+Install the resulting RPM via yum install <path/to/rpm>.
+
+
+== Configure the program
+
+You will need to specify in "~/.config/gitsync" the directories that you
+want gitsync to watch (that will be the work_dir option).
+Each directory should contain a git repository (cloned from a remote
+origin or just local) and will be separated by a comma ',' in the list.
+ei:
+  work_dir = /home/user/Notes, /home/user/Articles, /home/user/Scripts
+
+Example file:
+
+  $ cat ~/.config/gitsync
+  [gitsync]
+  work_dir=/home/pingou/Documents/ConfNotes /home/pingou/Images/backup
+
+
+Then you can run gitsync as daemon using
+  /usr/local/bin/gitsync.py --daemon
+
+This will watch for changes on the filesystem and add/remove the files from
+the git repositories as they are added/updated/removed.
+
+You may want to add --verbose to get some output and eventually redirect
+them to a log file. It is now up to you ;-)
+
+
+My workflow here would be something like:
+1) setup gitolite
+2) create the repo in gitolite
+3) clone it
+4) create the first commit by hand and push it to the remote repo
+   (this will create the master branch, needed by gitsync)
+5) setup gitsync on machine A pointing to the clone checked-out
+6) repeat step 4 on the other machines
+7) enjoy* ;-)
+
+
+====================================================================
+/!\  Please note that if one file is changed on two systems at once,
+there will likely be a conflict in git. If gitsync cannot push to
+the remote repo, it will say so and that will be up to you to fix
+the git repo.
+====================================================================
+
+
+== Configure the service
+
+gitsync comes with a systemd unit file, if you installed gitsync from the git
+and into ~/bin or /usr/local/bin, you will need to edit it and adjust the
+line starting with ``ExecStart=`` to point to where is `gitsync.py`.
+
+Once the file is edited, you can copy it to:
+
+  ~/.config/systemd/user/gitsync.service
+
+Using it becomes then as easy as:
+
+  systemctl --user start gitsync
+
+And to have it automatically started when you log-in:
+
+  systemctl --user enable gitsync
+
+
+/!\ You will need to restart gitsync after every edition made to the
+configuration file:
+
+  systemctl --user restart gitsync
+
+
+== Final notes
+
+This program is bug free of course but may contain some random features
+if you face one of them and can reproduce it, please let us know. We will
+decide wether to keep it or not ;-)

@@ -1,0 +1,1 @@
+A disk cleanup tool that thoroughly scans your computer for unnecessary and invalid files no longer being used by the system. Removes items missed by Windows Disk Cleanup and other popular tools.

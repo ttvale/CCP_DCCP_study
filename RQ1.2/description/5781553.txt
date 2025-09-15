@@ -1,0 +1,1 @@
+Enhances your ActiveRecord model to export its data to a sitemap in an intuitive way

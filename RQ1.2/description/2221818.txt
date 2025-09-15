@@ -1,0 +1,1 @@
+A modal hover view with several types that show the user that an activity is ongoing.

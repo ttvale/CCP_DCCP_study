@@ -1,0 +1,1 @@
+A simple demo of a web page interacting with sleepy mongoose REST api using JQuery. Instructions for Mac OSX running MAMP.

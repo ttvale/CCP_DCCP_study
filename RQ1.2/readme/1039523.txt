@@ -1,0 +1,7 @@
+This is an initial version of a jQuery Mobile theme for the University of
+Florida, based on what you see on UF Mobile and ISIS Mobile.
+
+http://m.ufl.edu/
+http://www.isis.ufl.edu/mobile/
+
+If you have any questions, please email webmaster@ufl.edu.

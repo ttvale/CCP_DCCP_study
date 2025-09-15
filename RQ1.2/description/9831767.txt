@@ -1,0 +1,1 @@
+A directory of XML dialects and their namespaces.

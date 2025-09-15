@@ -1,0 +1,1 @@
+Make possible to display fieldsets and inline in cols and tabs in the Django admin

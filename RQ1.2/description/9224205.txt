@@ -1,0 +1,1 @@
+remotecv is an OpenCV server for facial and feature recognition.

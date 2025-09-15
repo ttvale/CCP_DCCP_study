@@ -1,0 +1,1 @@
+Hadoop, Spark and Storm based anomaly detection implementations for data quality, cyber security, fraud detection etc.

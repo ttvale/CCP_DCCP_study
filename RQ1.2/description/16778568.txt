@@ -1,0 +1,1 @@
+Ban a player from the server when they die

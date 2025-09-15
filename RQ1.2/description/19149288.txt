@@ -1,0 +1,1 @@
+A quick script to take hourly, daily, monthly, weekly, yearly snapshots on a ZFS filesystem

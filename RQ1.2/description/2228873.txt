@@ -1,0 +1,1 @@
+Pure XQuery parser for complex full-text search syntax, suitable for use with MarkLogic Server

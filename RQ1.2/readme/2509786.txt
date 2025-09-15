@@ -1,0 +1,26 @@
+Login is working
+
+Basic function of forum, add boards, conversations & replies functioning correctly.
+
+Added pagination for boards lists.
+Added pagination for Conversations
+Added pagination for Comments
+Tidied up lists a little - more to do
+
+TODO
+
+Admin functions for create/destroy
+
+Search with Sunspot
+
+Display with jQuery
+
+Integrate flickr API
+
+Tidy up CSS
+
+rake db:populate is functioning, although need to check that conversations and comments are being populated correctly
+
+Added jQuery-rails gem
+Added jQuery into app/assets/javascript
+

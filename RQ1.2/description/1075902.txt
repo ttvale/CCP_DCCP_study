@@ -1,0 +1,1 @@
+This is a plugin that makes it simpler to create, control, and animate x3dom based scenes using jQuery.

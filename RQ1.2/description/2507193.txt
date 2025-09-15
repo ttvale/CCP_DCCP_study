@@ -1,0 +1,1 @@
+Simple implementation of the memory filesystem for the Java 7 NIO Filesystem API

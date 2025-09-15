@@ -1,0 +1,1 @@
+A tool to handle traification of BG2 mods

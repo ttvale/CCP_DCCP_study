@@ -1,0 +1,47 @@
+Chibichan is a very tiny Danbooru style image gallery.
+
+It is not at all based on Danbooru except for styling.
+
+Chibichan as its name implies is designed to be small,
+and also probably used for very small deployments.
+
+Chibichan is also not done at all.
+
+
+HOW TO INSTALL:
+1. Copy all files to your directory.
+2. Set your directory to be writable.
+3. Drag and drop files into the directory with the files here.
+
+
+ROAD MAP
+
+Current Capacity:
+-Display all the images in the current directory
+-Create and use thumbnails for these images
+-Infinite width display page
+-Each image opens to its own information page.
+-Flat file database
+-Tagging
+-Sorting by tags
+
+Planned:
+-Negated Tag Sorting
+-Slideshow based off query
+-Password protected upload/editing
+
+Would be nice:
+-Bulk tag editing
+-Security Review
+-Comment the code a bit
+-Magic Number removal
+-- Creating them at all is a bad habit, I know
+
+Maybe Eventually:
+-User based upload/editing
+-Cleanup and refactor code
+-Allow Commenting
+-Allow tag categorization
+
+
+The first one to cleanup and refactor this code becomes my new best friend.

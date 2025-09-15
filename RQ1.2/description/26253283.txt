@@ -1,0 +1,1 @@
+The Oxygen font family. A desktop/gui font family for integrated use with the KDE desktop.

@@ -1,0 +1,1 @@
+Ruby gem client for Elastic Search as SaaS

@@ -1,0 +1,1 @@
+Home Automation Interface based on QT, using LUA for "script"

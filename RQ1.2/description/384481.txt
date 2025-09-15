@@ -1,0 +1,1 @@
+A buildout recipe that generates a configuration file for SublimeCodeIntel

@@ -1,0 +1,11 @@
+---------
+If you want to use this software you will need to compile it and then run the executable. 
+For example in a GNU/Linux based operating system you will need to run the following commands:
+
+To compile teh software
+$ g++ orthodox_easter -o orthodox_easter 
+
+Run the software
+$ ./orthdox_easter 
+
+This program is licenced under GPLv3 (http://www.gnu.org/licenses/gpl-3.0.html) 

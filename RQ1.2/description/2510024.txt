@@ -1,0 +1,1 @@
+Logbot tails local log files to an IRC channel.

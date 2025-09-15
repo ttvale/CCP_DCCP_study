@@ -1,0 +1,1 @@
+WordPress plugin using Custom Post Types, Custom Taxonomies and a "mini" custom admin interface. For adding and deleting "Quotes", this NOT the same as WordPress' Quote Post Format

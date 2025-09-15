@@ -1,0 +1,1 @@
+Decorate product pages on amazon.co.uk with the equivilent irish price. This price will be in euro and include the Irish VAT rate where applicable.

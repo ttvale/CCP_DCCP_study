@@ -1,0 +1,1 @@
+A browser extension/add-on to filter tweets. Currently, supporting Google Chrome.and Mozilla Firefox (15+)

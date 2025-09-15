@@ -1,0 +1,1 @@
+A fully functional project configured with spring, spring security, REST (with Jersey) and Hibernate. The intent is to provide a bootstrap for this configuration.

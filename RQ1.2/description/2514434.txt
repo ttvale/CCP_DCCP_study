@@ -1,0 +1,1 @@
+SilverStripe module that easily allows adding of header image banners on CMS pages.

@@ -1,0 +1,1 @@
+Amount inflectsion for year, month, week and day. Also converting numbers to words in HRK (Croatian) 

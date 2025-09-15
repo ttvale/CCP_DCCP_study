@@ -1,0 +1,1 @@
+Maven extensions for the build-tweaking programmer

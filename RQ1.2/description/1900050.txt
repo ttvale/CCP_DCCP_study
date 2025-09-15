@@ -1,0 +1,1 @@
+Provides a calculated due date for new issues created in redmine

@@ -1,0 +1,1 @@
+Rdefs is a tiny Ruby script that extracts class, module, method, attribute definitions from a given Ruby source code.

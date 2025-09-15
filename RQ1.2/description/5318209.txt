@@ -1,0 +1,1 @@
+Tuned wakaba imageboard script with fastcgi support

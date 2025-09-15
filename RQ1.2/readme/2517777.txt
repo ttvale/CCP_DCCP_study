@@ -1,0 +1,12 @@
+How to use:
+    1. Installation: rails plugin install git://github.com/barek2k2/localize-multi-digit.git
+    2. Pre-requisite: i18n gem
+    3. Usages
+        Example:
+         - "123".to_ld
+         - "abc89efg".to_ld
+         - User.first.created_at.to_ld
+         - 89.567.to_ld
+         - Time.now.to_ld
+         - Date.today.to_ld
+    4. I tested it on Rails 3.1 with ruby 1.9.2 on both Windows(7) and Linux(Ubunutu)

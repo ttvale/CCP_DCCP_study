@@ -1,0 +1,1 @@
+Seeeduino DS3231 library updated to run with Arduino 1.0 IDE

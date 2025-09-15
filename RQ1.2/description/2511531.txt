@@ -1,0 +1,1 @@
+A distributed object language for node.js with multiple backends (e.g. redis, mysql, ...)

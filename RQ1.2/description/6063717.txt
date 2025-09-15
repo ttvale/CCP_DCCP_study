@@ -1,0 +1,1 @@
+PuttyPlus可用作SSH Client、串口调试、ADB Shell登陆工具，也可作为windows console使用。

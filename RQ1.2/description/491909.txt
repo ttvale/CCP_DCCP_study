@@ -1,0 +1,1 @@
+Monkey patches Backbone.js with extra features and enhancements

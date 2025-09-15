@@ -1,0 +1,1 @@
+Git mirror of Voce voice interaction library, with my improvements (link goes to upstream)

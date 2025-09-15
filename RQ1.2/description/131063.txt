@@ -1,0 +1,1 @@
+Knife plugin for testing Chef code in a Vagrant VM

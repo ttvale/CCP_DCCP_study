@@ -1,0 +1,1 @@
+Extensible PHP framework using packages, internal events, resources and much more.

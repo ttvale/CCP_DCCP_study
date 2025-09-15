@@ -1,0 +1,1 @@
+An application that helps you to choice the best move in the game of scrabble

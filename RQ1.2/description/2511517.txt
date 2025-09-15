@@ -1,0 +1,1 @@
+Doing Project Euler in F# for my personal growth in the language.

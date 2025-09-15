@@ -1,0 +1,1 @@
+Objects with immutable context, especially good for contextual logging

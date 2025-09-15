@@ -1,0 +1,1 @@
+A PHP 5.3 library for creating an EventSource stream.

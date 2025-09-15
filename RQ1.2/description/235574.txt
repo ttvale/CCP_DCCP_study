@@ -1,0 +1,1 @@
+.NET/Mono library for multi-threading, including lock-free thread-safe collections.

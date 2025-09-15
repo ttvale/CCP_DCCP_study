@@ -1,0 +1,1 @@
+jQuery plugin to render an date-sorted html index with stats for any combination of repos for given Github users or individual repos. Useful for portfolios.

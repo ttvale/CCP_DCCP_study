@@ -1,0 +1,1 @@
+Proof of concept for a new tech stack.. Gradle for builds, jboss with automated installation / deployment, spring + distributed transactions..

@@ -1,0 +1,1 @@
+This is a plugin for Question2Answer that provides AntiBot Captcha - simple good-looking, but well-protected plugin against spam robots for your contents.

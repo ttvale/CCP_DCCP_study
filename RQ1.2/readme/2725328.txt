@@ -1,0 +1,70 @@
+Copyright © 2010-2011 Cisco Systems, Inc.  All rights reserved.
+Copyright © 2010-2012 Myricom, Inc.  All rights reserved.
+Copyright © 2010-2018 UT-Battelle, LLC.  All rights reserved.
+Copyright © 2010-2011 Qlogic Corporation.  All rights reserved.
+Copyright © 2010-2014 Oak Ridge National Labs.  All rights reserved.
+
+$COPYRIGHT$
+
+Additional copyrights may follow
+
+$HEADER$
+
+
+= Requesting help ==============================================================
+
+To request help using CCI, please subscribe to the users list at:
+
+	http://lists.cci-forum.com/listinfo.cgi/cci-users-cci-forum.com
+
+Once subscribed, you will be able to send email to:
+
+	cci-users@lists.cci-forum.com.
+
+Please include a detailed description of the issue as well as your
+test environment. This is a useful guide for preparing help requests:
+
+	http://www.chiark.greenend.org.uk/~sgtatham/bugs.html
+
+Thank you for using CCI.
+
+
+= Supported Transports =========================================================
+
+The following transports are supported:
+
+  Sockets (UDP)
+  OFA Verbs (InfiniBand and RoCE)
+  Cray GNI (Gemini and Aries)
+  Linux Ethernet (raw Ethernet)
+  TCP
+  Shared Memory
+
+
+= Current Limitations ==========================================================
+
+The current CCI prototype has the following limitations:
+
+  Multicast connections are not implemented
+
+  See README.<transport> for additional notes and limitations for that
+  transport.
+
+  The current CCI build system supports the standard 'make dist' command but
+  users may face problems when using a MacOS/BSD environment, resulting in
+  empty distribution archives. In this context, the following error message
+  will appear in the output of the 'make dist' command:
+    Numeric user ID too largeNumeric group ID too large
+  This error is due to a user ID and group ID that BSD tar is trying to include
+  into the archive but that cannot be encoded, usually because the user account
+  is a "Network User" account. To address this problem, please follow these
+  instructions:
+    - compile GNU tar from source (http://www.gnu.org/software/tar/),
+    - extend your PATH environment variable to include the directory where the
+      GNU tar binary has been compiled,
+    - set the TAR_OPTIONS environment variable to "--owner=0 --group=0
+      --numeric-owner",
+    - run the autogen.pl and configure commands again.
+  You should then be able to successfully create the CCI distribution archive
+  by running the 'make dist' command.
+  

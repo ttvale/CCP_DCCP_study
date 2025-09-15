@@ -1,0 +1,1 @@
+A simple amqp client command line for publish and subscribe messages

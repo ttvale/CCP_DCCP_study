@@ -1,0 +1,1 @@
+A flexible, multi-channel notification system for Django applications with built-in support for email digests, user preferences, and extensible delivery channels.

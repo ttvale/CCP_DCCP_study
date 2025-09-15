@@ -1,0 +1,1 @@
+An extension for Joomla! that put on your site a floating box, that contains social media buttons. The extension also puts buttons into the articles.

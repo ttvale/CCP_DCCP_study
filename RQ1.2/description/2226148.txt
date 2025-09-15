@@ -1,0 +1,1 @@
+Examples to learn how to extend WebInspector

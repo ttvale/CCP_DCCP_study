@@ -1,0 +1,1 @@
+CubeAttack framework implemented in CUDA (TRIVIUM & MICKEY as example targets)

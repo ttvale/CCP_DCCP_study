@@ -1,0 +1,1 @@
+Provides a global persisted key value store for BrowserCMS that can be used to keep configuration key value pairs

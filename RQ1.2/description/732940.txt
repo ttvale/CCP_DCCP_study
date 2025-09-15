@@ -1,0 +1,1 @@
+A plugin for creating a custom checkbox or radio button

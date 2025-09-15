@@ -1,0 +1,1 @@
+distribute and coordinate work using parallel processes (like GNU parallel, but much faster and memory-efficient)

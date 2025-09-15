@@ -1,0 +1,1 @@
+Eclipse RCP version of pms-optical-shop.

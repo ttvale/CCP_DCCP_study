@@ -1,0 +1,1 @@
+Sample project of saga in masstransit using rabbitmq

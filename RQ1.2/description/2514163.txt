@@ -1,0 +1,1 @@
+A simple Pyramid webapp for displaying per developer tickets and hours from multiple Tracs.

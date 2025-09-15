@@ -1,0 +1,1 @@
+Shared ispell dictionary (stored in shared segment, used by multiple connections)

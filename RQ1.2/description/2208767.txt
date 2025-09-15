@@ -1,0 +1,1 @@
+Email engine for CakeLog, CakePHP 2.x

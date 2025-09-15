@@ -1,0 +1,1 @@
+Simple Java Swing Program for running your HQL and SQL Queries.

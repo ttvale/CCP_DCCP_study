@@ -1,0 +1,1 @@
+FastDB is a single PHP navigation script for Fast and Simple MySQL and PostgreSQL databases.

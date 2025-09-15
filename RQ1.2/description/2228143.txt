@@ -1,0 +1,1 @@
+Example code for the General Architecture for Text Engineering (GATE)

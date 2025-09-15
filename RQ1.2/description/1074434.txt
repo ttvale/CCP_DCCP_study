@@ -1,0 +1,1 @@
+Golang django-like admin with mgo backend

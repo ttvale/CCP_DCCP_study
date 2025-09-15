@@ -1,0 +1,1 @@
+Maven Plugin to help with internationalization of java projects.

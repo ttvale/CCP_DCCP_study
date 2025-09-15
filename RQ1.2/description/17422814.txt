@@ -1,0 +1,3 @@
+This component provides pose data for a tracked object in the qualisys motion
+  tracking system. It uses a TCP connection to the QTM server to transfer live
+  tracking data

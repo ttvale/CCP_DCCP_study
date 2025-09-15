@@ -1,0 +1,1 @@
+Ethernet client with Dhcp and DNS support

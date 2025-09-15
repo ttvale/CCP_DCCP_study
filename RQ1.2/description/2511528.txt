@@ -1,0 +1,1 @@
+Mini web app to make icalendar files of course schedules at Queen's University.
